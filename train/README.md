@@ -78,6 +78,7 @@ game's scene transitions hang.
 
     python -m pytest tests/train           # ~20 s: kernels, PPO update, prep, queue, pool, mirror, game client
     python tests/train/smoke.py            # ~10 s: the recipe end to end on the real sim
+    python tests/train/test_hitless.py     # the hitless objective's GAE and soft reward
 
 Each test file also runs as a script. They need CUDA and the built sim DLL.
 
@@ -87,6 +88,7 @@ Each test file also runs as a script. They need CUDA and the built sim DLL.
 |---|---|
 | `config.py` | every knob, one dataclass, `--flag` for each; the defaults are the recipe |
 | `train.py` | the run: rollout queue -> async learner, the adaptive-difficulty curriculum (D), evals, logging, checkpoints |
+| `train_hitless.py` | the same run on the hitless objective (below): its own PPO subclass and loop, everything else shared |
 | `rollout.py` | the actor (one CUDA graph per batch size: preprocessing kernels over the page-locked sim buffers, the policy, the readback) and the queue that forwards whichever envs are ready and fills per-env store segments |
 | `ppo.py` | normalizers, decomposed GAE, the PPO update as one CUDA graph per minibatch, the learner thread, checkpoints |
 | `model.py` | the policy network (PyTorch reference) and the switch to its fused kernels |
@@ -108,6 +110,21 @@ measured from rollouts, per boss, not tuned. Evals and logs still report
 masks. No terminal win/loss bonus: under
 discounting, idling beat dying. The sim ends an episode where the game does
 (knight death, or the boss scene's OnBossesDead).
+
+### The hitless objective (`train_hitless.py`)
+
+    r'_t = dmg_t * (1 - hit_t)  +  alpha * (-log pi(a_t|s_t) - H_target)
+
+A return runs from a step to the next hit (any damage, a pit included) or
+the end of the fight, undiscounted (`gamma` 1): V(s) is the boss damage still
+to come before the next hit. A hit ends the return, not the fight, and a hit
+costs exactly the damage it forfeits; damage landed on the hit step is a
+trade and does not count. One critic (the attack head); no D, mask price or
+heal term. The entropy is in the reward (maximum-entropy RL), with `alpha`
+the multiplier of E[H] >= `target_entropy`, stepped every epoch; subtracting
+the target keeps staying alive from earning an entropy stream. `log pi` is
+the joint log-prob of the heads the agent chose (the action head is out on
+a hard-commit step).
 
 ## Invariants
 
