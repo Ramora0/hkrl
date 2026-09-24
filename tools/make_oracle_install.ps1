@@ -134,7 +134,8 @@ Get-ChildItem $srcData | ForEach-Object {
 }
 Set-Company (Join-Path $dstData "globalgamemanagers")
 Set-Company (Join-Path $dstData "app.info")
-"[data] $linked asset files linked, $copied small files copied; company '$Company'"
+$how = if ((Split-Path -Qualifier $Dst) -eq (Split-Path -Qualifier $Game)) { "hardlinked" } else { "copied (another drive than the game)" }
+"[data] $linked asset files $how, $copied small files copied; company '$Company'"
 
 # Plugins: a real folder without Steam's (or GOG Galaxy's) native library.
 $plugins = Join-Path $dstData "Plugins"
