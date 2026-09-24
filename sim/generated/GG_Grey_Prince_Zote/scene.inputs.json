@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T1/hero.json",
+      "sha256": "db5f31419c879b08045a634504731c6f7e291dae5a37fe921e1dd5967815622b",
+      "size": 252988
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T1/physics.json",
+      "sha256": "c8250385487afc274b6fd29ded34d1f6c2d8ba341d16ab40eca2407239745d18",
+      "size": 622041
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T1/scene.json",
+      "sha256": "53b2372082b0b6434e319a20511b21d97032b09112e077b74e70670492bd1ae7",
+      "size": 20927915
+    }
+  ],
+  "scene": "GG_Grey_Prince_Zote"
+}

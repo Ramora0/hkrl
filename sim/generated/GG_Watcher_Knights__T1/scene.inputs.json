@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T2/hero.json",
+      "sha256": "4bd19ec73197a0f906844cb3ca67d99a9f9fede9c2a507b723c7a467700076c2",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T2/physics.json",
+      "sha256": "3cfd1f96bbeb883e7f432338e47f91a195022b55ab1ef2e0b13664ef3b822144",
+      "size": 622008
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T2/scene.json",
+      "sha256": "6888c5a813544c152421a03b8556fa68a5edbbc1d4ff21721653c61a5c3dc751",
+      "size": 21502827
+    }
+  ],
+  "scene": "GG_Watcher_Knights@T1"
+}

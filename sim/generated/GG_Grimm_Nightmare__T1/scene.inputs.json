@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Grimm_Nightmare__T2/hero.json",
+      "sha256": "ac8fb73d61b4d355f6281865336ea6551d22282de4d30a498f6cef65b243c2d1",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm_Nightmare__T2/physics.json",
+      "sha256": "e8e832aa8573f6a69ee89940717718364b3dbb9b82fcc087322b9e4feb489dc7",
+      "size": 622017
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm_Nightmare__T2/scene.json",
+      "sha256": "547d54e3aec2d0c6130a50749765a1edf7fcaadef9d3c8bfcd173a95cbe16671",
+      "size": 20206436
+    }
+  ],
+  "scene": "GG_Grimm_Nightmare__T1"
+}

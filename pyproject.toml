@@ -1,0 +1,30 @@
+# The Python environment: `uv sync` makes .venv/ with exactly these versions.
+# torch is pinned exactly: the prebuilt kernels (train/kernels/prebuilt/) link against its C++ ABI.
+[project]
+name = "hkrl"
+version = "0.1.0"
+description = "Reinforcement learning on Hollow Knight boss fights"
+requires-python = "==3.12.*"
+dependencies = [
+    "torch==2.11.0",
+    "numpy==2.4.4",
+    "psutil==7.2.2",
+    "websockets==16.0",
+    "wandb==0.28.2",
+    "pytest==9.1.1",
+    "ninja",            # builds the kernels when no prebuilt one matches
+]
+
+[project.optional-dependencies]
+assets = ["UnityPy==1.25.3"]   # tools/extract_assets.py only
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true

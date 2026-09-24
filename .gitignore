@@ -1,0 +1,37 @@
+# build outputs
+sim/build*/
+*.dll
+*.dll.a
+*.inc
+oracle/bin/
+oracle/obj/
+tools/wallclock_scan/bin/
+tools/wallclock_scan/obj/
+tests/fixtures/staterec/gen/bin/
+tests/fixtures/staterec/gen/obj/
+train/kernels/_build*/
+__pycache__/
+*.pyc
+.venv/
+
+# run outputs
+runs/
+wandb/
+*.log
+*.hktrace
+*.rngdraws.jsonl
+*.hkstate
+!tests/fixtures/staterec/*.hkstate
+
+# analysis/ is the data store (dumps, fsm, corpora, decomp, upstream): only the cited docs are tracked
+analysis/*
+!analysis/README.md
+!analysis/authorities.md
+!analysis/specs/
+
+# release assets (setup.ps1 downloads them)
+train/kernels/prebuilt/
+models/
+dist/
+# the oracle game install (tools/make_oracle_install.ps1)
+/game/

@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T2/hero.json",
+      "sha256": "99b97bcd5b2ff784a05ab5600824ee7618272f4d8544dd70a64428a6290f7317",
+      "size": 253017
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T2/physics.json",
+      "sha256": "213a189161f4380b3cb65af5a48879efbe19e50d9f74aea5f81227e64c92c95d",
+      "size": 622277
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T2/scene.json",
+      "sha256": "b2fc3938f945fa0298af46521050b21e1fda7dda4bdffbe618b15c4978f81e8d",
+      "size": 22548390
+    }
+  ],
+  "scene": "GG_Radiance@T1"
+}

@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_2__T3/hero.json",
+      "sha256": "c78edefcf66e21502cc4b2f5a81a1dad12f4ab36b725c9958d0a5f99d960ead2",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_2__T3/physics.json",
+      "sha256": "8c161fab3559998cdaab843bba047c6e4e9684286311383fbdf2a2f64214b971",
+      "size": 622121
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_2__T3/scene.json",
+      "sha256": "2764f2573821206b1520c79cd8f42851454d1dd45fadbfc7ebe8d534593324b9",
+      "size": 19667013
+    }
+  ],
+  "scene": "GG_Hornet_2__T2"
+}

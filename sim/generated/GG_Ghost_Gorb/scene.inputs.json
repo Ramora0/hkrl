@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps/GG_Ghost_Gorb/hero.json",
+      "sha256": "42403a18fd72677209c9879ae876ebac659404c1e5d701186701f50c075e4d29",
+      "size": 252984
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Gorb/physics.json",
+      "sha256": "fe04a879ece8c31660317c3bfc30402f1fdf56ab57f75529666f5581a9e5472b",
+      "size": 622033
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Gorb/scene.json",
+      "sha256": "94bdac21775afc1b262d1780bc71f53b721bec9768e087883ff4122c5f5c8adf",
+      "size": 18528485
+    }
+  ],
+  "scene": "GG_Ghost_Gorb"
+}

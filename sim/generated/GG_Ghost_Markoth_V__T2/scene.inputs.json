@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Markoth_V__T3/hero.json",
+      "sha256": "5172907724d4ba32bd2b343b8725964c6e25bdf0ec75c5a395f34c105060d75e",
+      "size": 252987
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Markoth_V__T3/physics.json",
+      "sha256": "005b00375269d08be9b07ace20fb813a2a9a301f9e18897c8f88ee082379a1d8",
+      "size": 622039
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Markoth_V__T3/scene.json",
+      "sha256": "c57d38adca9e1d2556981d152bd8bb8886f99ac1260c69ffbcd39144e3473a05",
+      "size": 19602327
+    }
+  ],
+  "scene": "GG_Ghost_Markoth_V__T2"
+}

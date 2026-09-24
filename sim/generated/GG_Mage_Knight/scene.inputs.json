@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight__T1/hero.json",
+      "sha256": "00f987638c7665526ff971515705900dced066720f5d05dcf3795a5fcdc18887",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight__T1/physics.json",
+      "sha256": "a4c049816941261b5a226259b5adfef9ad3590d22a995ed5a9a0a78b816e2535",
+      "size": 622023
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight__T1/scene.json",
+      "sha256": "6338760b8ea2c3cb2497fc25f5c3f1f7890874d5db5ac632a65ed27bd1e1770d",
+      "size": 19229722
+    }
+  ],
+  "scene": "GG_Mage_Knight"
+}

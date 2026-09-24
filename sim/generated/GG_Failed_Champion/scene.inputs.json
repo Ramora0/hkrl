@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T1/hero.json",
+      "sha256": "b51255ecc29fbfd1ba18bb45d02c3a2d297e86b03c1b072a63dd274fe8bcb6e1",
+      "size": 253000
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T1/physics.json",
+      "sha256": "43556a5d979add351e0aef94f6ba354f6f707b4d4252369f4bb4365583d64f6e",
+      "size": 622062
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T1/scene.json",
+      "sha256": "6b97f9da07ee3e8235bc03a8c41dcdc745ab8bc440888d59babdc7f6b77488d6",
+      "size": 20283785
+    }
+  ],
+  "scene": "GG_Failed_Champion"
+}

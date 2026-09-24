@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T3/hero.json",
+      "sha256": "29fadc5f13f689129be277eaf701c350c3fc1dbd00143a0a834eac63e7941385",
+      "size": 253000
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T3/physics.json",
+      "sha256": "666bc1ea13ee96b8f4916893d30e0e7d513f17b22fd2a9f4d22718bed84dc19a",
+      "size": 622114
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T3/scene.json",
+      "sha256": "d53e759388b65235c90ae38d9b9beda567e09dd444a0f20d37df3f765836a360",
+      "size": 19296984
+    }
+  ],
+  "scene": "GG_Traitor_Lord@T2"
+}

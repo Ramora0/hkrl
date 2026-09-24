@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T2/hero.json",
+      "sha256": "c4afe74d415243b9acee598eef0b75c0345dadc996be62e2f3e0c3ad8b21bdaa",
+      "size": 252980
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T2/physics.json",
+      "sha256": "bea36012d359efbec850d0345f438bb59a66c73ffbbd8df8b7d4ec115c986db2",
+      "size": 622008
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T2/scene.json",
+      "sha256": "579d0a9158a9731caa597a9977850e7515ef80ff32abc793028b839f7907005d",
+      "size": 19736480
+    }
+  ],
+  "scene": "GG_Grimm@T1"
+}

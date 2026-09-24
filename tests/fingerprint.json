@@ -1,0 +1,2002 @@
+{
+ "GG_Brooding_Mawlek/1/fast": {
+  "sha": "67fe7a5f3e6dfe4c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Brooding_Mawlek/1/wire": {
+  "sha": "33e49250c347e0c4",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Brooding_Mawlek/2/fast": {
+  "sha": "4e1319f7257884b7",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Brooding_Mawlek/2/wire": {
+  "sha": "bed511b95d23b5ce",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Brooding_Mawlek_V@T1/1/fast": {
+  "sha": "bbf8fe42c7f1cfe7",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Brooding_Mawlek_V@T1/1/wire": {
+  "sha": "70311b9b428401f4",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Brooding_Mawlek_V@T1/2/fast": {
+  "sha": "d35d230284e06630",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Brooding_Mawlek_V@T1/2/wire": {
+  "sha": "d7f35d21de7588d9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Brooding_Mawlek_V@T2/1/fast": {
+  "sha": "a834478acc781ccf",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Brooding_Mawlek_V@T2/1/wire": {
+  "sha": "d6443a78213e2cdd",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Brooding_Mawlek_V@T2/2/fast": {
+  "sha": "276f16caf9941948",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Brooding_Mawlek_V@T2/2/wire": {
+  "sha": "c4d75c730bd831b5",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian/1/fast": {
+  "sha": "09ea8f02c713830f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian/1/wire": {
+  "sha": "5aba1c81c4f29869",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian/2/fast": {
+  "sha": "4de2846c276e4de1",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian/2/wire": {
+  "sha": "1631e49a1192af08",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian@T1/1/fast": {
+  "sha": "4dc659c2b2cb01da",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian@T1/1/wire": {
+  "sha": "589bc243b0ee0e45",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian@T1/2/fast": {
+  "sha": "6e9ea3521c08bf19",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian@T1/2/wire": {
+  "sha": "449372f9fc463f08",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian@T2/1/fast": {
+  "sha": "1244ac96d71d4ac4",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian@T2/1/wire": {
+  "sha": "0ebf28fefea361ab",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian@T2/2/fast": {
+  "sha": "3022ec529a2e7baa",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Crystal_Guardian@T2/2/wire": {
+  "sha": "078b95a6757b585c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion/1/fast": {
+  "sha": "48d5f3292ee227eb",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion/1/wire": {
+  "sha": "d62f9759dd505e96",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion/2/fast": {
+  "sha": "9307699063dfaf0c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion/2/wire": {
+  "sha": "4bebc3f9f3bc1e68",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion@T1/1/fast": {
+  "sha": "0cc279bcf1bc6110",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion@T1/1/wire": {
+  "sha": "667de642bb8dbfc5",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion@T1/2/fast": {
+  "sha": "11d679963ed26161",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion@T1/2/wire": {
+  "sha": "dc6e51cf5a256cc8",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion@T2/1/fast": {
+  "sha": "183a42a961e26ddc",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion@T2/1/wire": {
+  "sha": "2a83924854ce39e4",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion@T2/2/fast": {
+  "sha": "07a73766017b9620",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Failed_Champion@T2/2/wire": {
+  "sha": "a9744f3bbe82593e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight/1/fast": {
+  "sha": "4a4a70c180360c33",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight/1/wire": {
+  "sha": "5411aa55460d83a8",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight/2/fast": {
+  "sha": "e518a649ae1acee3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight/2/wire": {
+  "sha": "43a6b58087a6b825",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight@T1/1/fast": {
+  "sha": "83191d313cb20462",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight@T1/1/wire": {
+  "sha": "e026422b919f0ee2",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight@T1/2/fast": {
+  "sha": "55a73c4728b538d1",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight@T1/2/wire": {
+  "sha": "ec5996fc2f77d64f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight@T2/1/fast": {
+  "sha": "83191d313cb20462",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight@T2/1/wire": {
+  "sha": "92eda131f54a45d4",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight@T2/2/fast": {
+  "sha": "2499b2912da36abc",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_False_Knight@T2/2/wire": {
+  "sha": "497fea18f4f8ad36",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien/1/fast": {
+  "sha": "516fc0b8088630c0",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien/1/wire": {
+  "sha": "78f9162140e1870c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien/2/fast": {
+  "sha": "0bb4b12a07b49af1",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien/2/wire": {
+  "sha": "b256f715559aef19",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien@T1/1/fast": {
+  "sha": "41d74549c34deaec",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien@T1/1/wire": {
+  "sha": "45184f5f465960e7",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien@T1/2/fast": {
+  "sha": "67d483508776bc77",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien@T1/2/wire": {
+  "sha": "de14b5c42cd40692",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien@T2/1/fast": {
+  "sha": "98c8e90cc02cb77f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien@T2/1/wire": {
+  "sha": "25365b85a89ee1aa",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien@T2/2/fast": {
+  "sha": "3dfe15dad8e46176",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Galien@T2/2/wire": {
+  "sha": "d7008d7a2efe3a19",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb/1/fast": {
+  "sha": "8851e2dc5b39cc51",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb/1/wire": {
+  "sha": "b1b060a3b7eb9244",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb/2/fast": {
+  "sha": "ae0e5a2f4386482e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb/2/wire": {
+  "sha": "c265f710dbf1555b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb_V@T1/1/fast": {
+  "sha": "aea8e044dbebbed2",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb_V@T1/1/wire": {
+  "sha": "2c9943a542f007fe",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb_V@T1/2/fast": {
+  "sha": "44d45d424ecf8cb3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb_V@T1/2/wire": {
+  "sha": "0c1987b98b921eb7",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb_V@T2/1/fast": {
+  "sha": "96f9654417ba65d3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb_V@T2/1/wire": {
+  "sha": "4ef691a5b22c4b90",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb_V@T2/2/fast": {
+  "sha": "efc84e443495daff",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Gorb_V@T2/2/wire": {
+  "sha": "34a83727420aaa95",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu/1/fast": {
+  "sha": "a1a9f065321918bb",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu/1/wire": {
+  "sha": "1d3810142af31eeb",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu/2/fast": {
+  "sha": "cedcc5c6bdcb6147",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu/2/wire": {
+  "sha": "429619d80dd664f9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu@T1/1/fast": {
+  "sha": "10920e1176e03f77",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu@T1/1/wire": {
+  "sha": "f995c7f7a233336e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu@T1/2/fast": {
+  "sha": "6076b205df078e0e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu@T1/2/wire": {
+  "sha": "34804e448de547ca",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu@T2/1/fast": {
+  "sha": "10920e1176e03f77",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu@T2/1/wire": {
+  "sha": "70a66651b16a3b1e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu@T2/2/fast": {
+  "sha": "4652a86bf19e4405",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Hu@T2/2/wire": {
+  "sha": "250d143b5d3f9a1c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth/1/fast": {
+  "sha": "5d60ace754ea4c86",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth/1/wire": {
+  "sha": "af075a8fc21e9a1b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth/2/fast": {
+  "sha": "fc385a86e928ce7d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth/2/wire": {
+  "sha": "02aef6a3f0212164",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth_V@T1/1/fast": {
+  "sha": "2fb3fbebd1a42b8f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth_V@T1/1/wire": {
+  "sha": "7ff1006261a16eb5",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth_V@T1/2/fast": {
+  "sha": "5cbca3728f6d4e7a",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth_V@T1/2/wire": {
+  "sha": "59f328794018933b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth_V@T2/1/fast": {
+  "sha": "8b0da10d9a51a218",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth_V@T2/1/wire": {
+  "sha": "1ac908a02e21f811",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth_V@T2/2/fast": {
+  "sha": "3658626af7355152",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Markoth_V@T2/2/wire": {
+  "sha": "54ece6b5191c0993",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu/1/fast": {
+  "sha": "ff9adebbfd93582d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu/1/wire": {
+  "sha": "abe052f2065bd9cd",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu/2/fast": {
+  "sha": "bd015cc5a0978c44",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu/2/wire": {
+  "sha": "621a039ea06a8a12",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu_V@T1/1/fast": {
+  "sha": "73c9266af291e0f6",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu_V@T1/1/wire": {
+  "sha": "5d42b5d347c78834",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu_V@T1/2/fast": {
+  "sha": "bb9c3e6ee1419b13",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu_V@T1/2/wire": {
+  "sha": "7eb3f083a34c2f1c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu_V@T2/1/fast": {
+  "sha": "953a259227f09ebc",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu_V@T2/1/wire": {
+  "sha": "7923f26a23bebece",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu_V@T2/2/fast": {
+  "sha": "8ec383d9a04635cf",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Marmu_V@T2/2/wire": {
+  "sha": "7370d522a060aa01",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes/1/fast": {
+  "sha": "8a8e4d1b495b9ca3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes/1/wire": {
+  "sha": "bb2fb9b2817e9268",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes/2/fast": {
+  "sha": "a71fbbd7e60795e9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes/2/wire": {
+  "sha": "0dc44863a79e948d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes_V@T1/1/fast": {
+  "sha": "c9ac798626353e16",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes_V@T1/1/wire": {
+  "sha": "d15ea85cf7929cc2",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes_V@T1/2/fast": {
+  "sha": "5b2fdfd43ff199fb",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes_V@T1/2/wire": {
+  "sha": "79305370b493038d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes_V@T2/1/fast": {
+  "sha": "c4fa8181e3ebd0f7",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes_V@T2/1/wire": {
+  "sha": "d8c9f2d2e7bbd008",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes_V@T2/2/fast": {
+  "sha": "32c95b04199c6a93",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_No_Eyes_V@T2/2/wire": {
+  "sha": "f894a6bab2065971",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero/1/fast": {
+  "sha": "dae4231f0ffb0b9d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero/1/wire": {
+  "sha": "0b12ac064503ff43",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero/2/fast": {
+  "sha": "502904069fc23910",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero/2/wire": {
+  "sha": "0633917f72f99984",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero_V@T1/1/fast": {
+  "sha": "b5a37f436dcbcc55",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero_V@T1/1/wire": {
+  "sha": "6f436dc7350cb52f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero_V@T1/2/fast": {
+  "sha": "b9100effb2f38194",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero_V@T1/2/wire": {
+  "sha": "5cffcef00cdc9414",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero_V@T2/1/fast": {
+  "sha": "7b0e3c6d5cc4d912",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero_V@T2/1/wire": {
+  "sha": "cae4eee7706af200",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero_V@T2/2/fast": {
+  "sha": "2a7becacd07e5e11",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Ghost_Xero_V@T2/2/wire": {
+  "sha": "236bd3ef61485aaa",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer/1/fast": {
+  "sha": "1416c016fdf020ee",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer/1/wire": {
+  "sha": "7453e811b3a7e390",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer/2/fast": {
+  "sha": "bc5f893b9f5d4794",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer/2/wire": {
+  "sha": "e3e0c3395d1db518",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer@T1/1/fast": {
+  "sha": "c3735212ae2dbc3f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer@T1/1/wire": {
+  "sha": "5339bc5709c5ab2b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer@T1/2/fast": {
+  "sha": "9cb99f0102153808",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer@T1/2/wire": {
+  "sha": "76b840f8ba87ed7d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer@T2/1/fast": {
+  "sha": "2027c8da20cc47ec",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer@T2/1/wire": {
+  "sha": "e555629150491af0",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer@T2/2/fast": {
+  "sha": "87deb3776303a56b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_God_Tamer@T2/2/wire": {
+  "sha": "68e3c321a6857587",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote/1/fast": {
+  "sha": "e372bb2f53d220fd",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote/1/wire": {
+  "sha": "dd23eb03789bf7df",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote/2/fast": {
+  "sha": "ecfd88a7c79d9038",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote/2/wire": {
+  "sha": "35dd1d35e2d61b9c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote@T1/1/fast": {
+  "sha": "e372bb2f53d220fd",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote@T1/1/wire": {
+  "sha": "fd76123843d5d544",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote@T1/2/fast": {
+  "sha": "5bf42ab7daf4ddb3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote@T1/2/wire": {
+  "sha": "9146faf2b337944d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote@T2/1/fast": {
+  "sha": "e372bb2f53d220fd",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote@T2/1/wire": {
+  "sha": "84a2a7c9a390e892",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote@T2/2/fast": {
+  "sha": "e24527c7f789ff40",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grey_Prince_Zote@T2/2/wire": {
+  "sha": "b10cbb8e7e2c2621",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm/1/fast": {
+  "sha": "cc205734b5c619a0",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm/1/wire": {
+  "sha": "d95d08757feb8d5b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm/2/fast": {
+  "sha": "f65847cb8c719016",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm/2/wire": {
+  "sha": "ae507c79cb708756",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm@T1/1/fast": {
+  "sha": "8e008cba09551b69",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm@T1/1/wire": {
+  "sha": "197065784e9ff1cf",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm@T1/2/fast": {
+  "sha": "127857efaa3c61cf",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm@T1/2/wire": {
+  "sha": "2e0c7b40d7e587aa",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm@T2/1/fast": {
+  "sha": "5a0030acee8f411f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm@T2/1/wire": {
+  "sha": "70c38d216548fb7d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm@T2/2/fast": {
+  "sha": "e20023d411e0de3a",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm@T2/2/wire": {
+  "sha": "c5aa349524d1c690",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare/1/fast": {
+  "sha": "d527ed132c1d0c4a",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare/1/wire": {
+  "sha": "bfc3528b68e8a872",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare/2/fast": {
+  "sha": "398fd75ebd53a140",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare/2/wire": {
+  "sha": "5c72b2ac24c81b15",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare@T1/1/fast": {
+  "sha": "b01d3cd19c3a2442",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare@T1/1/wire": {
+  "sha": "a2f1e1b112410f3c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare@T1/2/fast": {
+  "sha": "b2384108f478c22b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare@T1/2/wire": {
+  "sha": "e80b6d0f274bf22f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare@T2/1/fast": {
+  "sha": "8561b0e5deba7db2",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare@T2/1/wire": {
+  "sha": "3d8ee2c21ad80fa6",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare@T2/2/fast": {
+  "sha": "eacfa8fdc7aad55e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Grimm_Nightmare@T2/2/wire": {
+  "sha": "e628caad074dfe32",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother/1/fast": {
+  "sha": "296df6b3469dcecf",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother/1/wire": {
+  "sha": "90601202452207da",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother/2/fast": {
+  "sha": "b44cd6f2c5e93ab5",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother/2/wire": {
+  "sha": "c26695cec8c31718",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V/1/fast": {
+  "sha": "96d63ceddb611003",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V/1/wire": {
+  "sha": "aef41082eb22664b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V/2/fast": {
+  "sha": "53109b8ee16948b1",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V/2/wire": {
+  "sha": "9c918b77929653a7",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V@T1/1/fast": {
+  "sha": "eae813d1092ede43",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V@T1/1/wire": {
+  "sha": "4a2b7a9fe956519b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V@T1/2/fast": {
+  "sha": "17b3298e6e31ce4c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V@T1/2/wire": {
+  "sha": "bed69324489a6438",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V@T2/1/fast": {
+  "sha": "613e8c545498ab6b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V@T2/1/wire": {
+  "sha": "83b87fb31436fe1c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V@T2/2/fast": {
+  "sha": "f141d1df9c4d24c4",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Gruz_Mother_V@T2/2/wire": {
+  "sha": "da8d120eec124823",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight/1/fast": {
+  "sha": "bef645dbe6c10d4a",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight/1/wire": {
+  "sha": "24e29427df28ecd1",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight/2/fast": {
+  "sha": "2f148efddae07128",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight/2/wire": {
+  "sha": "239d2cf2517c4b72",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight@T1/1/fast": {
+  "sha": "17c507a84739e2d9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight@T1/1/wire": {
+  "sha": "19ccbeda616a5d7e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight@T1/2/fast": {
+  "sha": "25b4185490123059",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight@T1/2/wire": {
+  "sha": "8fb513516ad33ce9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight@T2/1/fast": {
+  "sha": "3a8d94f741c06418",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight@T2/1/wire": {
+  "sha": "5865c1ada1d3dfc3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight@T2/2/fast": {
+  "sha": "8fa51e6ba914711b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hive_Knight@T2/2/wire": {
+  "sha": "477eaf0125a85632",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight/1/fast": {
+  "sha": "0d7de27edff3b841",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight/1/wire": {
+  "sha": "e06616c03d40431b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight/2/fast": {
+  "sha": "c54b876094aec93f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight/2/wire": {
+  "sha": "d50d1c9e3e25eaf1",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight@T1/1/fast": {
+  "sha": "e3ba0c2f1654bb57",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight@T1/1/wire": {
+  "sha": "5b5ab0c56fe93f25",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight@T1/2/fast": {
+  "sha": "023947ee205be111",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight@T1/2/wire": {
+  "sha": "ac4bd2f667f4fe25",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight@T2/1/fast": {
+  "sha": "d6e6ff52175605b9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight@T2/1/wire": {
+  "sha": "e967ae963b6128c9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight@T2/2/fast": {
+  "sha": "4c4ee40968183a96",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hollow_Knight@T2/2/wire": {
+  "sha": "febedaf378528df0",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1/1/fast": {
+  "sha": "1f1c5a2ad9aa3750",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1/1/wire": {
+  "sha": "2c350754de5c0ce6",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1/2/fast": {
+  "sha": "3ff915fdd85c5e3c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1/2/wire": {
+  "sha": "b809ea2317bcc40e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1@T1/1/fast": {
+  "sha": "f9d1a75e68efd13f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1@T1/1/wire": {
+  "sha": "32763638af519d69",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1@T1/2/fast": {
+  "sha": "ff0631b82add15f8",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1@T1/2/wire": {
+  "sha": "0c397df932f33d55",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1@T2/1/fast": {
+  "sha": "1515eb2b337a4725",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1@T2/1/wire": {
+  "sha": "3d3d9dedffefc510",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1@T2/2/fast": {
+  "sha": "0ed58b34c0a80c4c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_1@T2/2/wire": {
+  "sha": "d8521c73a366287e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2/1/fast": {
+  "sha": "48812867df31c817",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2/1/wire": {
+  "sha": "75195c9e0a3764a6",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2/2/fast": {
+  "sha": "ead471e2b93358db",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2/2/wire": {
+  "sha": "1b624c83e5d683ab",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2@T1/1/fast": {
+  "sha": "ce9d7d9dcac96f65",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2@T1/1/wire": {
+  "sha": "242afa51027de4f2",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2@T1/2/fast": {
+  "sha": "c6a78b8c1a884874",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2@T1/2/wire": {
+  "sha": "472c3cc36fea06c5",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2@T2/1/fast": {
+  "sha": "5234df7b089b548e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2@T2/1/wire": {
+  "sha": "02891bc11858552f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2@T2/2/fast": {
+  "sha": "e9fd411e7b4d29d9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Hornet_2@T2/2/wire": {
+  "sha": "fc7ae39b14cfcd0c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight/1/fast": {
+  "sha": "bd5cdf1f99ecdd00",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight/1/wire": {
+  "sha": "cbe70acfd9f9dccb",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight/2/fast": {
+  "sha": "8858eab1405c56f0",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight/2/wire": {
+  "sha": "8185b8b2535bfc1d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight_V@T1/1/fast": {
+  "sha": "b298977c8733460e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight_V@T1/1/wire": {
+  "sha": "c7bef110ecf11dcf",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight_V@T1/2/fast": {
+  "sha": "ee3589cb57f8a883",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight_V@T1/2/wire": {
+  "sha": "9cfba8a490996580",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight_V@T2/1/fast": {
+  "sha": "d849f67c806b8643",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight_V@T2/1/wire": {
+  "sha": "4290231251017e5f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight_V@T2/2/fast": {
+  "sha": "aaa94c9e4b2c466b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mage_Knight_V@T2/2/wire": {
+  "sha": "552851b4446ffd17",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords/1/fast": {
+  "sha": "39f6312cb6115a87",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords/1/wire": {
+  "sha": "c50bb5ef4fe9c885",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords/2/fast": {
+  "sha": "00cd82859b74d1dc",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords/2/wire": {
+  "sha": "9e7c74becdc8eba2",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords@T1/1/fast": {
+  "sha": "2adc24f39451d156",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords@T1/1/wire": {
+  "sha": "3218d7d416fe8d5b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords@T1/2/fast": {
+  "sha": "116f8425771140ac",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords@T1/2/wire": {
+  "sha": "80394354a6b6fef5",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords@T2/1/fast": {
+  "sha": "7e584fe031cd9194",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords@T2/1/wire": {
+  "sha": "7f83581fd51cd4d8",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords@T2/2/fast": {
+  "sha": "967714858061fdf4",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords@T2/2/wire": {
+  "sha": "3c24278a5aa379ec",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V/1/fast": {
+  "sha": "7535bf7801fe0649",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V/1/wire": {
+  "sha": "f6ceca54195d9a77",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V/2/fast": {
+  "sha": "f85751c7cb0a903d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V/2/wire": {
+  "sha": "848224567ebd7ca9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V@T1/1/fast": {
+  "sha": "f6aa7637823600c4",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V@T1/1/wire": {
+  "sha": "04e1145876bf2d0f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V@T1/2/fast": {
+  "sha": "b486475e3c08b688",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V@T1/2/wire": {
+  "sha": "0dece55bf884916b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V@T2/1/fast": {
+  "sha": "84ed93b3154ec033",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V@T2/1/wire": {
+  "sha": "d736fc5533870e77",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V@T2/2/fast": {
+  "sha": "c048ffca4493dd6c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mantis_Lords_V@T2/2/wire": {
+  "sha": "0d0eacd6f83ec6b5",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger/1/fast": {
+  "sha": "c63413a4325e0692",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger/1/wire": {
+  "sha": "d7961969c12f5251",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger/2/fast": {
+  "sha": "f3932d1b2c0435eb",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger/2/wire": {
+  "sha": "37f85af87ac0924f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger@T1/1/fast": {
+  "sha": "b49264bd680dc708",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger@T1/1/wire": {
+  "sha": "e36afffeb5a5b023",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger@T1/2/fast": {
+  "sha": "c5b9ad9c9e204b1b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger@T1/2/wire": {
+  "sha": "00e2f64ad8998ff6",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger@T2/1/fast": {
+  "sha": "47303c3701d8f073",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger@T2/1/wire": {
+  "sha": "7ddb6576e39f476f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger@T2/2/fast": {
+  "sha": "4aa5e67b224c6212",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Mega_Moss_Charger@T2/2/wire": {
+  "sha": "e5673ec2d5637e0c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters/1/fast": {
+  "sha": "0930ecc467b37c05",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters/1/wire": {
+  "sha": "ad30403bf6f311d1",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters/2/fast": {
+  "sha": "ac8db2b0f8d68e99",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters/2/wire": {
+  "sha": "438a2cf90c179311",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters@T1/1/fast": {
+  "sha": "a515a9def7627fe3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters@T1/1/wire": {
+  "sha": "147336e39d8ac265",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters@T1/2/fast": {
+  "sha": "1205c3399edcce76",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters@T1/2/wire": {
+  "sha": "683d8fa8e6a01e44",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters@T2/1/fast": {
+  "sha": "e78c75f312bfc215",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters@T2/1/wire": {
+  "sha": "233cdab9cc62e731",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters@T2/2/fast": {
+  "sha": "7fcd8d3e105aacb3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nailmasters@T2/2/wire": {
+  "sha": "9a16e819ad42a0f8",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk/1/fast": {
+  "sha": "e66653fb14947d6e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk/1/wire": {
+  "sha": "1eba3e414d7a94a6",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk/2/fast": {
+  "sha": "2453b2664472c118",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk/2/wire": {
+  "sha": "8d6096365df6bdc1",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk_V@T1/1/fast": {
+  "sha": "f8fe34ab51e81ab9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk_V@T1/1/wire": {
+  "sha": "0e422f7f034479f2",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk_V@T1/2/fast": {
+  "sha": "5cfb8f1b5ccb39ea",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk_V@T1/2/wire": {
+  "sha": "0223359999826f96",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk_V@T2/1/fast": {
+  "sha": "e910b83641293b19",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk_V@T2/1/wire": {
+  "sha": "48494d2a460ed66b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk_V@T2/2/fast": {
+  "sha": "528821d582220a72",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Nosk_V@T2/2/wire": {
+  "sha": "c49abc47183f9d71",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles/1/fast": {
+  "sha": "69fbee09a79b6621",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles/1/wire": {
+  "sha": "a44c3c06b77ed8d6",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles/2/fast": {
+  "sha": "ec2835ff1bb861f5",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles/2/wire": {
+  "sha": "6236912d7058413e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles@T1/1/fast": {
+  "sha": "c98d66eaaeff0238",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles@T1/1/wire": {
+  "sha": "bbe5f7b92d4c6c10",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles@T1/2/fast": {
+  "sha": "4c00eed7d34e7590",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles@T1/2/wire": {
+  "sha": "7a79a42c1ce98aa2",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles@T2/1/fast": {
+  "sha": "64729036507fd313",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles@T2/1/wire": {
+  "sha": "cc0dc03f87717872",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles@T2/2/fast": {
+  "sha": "f3b2ec5c986584aa",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Oblobbles@T2/2/wire": {
+  "sha": "6b53bb2bda465e46",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance/1/fast": {
+  "sha": "f14bbc2e3216e6bc",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance/1/wire": {
+  "sha": "1d246d39f568c066",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance/2/fast": {
+  "sha": "362e3da5b552b5aa",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance/2/wire": {
+  "sha": "0be6e34fd9503c0b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance@T1/1/fast": {
+  "sha": "f14bbc2e3216e6bc",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance@T1/1/wire": {
+  "sha": "058ca6458fc99d43",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance@T1/2/fast": {
+  "sha": "c6d40544bb661256",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance@T1/2/wire": {
+  "sha": "63b7c0aa4818b41d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance@T2/1/fast": {
+  "sha": "f14bbc2e3216e6bc",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance@T2/1/wire": {
+  "sha": "33d4081f1e22e75a",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance@T2/2/fast": {
+  "sha": "5727a020f951ab03",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Radiance@T2/2/wire": {
+  "sha": "531b3ee16921a84c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly/1/fast": {
+  "sha": "42f6e2fd05d7dce8",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly/1/wire": {
+  "sha": "4815fdea88dc258d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly/2/fast": {
+  "sha": "74ab3cdef675e712",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly/2/wire": {
+  "sha": "ec84cd65ed541c48",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly@T1/1/fast": {
+  "sha": "f09fecb78b805b70",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly@T1/1/wire": {
+  "sha": "1e6edccb9a23fdd3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly@T1/2/fast": {
+  "sha": "9773fa86d2fa3193",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly@T1/2/wire": {
+  "sha": "9badfa7811313cbb",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly@T2/1/fast": {
+  "sha": "f5e8229e52393b83",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly@T2/1/wire": {
+  "sha": "9b9b66c79b660125",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly@T2/2/fast": {
+  "sha": "caf01f5240d0b572",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Sly@T2/2/wire": {
+  "sha": "5cf68ca0fe9a545c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master/1/fast": {
+  "sha": "83435d41ecc13618",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master/1/wire": {
+  "sha": "1486239e14b3d038",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master/2/fast": {
+  "sha": "cfc7f45ad7be0327",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master/2/wire": {
+  "sha": "b3c8cc7cc5c036b9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master@T1/1/fast": {
+  "sha": "93dd742ee251700a",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master@T1/1/wire": {
+  "sha": "f7eafb5b942008c2",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master@T1/2/fast": {
+  "sha": "0278c83706242528",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master@T1/2/wire": {
+  "sha": "e4f0496e3a9b48ae",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master@T2/1/fast": {
+  "sha": "79e4587cab8e6f77",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master@T2/1/wire": {
+  "sha": "17e7ef9d6d4840e8",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master@T2/2/fast": {
+  "sha": "c1ca527fd7463181",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Master@T2/2/wire": {
+  "sha": "6dffbc30a24a3d5b",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant/1/fast": {
+  "sha": "f4b170a64cb8739f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant/1/wire": {
+  "sha": "f7996198e3f665ea",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant/2/fast": {
+  "sha": "99b1913c20857093",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant/2/wire": {
+  "sha": "e57c52d19999113d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant@T1/1/fast": {
+  "sha": "d52fe484fbae8927",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant@T1/1/wire": {
+  "sha": "d333952851945f3c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant@T1/2/fast": {
+  "sha": "42d9af70102cb5dc",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant@T1/2/wire": {
+  "sha": "0ba46dbd6beca421",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant@T2/1/fast": {
+  "sha": "273e8ea643737aa2",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant@T2/1/wire": {
+  "sha": "fdd70a174be0c1ac",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant@T2/2/fast": {
+  "sha": "0e5484ec710a0bea",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Soul_Tyrant@T2/2/wire": {
+  "sha": "2d50d7c9dbd3f326",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord/1/fast": {
+  "sha": "0113f73815a5038d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord/1/wire": {
+  "sha": "0a20756df364d297",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord/2/fast": {
+  "sha": "4869c0454bb0dbd3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord/2/wire": {
+  "sha": "03afeec0c59ff866",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord@T1/1/fast": {
+  "sha": "824fcf0957dcf7ed",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord@T1/1/wire": {
+  "sha": "bbd1f241996a714e",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord@T1/2/fast": {
+  "sha": "52e02cd421e5b0a9",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord@T1/2/wire": {
+  "sha": "872083c451cf3dbd",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord@T2/1/fast": {
+  "sha": "883ba536f7aa8d03",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord@T2/1/wire": {
+  "sha": "94e77a1bf9bc8d72",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord@T2/2/fast": {
+  "sha": "46e43aa5bdcc64b5",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Traitor_Lord@T2/2/wire": {
+  "sha": "7477aa4fef54e79d",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights/1/fast": {
+  "sha": "a342f6d1194702bd",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights/1/wire": {
+  "sha": "7c94efaa8586d187",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights/2/fast": {
+  "sha": "bf40003885022a01",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights/2/wire": {
+  "sha": "5703d8123b3cfc24",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights@T1/1/fast": {
+  "sha": "662035ab40715f7f",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights@T1/1/wire": {
+  "sha": "e4881e0f7e56ad44",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights@T1/2/fast": {
+  "sha": "9b089a43bfb868b3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights@T1/2/wire": {
+  "sha": "548eabf74e1609e8",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights@T2/1/fast": {
+  "sha": "316c9f0a3ae6420c",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights@T2/1/wire": {
+  "sha": "5fda68b389d02564",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights@T2/2/fast": {
+  "sha": "8a4e8f0da5e287e3",
+  "status": "ok",
+  "steps": 600
+ },
+ "GG_Watcher_Knights@T2/2/wire": {
+  "sha": "f7d36bf1cd9c9b8f",
+  "status": "ok",
+  "steps": 600
+ }
+}

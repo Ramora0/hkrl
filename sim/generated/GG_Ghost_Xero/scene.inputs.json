@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps/GG_Ghost_Xero/hero.json",
+      "sha256": "94e9b6f84041344cf8c0a9051a2de7593c31e9f55adb6ef08f2bc42f0b660091",
+      "size": 253001
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Xero/physics.json",
+      "sha256": "77a4ca0d1c68103ba2adfce10285e3730c3254bc4c32d93167fa8e3eb57d479d",
+      "size": 622203
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Xero/scene.json",
+      "sha256": "d35d2492b2f22110ed91f88a90a7367e2b1c5b317b722f51976350b8ea88d71c",
+      "size": 18647821
+    }
+  ],
+  "scene": "GG_Ghost_Xero"
+}

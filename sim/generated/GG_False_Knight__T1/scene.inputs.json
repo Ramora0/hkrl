@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_False_Knight__T2/hero.json",
+      "sha256": "dab75fa9c58ce0d4530426e83e8247b12e794fcc956645c252332945efe8c778",
+      "size": 253020
+    },
+    {
+      "path": "analysis/dumps_v2/GG_False_Knight__T2/physics.json",
+      "sha256": "436615cab6dafd2dfe49f8b394b7a1f33c39954edbe193f72f529387935c8c2e",
+      "size": 622240
+    },
+    {
+      "path": "analysis/dumps_v2/GG_False_Knight__T2/scene.json",
+      "sha256": "3ffdb04040f513bf18c23d88f16846a647bfe068bcb15c33d8af76e370b46f2a",
+      "size": 19487691
+    }
+  ],
+  "scene": "GG_False_Knight__T1"
+}

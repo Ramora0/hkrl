@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T3/hero.json",
+      "sha256": "af5f00868a234a020c5673b1eebb7dc0289c916cc4c271a1f00b59e12e9180d6",
+      "size": 253005
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T3/physics.json",
+      "sha256": "e4dd957d7d9525497fee3cae5ffd25e2519014b73f8a37cf66b3be53ab0b230a",
+      "size": 622106
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T3/scene.json",
+      "sha256": "8c04cb8d7e9990be56c240d443e53a5273251741c7ed1f5c398688969ee4064f",
+      "size": 19058769
+    }
+  ],
+  "scene": "GG_Crystal_Guardian@T2"
+}

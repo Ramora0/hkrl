@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Lists every wall-clock call site in the game's assemblies (oracle/Record/WallClockSites.cs) by reading their
+       IL with Mono.Cecil; nothing of the game is loaded or run.  Built and run by tools/wallclock_sites.py. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>WallClockScan</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../../oracle/Record/WallClockSites.cs" />
+    <Reference Include="Mono.Cecil">
+      <HintPath>$(HkManaged)/Mono.Cecil.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

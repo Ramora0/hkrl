@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps/GG_Gruz_Mother_V/hero.json",
+      "sha256": "4d693323f2d50ef8a056074c90f5acaffec9c20ef35c6b344582229d34f8966c",
+      "size": 252987
+    },
+    {
+      "path": "analysis/dumps/GG_Gruz_Mother_V/physics.json",
+      "sha256": "e0a1ae4ad164629d34c135736309e955ddd5bf65dac2e447b887ed54a0d5bc24",
+      "size": 622084
+    },
+    {
+      "path": "analysis/dumps/GG_Gruz_Mother_V/scene.json",
+      "sha256": "da3eca7f7b4bf133a541963d785ed326b649387f41087ab3211547246b67ba51",
+      "size": 18370751
+    }
+  ],
+  "scene": "GG_Gruz_Mother_V"
+}

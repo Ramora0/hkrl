@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T1/hero.json",
+      "sha256": "42b74a4c585b62d987b1490f7207871ec6bda521a7ca9e6c33e30052d7b02233",
+      "size": 253010
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T1/physics.json",
+      "sha256": "4c36585db8a1f1727d5c0ed79b06ad133b6989c5eccbc2fa4abd8229501ae87e",
+      "size": 622210
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T1/scene.json",
+      "sha256": "b93bded57109238e659a1a1577243bea821451e14a23ae560e69f947758630a5",
+      "size": 19528254
+    }
+  ],
+  "scene": "GG_Mantis_Lords"
+}

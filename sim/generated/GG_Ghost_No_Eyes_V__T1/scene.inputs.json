@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_No_Eyes_V__T2/hero.json",
+      "sha256": "ebedbc5798353670db209eea1d280756854dcd77c520bde36195964659febfd2",
+      "size": 252985
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_No_Eyes_V__T2/physics.json",
+      "sha256": "0ff78803609b3c952188c50e5462d96f1a29d497fe4e8dae1e409dd10d93f454",
+      "size": 622071
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_No_Eyes_V__T2/scene.json",
+      "sha256": "9bc8fe3e930c8384b9ebd8a63da5a741b68e853a5d1cee922f2063586fd37087",
+      "size": 19850188
+    }
+  ],
+  "scene": "GG_Ghost_No_Eyes_V__T1"
+}

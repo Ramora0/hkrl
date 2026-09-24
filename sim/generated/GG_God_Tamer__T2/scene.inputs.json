@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T3/hero.json",
+      "sha256": "bf89f16c518eee3477946b38ac17db906f01c192a8da01e088309d0c02ebf685",
+      "size": 252993
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T3/physics.json",
+      "sha256": "e842ad7a7459813ff9056f5291ff5caa366f19c5577e0b4f727b04f41cb1d660",
+      "size": 622049
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T3/scene.json",
+      "sha256": "c3a21013490b141d76bf42cc52e6d122fa9724c928613fb39f9e4bbe3d0637cd",
+      "size": 19802569
+    }
+  ],
+  "scene": "GG_God_Tamer@T2"
+}

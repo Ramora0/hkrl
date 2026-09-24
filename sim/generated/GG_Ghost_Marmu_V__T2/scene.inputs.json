@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Marmu_V__T3/hero.json",
+      "sha256": "f0de54a5e24b45ff057b4987d624052e8959930482212ca295f724ccca0de295",
+      "size": 252990
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Marmu_V__T3/physics.json",
+      "sha256": "85e248be5f96813064e84551b7492ae6a50b20eab758c5631408db399f03778c",
+      "size": 622088
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Marmu_V__T3/scene.json",
+      "sha256": "d4f6e244c7d2c8f4476bd5b0bd8dd97c612331ebe4b0ce388520da9d86815329",
+      "size": 19135695
+    }
+  ],
+  "scene": "GG_Ghost_Marmu_V__T2"
+}

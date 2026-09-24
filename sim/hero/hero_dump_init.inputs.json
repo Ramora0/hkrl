@@ -1,0 +1,2956 @@
+{
+  "generator": "sim/hero/gen_fields.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps/GG_False_Knight/hero.json",
+      "sha256": "f58bb5dcbaaea65b18ee666f276e285b192efd827cac4636714249fae19622e2",
+      "size": 253020
+    },
+    {
+      "path": "analysis/dumps/GG_False_Knight/hierarchy.json.gz",
+      "sha256": "48eca16c5545a5c39b59d645f5ecdb313106b2394a8825492659809ce1be6f07",
+      "size": 10244573
+    },
+    {
+      "path": "analysis/dumps/GG_False_Knight/meta.json",
+      "sha256": "d11e52aa4950abc97dcf88f57d105eb2a89200aa4e11d1b0c58c14a3586d5e2a",
+      "size": 1032
+    },
+    {
+      "path": "analysis/dumps/GG_False_Knight/playerdata.json",
+      "sha256": "5a1b7fc74381b6632a1c7abb1f017e9a69a03417c76c8d2e59c0590bfa4a8dab",
+      "size": 259289
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Gorb/hero.json",
+      "sha256": "42403a18fd72677209c9879ae876ebac659404c1e5d701186701f50c075e4d29",
+      "size": 252984
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Gorb/hierarchy.json.gz",
+      "sha256": "91c4661f6b7d9050bf9f75a3687e285fc9c91a9d4f2a3cd6d00bb7fe472a7641",
+      "size": 10131894
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Gorb/meta.json",
+      "sha256": "5a14e4ce2d402ff71544debef5061fe76956ab660d235c116c3c1b91de2d4a31",
+      "size": 1029
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Gorb/playerdata.json",
+      "sha256": "abfb916ad02812c3f731486b5e4bb6b84e19c337adffafd27dc719789bb339ad",
+      "size": 259280
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Hu/hero.json",
+      "sha256": "c9252eb88bab374aae297433ebafc8c477c6b7f891d3fed67b6969a319042ecd",
+      "size": 252993
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Hu/hierarchy.json.gz",
+      "sha256": "31f8d47c2ac4068596f7ebc4454c9bab4c7215337aa2ff93d161627de41bb6f5",
+      "size": 10162285
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Hu/meta.json",
+      "sha256": "aa99b3673c9c5d82f1a45e63b1509059ee6a4b30ec994744f2c0edf338082666",
+      "size": 1015
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Hu/playerdata.json",
+      "sha256": "6ac39665629e6db7dc4fd497a44caf7949c81d28fdaf3c368e328ce0aae01575",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Markoth/hero.json",
+      "sha256": "a0331db1e9582f1ddf8fe6ee1adcaa8ffe38d136ac2136163e7a7e5fa1a411de",
+      "size": 253015
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Markoth/hierarchy.json.gz",
+      "sha256": "25183377ba6f8b3ce5c5f53759c8df7ae16a4c685882c977fd12c4eef30c1bea",
+      "size": 10226625
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Markoth/meta.json",
+      "sha256": "d72709081c06a406aa610212a94ee51ad976f4d248d120df8fe1f3c489542e28",
+      "size": 1038
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Markoth/playerdata.json",
+      "sha256": "d4074d47cd8c14b87dc6978acd8cf38d84067750ec5573ee7250ada9d98eb109",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Marmu/hero.json",
+      "sha256": "05afe2b7dde25b8fd4e7b66d1affa77c8af6ae1dc2e5f99de21dba50eddfa247",
+      "size": 252985
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Marmu/hierarchy.json.gz",
+      "sha256": "049d8c975ecbe624ada56d554f5173f67fb69098e3c36523731007c7a905083e",
+      "size": 10158119
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Marmu/meta.json",
+      "sha256": "8bdea2b19d9e6c6149a659ad032a35e6c9d9483b5adda7906265ff0f30329c9f",
+      "size": 1036
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Marmu/playerdata.json",
+      "sha256": "97501ed2c933204cc7a6f7c9399bb14d9668f419d75ea2daa41d3b5fab89af5d",
+      "size": 259281
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_No_Eyes/hero.json",
+      "sha256": "5d7d4b8198d65bd420459c0ce8eb89e3c63335809d8e2be5ddc6179bae005664",
+      "size": 252989
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_No_Eyes/hierarchy.json.gz",
+      "sha256": "0146ec8c7553cd681c98a5af288b6b8fe48c3ab6bcbadc0f5c8b0db34323ecf9",
+      "size": 10265012
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_No_Eyes/meta.json",
+      "sha256": "6a15484a53b3a273dc8b5bafeba05605ebb33ee05e03bcbd56aa0768296c4d2d",
+      "size": 1046
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_No_Eyes/playerdata.json",
+      "sha256": "8b83eecc06ad03f30866b553d0f0e7553b8a0ec5d692afb7f04690e0f25da05d",
+      "size": 259281
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Xero/hero.json",
+      "sha256": "94e9b6f84041344cf8c0a9051a2de7593c31e9f55adb6ef08f2bc42f0b660091",
+      "size": 253001
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Xero/hierarchy.json.gz",
+      "sha256": "d52a1ff9b5216756e8695e5bdb81f3a4f3012ce325a03743e37803587ca5b9ff",
+      "size": 10069559
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Xero/meta.json",
+      "sha256": "614b92cfc90a8d6847b2096412006126b59c82c00d2fd2ec9c8c31c9ee1b1cae",
+      "size": 1029
+    },
+    {
+      "path": "analysis/dumps/GG_Ghost_Xero/playerdata.json",
+      "sha256": "828b35400e77bdc46b3405b8c955f80455baf3c0bd8e24b9ee759b7f146022fe",
+      "size": 259281
+    },
+    {
+      "path": "analysis/dumps/GG_Grimm_Nightmare/hero.json",
+      "sha256": "51e3d5a91600e05a7047852ade80267ca809806dd181724cf847122991aa93ea",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps/GG_Grimm_Nightmare/hierarchy.json.gz",
+      "sha256": "cb34e650a4d8488f4484dea7a3d20767c8f165453878dd4192592cded9b50708",
+      "size": 10133634
+    },
+    {
+      "path": "analysis/dumps/GG_Grimm_Nightmare/meta.json",
+      "sha256": "cc782749700047568439b9fa7cedeba52a884ed3afed922982fd0c6c0940d9ac",
+      "size": 1048
+    },
+    {
+      "path": "analysis/dumps/GG_Grimm_Nightmare/playerdata.json",
+      "sha256": "9b3487a9139396c2e13c4f16694e3b4228d14b74cddc0cf910a8e5fc336e19c6",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps/GG_Gruz_Mother/hero.json",
+      "sha256": "5d676987d3c101c28e432c5d015c747fdbb4c9317336e58b6709f6776b784af0",
+      "size": 252993
+    },
+    {
+      "path": "analysis/dumps/GG_Gruz_Mother/hierarchy.json.gz",
+      "sha256": "b553d59df71a3296ccf876553c5093c7c07616a33af4b166174f94ebf919fb4f",
+      "size": 10154936
+    },
+    {
+      "path": "analysis/dumps/GG_Gruz_Mother/meta.json",
+      "sha256": "f56b21a9947e9644b8d925231ec524a843184a4effaea8c4dd36fe9002eb6eb8",
+      "size": 1029
+    },
+    {
+      "path": "analysis/dumps/GG_Gruz_Mother/playerdata.json",
+      "sha256": "520021232c8ceeccb27a88821d2a0732c4ac1ed38f976edf0665f540f4fa9168",
+      "size": 259281
+    },
+    {
+      "path": "analysis/dumps/GG_Gruz_Mother_V/hero.json",
+      "sha256": "4d693323f2d50ef8a056074c90f5acaffec9c20ef35c6b344582229d34f8966c",
+      "size": 252987
+    },
+    {
+      "path": "analysis/dumps/GG_Gruz_Mother_V/hierarchy.json.gz",
+      "sha256": "7c58777b33ce5b6d2678738846832363acadce2472de5d9e1791238b1fc9147d",
+      "size": 10142619
+    },
+    {
+      "path": "analysis/dumps/GG_Gruz_Mother_V/meta.json",
+      "sha256": "f04f941a3e46398409204e2395891ade28e8a0a94b3d37f558c6de6f6b94abfb",
+      "size": 1074
+    },
+    {
+      "path": "analysis/dumps/GG_Gruz_Mother_V/playerdata.json",
+      "sha256": "7eeae34df74c469b6fe30f6f7f83d5d758a710a4ea8da73b7c81bd3e904bd545",
+      "size": 259281
+    },
+    {
+      "path": "analysis/dumps/GG_Hornet_1/hero.json",
+      "sha256": "fe445f2bf2b223b50fab6da9bdf0ffdafe3d68a0c5cd816e4665c535891412a3",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps/GG_Hornet_1/hierarchy.json.gz",
+      "sha256": "062fbda327c52fb8afb8c64c6efa2bb22c96dbe8f4a8ce439ee5b30226db6397",
+      "size": 10168685
+    },
+    {
+      "path": "analysis/dumps/GG_Hornet_1/meta.json",
+      "sha256": "a527ca18cb43a73006dccdbf34b11be5c6a63f3cc68509db00807c61057ca864",
+      "size": 1020
+    },
+    {
+      "path": "analysis/dumps/GG_Hornet_1/physics.json",
+      "sha256": "c4a015258d2de3c8844aa8fc30a72cebbfc10bb3fb3a1e5257ac9e2bb1361d7a",
+      "size": 622135
+    },
+    {
+      "path": "analysis/dumps/GG_Hornet_1/playerdata.json",
+      "sha256": "432a701684af7524b459d56a520924c36b8b11f70bad1a6cb8870929e4c57ea8",
+      "size": 259284
+    },
+    {
+      "path": "analysis/dumps/GG_Hornet_2/hero.json",
+      "sha256": "8a901f6bf34a0b33e89edfa6e550646596b079c112cad0ae90c448afdc03a7ef",
+      "size": 253015
+    },
+    {
+      "path": "analysis/dumps/GG_Hornet_2/hierarchy.json.gz",
+      "sha256": "4e3f8ea9628c65735845d1e56ff8c1fd86183d555181b2696823e9462c4a1836",
+      "size": 10150892
+    },
+    {
+      "path": "analysis/dumps/GG_Hornet_2/meta.json",
+      "sha256": "627ee04c5e447d237f6bb2060668d820661569c3cbfdb933eedf02451a545db0",
+      "size": 1035
+    },
+    {
+      "path": "analysis/dumps/GG_Hornet_2/playerdata.json",
+      "sha256": "5f7dddd54c15274229337eb5018ae94830b13e28035ba6a14b1b85b8bf69ed93",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps/GG_Mega_Moss_Charger/hero.json",
+      "sha256": "fd7c2d6031e7bb7fb70b5597e9f60eee21de61e4400d3c8d3db7d9e2dca2daab",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps/GG_Mega_Moss_Charger/hierarchy.json.gz",
+      "sha256": "3e21b0e14d37e08a785b27b8a8e3b132c1487279b894d4afa37ebf74ddceb248",
+      "size": 10207262
+    },
+    {
+      "path": "analysis/dumps/GG_Mega_Moss_Charger/meta.json",
+      "sha256": "09201e1e2a206afeae392d259322023bf7262c5c74da165737b9b4e781ac9c9f",
+      "size": 1047
+    },
+    {
+      "path": "analysis/dumps/GG_Mega_Moss_Charger/playerdata.json",
+      "sha256": "2ab8da164ccea9ad2f59a864b0b103695e056e59cd775396defd24877b429bbb",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps/GG_Nosk/hero.json",
+      "sha256": "852f8c44ac4fa6e1e1deb5a4101c9f3718abc500a5eae7cb871a2422c3631aa7",
+      "size": 252983
+    },
+    {
+      "path": "analysis/dumps/GG_Nosk/hierarchy.json.gz",
+      "sha256": "abf7941c93f04572f755211f28d406f09d543a1d3cd29a314b08ef2740047ea9",
+      "size": 10159514
+    },
+    {
+      "path": "analysis/dumps/GG_Nosk/meta.json",
+      "sha256": "879262b44c4f808ac60513484979958e21684f9d6b6800b210de98ce2c9b81c4",
+      "size": 1011
+    },
+    {
+      "path": "analysis/dumps/GG_Nosk/playerdata.json",
+      "sha256": "65c9ab44f8efab33c9285883ae42cc4ee4b46fb2a7793578981c72b9f8eebb49",
+      "size": 259279
+    },
+    {
+      "path": "analysis/dumps/GG_Soul_Master/hero.json",
+      "sha256": "2ce0e50298e98bbbbc7d048a07b9db48b1c8f2d04efd26fe305fca50813e37b3",
+      "size": 252992
+    },
+    {
+      "path": "analysis/dumps/GG_Soul_Master/hierarchy.json.gz",
+      "sha256": "e1e171ddd7fe80693a7e3103a81efb9d0151ca39c47b320038f94c8bccf37f13",
+      "size": 13529796
+    },
+    {
+      "path": "analysis/dumps/GG_Soul_Master/meta.json",
+      "sha256": "6fa31a1e2ba9c329ecd06abf6ce891994420123b6408563399dc64a4131f46ac",
+      "size": 1028
+    },
+    {
+      "path": "analysis/dumps/GG_Soul_Master/playerdata.json",
+      "sha256": "f65c082f47cd97a23d24f49e370c30e1a0cd0498c13fafce078b378af780d9a9",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_all/GG_Brooding_Mawlek_V/hero.json",
+      "sha256": "0a693bfe28107195fd26540c8f561610901bc85a8860bad01b8c88ddf0fe57ce",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_all/GG_Brooding_Mawlek_V/hierarchy.json.gz",
+      "sha256": "820fbf33732b447d7bc0e509e60d7bcc322f16f5a2c814aff3feb45d7856bcc4",
+      "size": 13527091
+    },
+    {
+      "path": "analysis/dumps_all/GG_Brooding_Mawlek_V/meta.json",
+      "sha256": "eccd7560b216934cf9694dac3038e5cbe72ec6f09932735991760846f633d780",
+      "size": 1046
+    },
+    {
+      "path": "analysis/dumps_all/GG_Brooding_Mawlek_V/playerdata.json",
+      "sha256": "7d72daa3681cb4bfd9ca852535fa43a88f8afc4851b49ddb3d117f257a13a5de",
+      "size": 259282
+    },
+    {
+      "path": "analysis/dumps_all/GG_Collector_V/hero.json",
+      "sha256": "ea64d1d9f702671b53e5eb9ea37a4f164266cc13abd600df74e93b4206149b08",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_all/GG_Collector_V/hierarchy.json.gz",
+      "sha256": "51f9e817caabb8ed7a57e715209fa275f87e3a54c0f9810258031b358f0c93c6",
+      "size": 13564875
+    },
+    {
+      "path": "analysis/dumps_all/GG_Collector_V/meta.json",
+      "sha256": "884c53e908f50745b61ffa8dd04c0694e1c07a99418c6d21c3ec3e5fd87b9cfd",
+      "size": 1028
+    },
+    {
+      "path": "analysis/dumps_all/GG_Collector_V/playerdata.json",
+      "sha256": "20ed87f084d1f7e818f5d11e1cb517a58f9fdbf9737a89d77c59a21bfc634411",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Gorb_V/hero.json",
+      "sha256": "8d0002e96795209847bc5d2e968536bd8ffdf592e07fb394506d0a8282d1ea78",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Gorb_V/hierarchy.json.gz",
+      "sha256": "6338f61b8f93c3715e29890aa5bb198f01611a81505685830e84d0d863d9bd4d",
+      "size": 13478454
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Gorb_V/meta.json",
+      "sha256": "d0f114fcef803a04477ab30d5709f852c4261f461ddc9af895002466e98b6df0",
+      "size": 1031
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Gorb_V/playerdata.json",
+      "sha256": "f7e2acdc72a688f885a66309a66c8dc316d7e5521420a746a6307e60a118b24f",
+      "size": 259280
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Markoth_V/hero.json",
+      "sha256": "0d5fb1c1aae79bc8e84daf7e43392f16892670e5e5bbf96c02b82cb395d22cff",
+      "size": 252987
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Markoth_V/hierarchy.json.gz",
+      "sha256": "bfbd313ca27e73434c6ba80927556b1600ddd458f758fca65d2527c6e5d4a97d",
+      "size": 13560579
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Markoth_V/meta.json",
+      "sha256": "4ab944f7b20bb109f94c6e64c68cbba46bde5b6f22112bb86776bd0e8fb9e866",
+      "size": 1040
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Markoth_V/playerdata.json",
+      "sha256": "f7ea847a587b9cb6d72123b3b3724f8be5491a79c9be1c5239a2e92a81b1fba9",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Marmu_V/hero.json",
+      "sha256": "e19372e815403d9d67e45f306868d559e223488e440b04ca91bfd3470616c118",
+      "size": 253010
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Marmu_V/hierarchy.json.gz",
+      "sha256": "4c6b0d137e1332430486af2c2b5d20a0938a50f013859be5f2d1bccc24867bee",
+      "size": 13502336
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Marmu_V/meta.json",
+      "sha256": "e451074cb5f5d8f0315deac558d33754eb8c7fc3e2dce3d9690e801b81bcb022",
+      "size": 1034
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Marmu_V/playerdata.json",
+      "sha256": "aa49ce1799a04a4f1448c15723512570d69ef31d477f97299054fb030f441e2f",
+      "size": 259282
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_No_Eyes_V/hero.json",
+      "sha256": "8b30fa46f57b2a308251cd377611a29f4b9c97a2f526c7ca7b6aa587589f40f4",
+      "size": 252993
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_No_Eyes_V/hierarchy.json.gz",
+      "sha256": "03028dcfe58ed4471703b67e6b0d0a27ed130195bbd056136d450be6ca3ec954",
+      "size": 13575019
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_No_Eyes_V/meta.json",
+      "sha256": "f80fbd1914bf7c797355f3aab88fe8d5d9b16ac6f30dfe86933e8f17c9522a43",
+      "size": 1040
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_No_Eyes_V/playerdata.json",
+      "sha256": "7afbae8c8eb42b71f8e0a32dfaeb365486d03106f1ff3d93ecd9695e374f31b0",
+      "size": 259281
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Xero_V/hero.json",
+      "sha256": "ee02901e8c01e8e9f2f7113c57c8bad2c1252a1ddc86c5c54ee8fa5c142e73c8",
+      "size": 252998
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Xero_V/hierarchy.json.gz",
+      "sha256": "3b97f2843cb9b8aa0e62742dbb54e2fe8e883885b60ea9f8952b8c6df89dee7e",
+      "size": 13535825
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Xero_V/meta.json",
+      "sha256": "c7d1eabc0e4689a6a41138f842725232c3d5b7bae3f5b2f4279fbbbc4e7a9d46",
+      "size": 1031
+    },
+    {
+      "path": "analysis/dumps_all/GG_Ghost_Xero_V/playerdata.json",
+      "sha256": "66f214d8c96f6ee5286863eb0387f72a21d6b7bd7c4f55616eff4dfea6c5cffc",
+      "size": 259282
+    },
+    {
+      "path": "analysis/dumps_all/GG_Mage_Knight_V/hero.json",
+      "sha256": "430069de4cc0e8af33a6c7642d2965396ba645b2852db5708874db32abe9928a",
+      "size": 253011
+    },
+    {
+      "path": "analysis/dumps_all/GG_Mage_Knight_V/hierarchy.json.gz",
+      "sha256": "f96f7517b5962465bb88284820a45ae1f2349b299dbc285899f85c2b9297b9c6",
+      "size": 13691193
+    },
+    {
+      "path": "analysis/dumps_all/GG_Mage_Knight_V/meta.json",
+      "sha256": "e4ff39021171ceceeedf9e382cd5275128ff1967380f9e46e0d7e8aca4842c7a",
+      "size": 1034
+    },
+    {
+      "path": "analysis/dumps_all/GG_Mage_Knight_V/playerdata.json",
+      "sha256": "77effd322a9e43c374f211d6001338e17864981dddd8faa870c3ef315b3de038",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_all/GG_Nosk_V/hero.json",
+      "sha256": "abe17ceb5023445995ee8f8ac7973ae31f6b7c6c46a8d05c0519fc362318040b",
+      "size": 253019
+    },
+    {
+      "path": "analysis/dumps_all/GG_Nosk_V/hierarchy.json.gz",
+      "sha256": "f209d43a175605f08db3d65f570ed0fe3a0cbe97aa46e105a1369c946ba91b3a",
+      "size": 13533411
+    },
+    {
+      "path": "analysis/dumps_all/GG_Nosk_V/meta.json",
+      "sha256": "69fbc93d8f6fb1c030c5a7a2c25243350a75a7f070a0f328a042c15d139273bf",
+      "size": 1013
+    },
+    {
+      "path": "analysis/dumps_all/GG_Nosk_V/playerdata.json",
+      "sha256": "b05eca9b536a51661b89593e8ede40af9d4c27f43cf12476ba050f735726d3a8",
+      "size": 259315
+    },
+    {
+      "path": "analysis/dumps_all/GG_Uumuu_V/hero.json",
+      "sha256": "aba37bbcff50f1235c1bcba4a5ed5101cff1698f845a6b4e269babb38dd03001",
+      "size": 252999
+    },
+    {
+      "path": "analysis/dumps_all/GG_Uumuu_V/hierarchy.json.gz",
+      "sha256": "75b38db90e3d5bde23aaea9a6f0dfb807c424ac644603cd4cf343a9a5eb92528",
+      "size": 13719600
+    },
+    {
+      "path": "analysis/dumps_all/GG_Uumuu_V/meta.json",
+      "sha256": "83b1eb29218caddd4094802b64663bb4c605512dd8bfa027581a0fadf8a35d02",
+      "size": 1016
+    },
+    {
+      "path": "analysis/dumps_all/GG_Uumuu_V/playerdata.json",
+      "sha256": "2cf79f82349f0e8e1ef9012c043cbe13e086b236120ffa0ef7234ca053cd2456",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_all/GG_Vengefly_V/hero.json",
+      "sha256": "0ef0e564fb6ef0ca8f5ae61763b30505ad92948c2f55ee6ba43d0c841c828201",
+      "size": 252998
+    },
+    {
+      "path": "analysis/dumps_all/GG_Vengefly_V/hierarchy.json.gz",
+      "sha256": "e88af858e87ed04c6a37e5e5d78db78dc39f8aa800e8c8515f834672bab04445",
+      "size": 13857454
+    },
+    {
+      "path": "analysis/dumps_all/GG_Vengefly_V/meta.json",
+      "sha256": "9ea6d6312367b07c4dbae03173662d3ba61859566b4c8beb3a3ce396ba7b8cca",
+      "size": 1025
+    },
+    {
+      "path": "analysis/dumps_all/GG_Vengefly_V/playerdata.json",
+      "sha256": "4b86eb46650d36015a28235ed844c992653e2d7738a8dc2b800ffd0f70b35c99",
+      "size": 259290
+    },
+    {
+      "path": "analysis/dumps_all/GG_Workshop/hero.json",
+      "sha256": "fea22cc8346f3187d8e2b968c14108b3203d18126d060bfda9fecb3040521922",
+      "size": 252607
+    },
+    {
+      "path": "analysis/dumps_all/GG_Workshop/hierarchy.json.gz",
+      "sha256": "5949a5c52d236a7518d37671df27410ea3ff0fb2dcc3b77cc482e35d163dadb0",
+      "size": 14605026
+    },
+    {
+      "path": "analysis/dumps_all/GG_Workshop/meta.json",
+      "sha256": "aac7c26573a060549f1c0712bf323c67efb9898eb872cea03c91f75e1e3caff2",
+      "size": 1015
+    },
+    {
+      "path": "analysis/dumps_all/GG_Workshop/playerdata.json",
+      "sha256": "62db06c2646d500f94a61266b1e3ee7ef9d070873cbdf4c707709c96c469b85d",
+      "size": 259254
+    },
+    {
+      "path": "analysis/dumps_t1/GG_Gruz_Mother_V/hero.json",
+      "sha256": "5429d9e5ea1b8d7908e335a8af5a02bd9dfecbb13243b84b9e3b6df38a266e65",
+      "size": 252987
+    },
+    {
+      "path": "analysis/dumps_t1/GG_Gruz_Mother_V/hierarchy.json.gz",
+      "sha256": "a3dcc52bfbb676d637b843fb9abf64303a32cdfe2c091cddf73ebc88b35339eb",
+      "size": 13501250
+    },
+    {
+      "path": "analysis/dumps_t1/GG_Gruz_Mother_V/meta.json",
+      "sha256": "76519f80b7a12465dc7b2249a99fcf9de229975885b01fe5e62b39984a31b35a",
+      "size": 510
+    },
+    {
+      "path": "analysis/dumps_t1/GG_Gruz_Mother_V/playerdata.json",
+      "sha256": "7a2ccdc76d06939d0d0b2738c65fe0cb5e72229a6f8ef06c58c0eb96d3f2549c",
+      "size": 259281
+    },
+    {
+      "path": "analysis/dumps_t1/GG_Workshop/hero.json",
+      "sha256": "729b6d45329e37865e66b450912fbb4ac36454ffe508ddcc2f17f7b3d3223b5f",
+      "size": 252630
+    },
+    {
+      "path": "analysis/dumps_t1/GG_Workshop/hierarchy.json.gz",
+      "sha256": "5a1fad2bae7f5abd3721ba8b7606b45c01f14ddc2619d0ce7d9984185da2c81b",
+      "size": 14656289
+    },
+    {
+      "path": "analysis/dumps_t1/GG_Workshop/meta.json",
+      "sha256": "ecc4b2734a7087f452e0deab2e59e6a43cd5e04bb7b3b09511897e1311624d05",
+      "size": 503
+    },
+    {
+      "path": "analysis/dumps_t1/GG_Workshop/playerdata.json",
+      "sha256": "54858d1df062003bdc9adb33cd0a347bd323753db1b3ff17e5a793caafa37422",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_t2/GG_Workshop/hero.json",
+      "sha256": "c41d3c0940d0c07bd7deac389632f82275e7129dec745695f91a246bb2ea00d1",
+      "size": 252630
+    },
+    {
+      "path": "analysis/dumps_t2/GG_Workshop/hierarchy.json.gz",
+      "sha256": "d84b5baddaaeb1119cdc7080bbb93e07e733dca24508a4f2594c7b31960699f7",
+      "size": 14655876
+    },
+    {
+      "path": "analysis/dumps_t2/GG_Workshop/meta.json",
+      "sha256": "e01c0736b04c3b224488bab359aed59fb8409c65b56bc1d93c6d59e576fe706e",
+      "size": 503
+    },
+    {
+      "path": "analysis/dumps_t2/GG_Workshop/playerdata.json",
+      "sha256": "dc70d6d4197ec6fed3d4748921826923ec7c92a2eaf5c21c3472690dd49622bc",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T1/hero.json",
+      "sha256": "649bec7dd458d087d78eec937f195112d1167aa001af89da5a6287dfb854d043",
+      "size": 253015
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T1/hierarchy.json",
+      "sha256": "880b4e40695fa71f7543667aca164f52284c40073167a3b0fa300fac9123cdbf",
+      "size": 242182875
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T1/meta.json",
+      "sha256": "faea013eb7e3b94d4d248ed4efa68608859feeece4dac1ab1c2964698942c796",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T1/playerdata.json",
+      "sha256": "99fe9c77cb187a0d68015ae8016fa86123a2739aff5f9736ceec70df1f90785b",
+      "size": 259284
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T2/hero.json",
+      "sha256": "faba0b1c2032e1196de82ca4e9268fd3d3b3c3f2b005233ebf24fe9f96eb908e",
+      "size": 253015
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T2/hierarchy.json",
+      "sha256": "2eb1b9e11b80f51613a1069dc136e13a10b74f196a32b7908ff5829e7a8b86cb",
+      "size": 242182803
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T2/meta.json",
+      "sha256": "1678d9e86a74032361e61ee5c2af883fd3ff4931f011ff949c26542d87c31a7e",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T2/playerdata.json",
+      "sha256": "d5a23a5b913ee3ba18dd2ecb802c3fb37420c73d492fd85df10803e4951c995b",
+      "size": 259284
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T3/hero.json",
+      "sha256": "88f7fb295967a17924bb444544be3f074c418c3b232231b24d6f84f970252497",
+      "size": 253015
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T3/hierarchy.json",
+      "sha256": "7e8839d54591a6548e86c5aa8f9eec75aea75f1e06eed22f7f2466d9510e9a3f",
+      "size": 242182565
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T3/meta.json",
+      "sha256": "318f05af3564a83c059e207ea720eabd91020f96037829cb1f1f1d2cf6fd713f",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Broken_Vessel__T3/playerdata.json",
+      "sha256": "d5a23a5b913ee3ba18dd2ecb802c3fb37420c73d492fd85df10803e4951c995b",
+      "size": 259284
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek_V__T2/hero.json",
+      "sha256": "0977e343f9041a9544a49eb77a6827605121a79406597cc88c9a4ff70f41633c",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek_V__T2/hierarchy.json",
+      "sha256": "a648e7a734ce8009ab80b1759ddf6f31ac73a2d8eea63ee74b968bab15a44234",
+      "size": 241132171
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek_V__T2/meta.json",
+      "sha256": "45413a9734a2492594e7af89fc0a0ae08f56c9daf8c3ef34de987643b84db2f2",
+      "size": 414
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek_V__T2/playerdata.json",
+      "sha256": "907176d175407882797315f6f161c59c915d2f01e5e821732c81744e7e84b515",
+      "size": 259282
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek_V__T3/hero.json",
+      "sha256": "bc3055051c996585b5f05bde19e0f4efddbbc9fed5938cd3c4b74f95c713d541",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek_V__T3/hierarchy.json",
+      "sha256": "b63198358efe82898b018d3b4d107dfe150e553f98e23bf242277b42e9663eff",
+      "size": 241132207
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek_V__T3/meta.json",
+      "sha256": "0c6dbd1e4318ed74b29ef455126ed5e441560b654cf345b9c7f1b322ffb2c687",
+      "size": 414
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek_V__T3/playerdata.json",
+      "sha256": "907176d175407882797315f6f161c59c915d2f01e5e821732c81744e7e84b515",
+      "size": 259282
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek__T1/hero.json",
+      "sha256": "592b46131451b30ef75df689e2c2e5061343a1d128d3f2b06c372c3123b38838",
+      "size": 253014
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek__T1/hierarchy.json",
+      "sha256": "4062f6e05e0e169c8e6eb922e796149d9a306206118dba632203d2d833a5aff9",
+      "size": 241100040
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek__T1/meta.json",
+      "sha256": "0df41abf4a3189da721b032d2846b1f53b60192bfab24fcfe2654b45127109de",
+      "size": 410
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek__T1/playerdata.json",
+      "sha256": "dbbd53109ce771351a2a51eb9e1e548c5196141bd142308b5a1578385241b64c",
+      "size": 259282
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector_V__T2/hero.json",
+      "sha256": "36301e493693b9103c4b7598459bccbb7cf7e07c5ec130fb970ee3ad0390e679",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector_V__T2/hierarchy.json",
+      "sha256": "c5b9ab39f43a0022249fae161b4795f578676236fc48af8d08f2adefb1f9f1ba",
+      "size": 241513678
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector_V__T2/meta.json",
+      "sha256": "99825682607c2de8ad99dc44e50ef753b4e31b0b1122f760a9d8873d08f6b662",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector_V__T2/playerdata.json",
+      "sha256": "f74a13a2039cd73418690eaec44de7b118c85de876d014bc38322a4304ded16a",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector_V__T3/hero.json",
+      "sha256": "f66d85e3af58eaedd065895b5901cd43254f954bbc2d2f51c4b0367b2022a288",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector_V__T3/hierarchy.json",
+      "sha256": "9401bb279218db0783ffddb03f73a1d0409608c6f354099d300ec61dd2b3e9f7",
+      "size": 241513747
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector_V__T3/meta.json",
+      "sha256": "29034ec3df42657178773d057706e82bbfd1fff012faefd22637e5d74fea6a75",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector_V__T3/playerdata.json",
+      "sha256": "20ed87f084d1f7e818f5d11e1cb517a58f9fdbf9737a89d77c59a21bfc634411",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector__T1/hero.json",
+      "sha256": "2de1e4a0987ef9997b50153b8d8d99b3c3204b678127a5e6c6ff19aba144381d",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector__T1/hierarchy.json",
+      "sha256": "3a1cb8ad963bc1585a6cd78888676eec83dd93612902ae9951579cff483623c5",
+      "size": 241321008
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector__T1/meta.json",
+      "sha256": "d8c569681c268d55a3395aa4146caf950525f78c4141431ad203b04e7a96b562",
+      "size": 398
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Collector__T1/playerdata.json",
+      "sha256": "f74a13a2039cd73418690eaec44de7b118c85de876d014bc38322a4304ded16a",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T1/hero.json",
+      "sha256": "097e944a205dd9fbb8a0f517944153eefb2948f2bcfc54b103eb99401dbda124",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T1/hierarchy.json",
+      "sha256": "9d90e7dfc951bc5e1e69b3a8ec5f5aafd75a3c128ed47c194b15b4487b77755e",
+      "size": 241052343
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T1/meta.json",
+      "sha256": "75de2434f3afe151ebfad12da929f38e1262f973eac333a4f6c1dd87caea2e7d",
+      "size": 416
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T1/playerdata.json",
+      "sha256": "a0a7fbdac6ea76ef31b11891e2229aba358de87c2ede299a47a949c908525264",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T2/hero.json",
+      "sha256": "13429c8c89abcb2f267eab90bbefb3dd8e7656423b464b079e29d9ed54b1e4f8",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T2/hierarchy.json",
+      "sha256": "abe33a515058214bf4dee41d4294d157f937a5d47bb6af8904f898a60377e76d",
+      "size": 241052423
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T2/meta.json",
+      "sha256": "83975aa5e29325cf87780ab62b277daafbf9d1bc15291aa27a233a2a4bf935e1",
+      "size": 416
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T2/playerdata.json",
+      "sha256": "a0a7fbdac6ea76ef31b11891e2229aba358de87c2ede299a47a949c908525264",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T3/hero.json",
+      "sha256": "a1bf1ff950be1893d83ad8827622c1e5be6cf31c7eb5ddb24f758fcbf87af6c0",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T3/hierarchy.json",
+      "sha256": "c010dcc89e3a2d1bb95cd16242a2f19c6e9e861557e4da69ed22defb5bfc2c87",
+      "size": 241031698
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T3/meta.json",
+      "sha256": "ba582fb0bd0116c2bd4c564a3af88d006a92acc9b7dfd3b6d81ec68d30920d3b",
+      "size": 416
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian_2__T3/playerdata.json",
+      "sha256": "a0a7fbdac6ea76ef31b11891e2229aba358de87c2ede299a47a949c908525264",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T1/hero.json",
+      "sha256": "aef927f876f4c309117bff84df13090e5551a6a8962cf221dd50d20413ba871c",
+      "size": 253004
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T1/hierarchy.json",
+      "sha256": "244072d5efa41997eda34a3c52fadadbed6740bd3930eb00eb1a1958d081fd1a",
+      "size": 240864032
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T1/meta.json",
+      "sha256": "f5d046e4db145ce58531d0032b1c4c0a4d06080faa0968b4a2c24ae692bdd3d9",
+      "size": 412
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T1/playerdata.json",
+      "sha256": "e44d3143591204cd8221bc2fb95aa34ff10399e7fcc9d20b68ba5c321dc2c47a",
+      "size": 259298
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T2/hero.json",
+      "sha256": "7481c107d9b5e8b5e870756c178b757f80324abe37d5618dab2c9b31dc9e7716",
+      "size": 253005
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T2/hierarchy.json",
+      "sha256": "8cd8ff74a1366664a7b5d64f3d9252a14ab884380442ddd2a10a939fd2821298",
+      "size": 240864161
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T2/meta.json",
+      "sha256": "d369a2141044898d2de8c9f6cd99c111243d10ce6444047fcba6ce3eee72c575",
+      "size": 412
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T2/playerdata.json",
+      "sha256": "d11dee8701f147c09440ed45685be021dcf6daf72f65e0bf8485ace3e018059b",
+      "size": 259298
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T3/hero.json",
+      "sha256": "af5f00868a234a020c5673b1eebb7dc0289c916cc4c271a1f00b59e12e9180d6",
+      "size": 253005
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T3/hierarchy.json",
+      "sha256": "4bc38db99f28ab6dbf7c4c56b1d09d0b4d8af58387f6474fa50c767fa4653f85",
+      "size": 240864032
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T3/meta.json",
+      "sha256": "03b7e8909611295dd5b7fc20f4e240c40dc85c127dccd051c185dc753a632eb5",
+      "size": 412
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Crystal_Guardian__T3/playerdata.json",
+      "sha256": "d11dee8701f147c09440ed45685be021dcf6daf72f65e0bf8485ace3e018059b",
+      "size": 259298
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T1/hero.json",
+      "sha256": "b1439ae86c0ab8341f65474dad909ff6c90479926f384d864e8fae89416de058",
+      "size": 252988
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T1/hierarchy.json",
+      "sha256": "483545c1296e6918400c13343d31bdbbc90b9dad4effaab9b6b114f44a4f0ed4",
+      "size": 240957044
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T1/meta.json",
+      "sha256": "a76db4c5f0138e6d2f5a40e6fe04f17c22dd336d63e65571869596048b44897c",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T1/playerdata.json",
+      "sha256": "f73351c482c1b68879887c565fde106fdc1c6bcf05d53b67dca954d85dcaf54e",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T2/hero.json",
+      "sha256": "ee22b7d8499f6e261f9748c6844d394eb75f23a1322b8cc88d2a475a397f3648",
+      "size": 252988
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T2/hierarchy.json",
+      "sha256": "e865bc1933f0a030132005dd0af4a70df423902023bf962bbacbb6b9c671e37d",
+      "size": 240957184
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T2/meta.json",
+      "sha256": "7690a1f3cda64f876f1604451f2b0b6c2f09c840b488938ba32cb33ad3e99250",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T2/playerdata.json",
+      "sha256": "f73351c482c1b68879887c565fde106fdc1c6bcf05d53b67dca954d85dcaf54e",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T3/hero.json",
+      "sha256": "d6d0a749ff745a23f12d1a6a82d1da70355af7c9172c512cb348f8f9914be2fb",
+      "size": 252988
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T3/hierarchy.json",
+      "sha256": "17103f2f926489a9ca04ab1251cafb8c0a14a7f662172f3b981b4b268006505c",
+      "size": 240957088
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T3/meta.json",
+      "sha256": "1fe180511ce8abc12159b082da67164b78b42a975d3735b550fabcb0da7c6dca",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Dung_Defender__T3/playerdata.json",
+      "sha256": "f73351c482c1b68879887c565fde106fdc1c6bcf05d53b67dca954d85dcaf54e",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T1/hero.json",
+      "sha256": "b51255ecc29fbfd1ba18bb45d02c3a2d297e86b03c1b072a63dd274fe8bcb6e1",
+      "size": 253000
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T1/hierarchy.json",
+      "sha256": "660d4186db07132f80a501cce9d09df12f5141b0aebf269b58025c0acc137277",
+      "size": 241647942
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T1/meta.json",
+      "sha256": "2e21df4eda93073325114cdb4b3d626211c39f9bcd1a49cf33b34394c9cb5023",
+      "size": 411
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T1/playerdata.json",
+      "sha256": "598a3e2ccb5e6af506359558dbc55c260107ad7e4477b8d32818294fa14f0e00",
+      "size": 259288
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T2/hero.json",
+      "sha256": "587039a69940b9558205898b692b305ced01760eb3ca3f71fcedec0abb128627",
+      "size": 252997
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T2/hierarchy.json",
+      "sha256": "b5df6ed7f3f9c47229629d28c54daa06b6beafc87ad4a4997f9a8fceda9d0ba9",
+      "size": 241668604
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T2/meta.json",
+      "sha256": "2a650c8b86cf744c41a93c2671e95b9249368dd6e1b5229dce174024e0df54f0",
+      "size": 411
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T2/playerdata.json",
+      "sha256": "598a3e2ccb5e6af506359558dbc55c260107ad7e4477b8d32818294fa14f0e00",
+      "size": 259288
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T3/hero.json",
+      "sha256": "dee0475e70442d24c979568a2b735190034f069469e120d401dfe96b6b00b8e1",
+      "size": 253000
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T3/hierarchy.json",
+      "sha256": "ef22194fb1bfc3c1339eedde7ad660ea97300eaf20e0151f3eac72dbfc3f3473",
+      "size": 241668611
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T3/meta.json",
+      "sha256": "aa2b46bbacd900e7ce94b8ec1b10a6ef696c36cdbdf54558896fb30e339e8b51",
+      "size": 411
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Failed_Champion__T3/playerdata.json",
+      "sha256": "598a3e2ccb5e6af506359558dbc55c260107ad7e4477b8d32818294fa14f0e00",
+      "size": 259288
+    },
+    {
+      "path": "analysis/dumps_v2/GG_False_Knight__T2/hero.json",
+      "sha256": "dab75fa9c58ce0d4530426e83e8247b12e794fcc956645c252332945efe8c778",
+      "size": 253020
+    },
+    {
+      "path": "analysis/dumps_v2/GG_False_Knight__T2/hierarchy.json",
+      "sha256": "b4ec2808d4129c597c6809020d902eed28b51b3c16cde394c8957c93e2ecc62c",
+      "size": 244236743
+    },
+    {
+      "path": "analysis/dumps_v2/GG_False_Knight__T2/meta.json",
+      "sha256": "35a20ee7b77e05e6c6ae9ea5283fb3afcb48c1e072aea8fa2fbcd1210e095935",
+      "size": 405
+    },
+    {
+      "path": "analysis/dumps_v2/GG_False_Knight__T2/playerdata.json",
+      "sha256": "ae546ecb6a0c8626b787e10acc8b99b2c1bf52bac38bbafb62651c5daee659bd",
+      "size": 259289
+    },
+    {
+      "path": "analysis/dumps_v2/GG_False_Knight__T3/hero.json",
+      "sha256": "8c91800ad4407031acf7e91ba10341907d6a25db8d6ba093b862d3c23cdb424e",
+      "size": 253020
+    },
+    {
+      "path": "analysis/dumps_v2/GG_False_Knight__T3/hierarchy.json",
+      "sha256": "81cb68bb0d6bebfcdfb7779d5c6fbff1dfcc7c0fb8ddf10a9495c41fb14f49be",
+      "size": 244236725
+    },
+    {
+      "path": "analysis/dumps_v2/GG_False_Knight__T3/meta.json",
+      "sha256": "da863b718390876b9854442705f805f47bb007342e1f18100b9280c4a6d70f88",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_False_Knight__T3/playerdata.json",
+      "sha256": "ae546ecb6a0c8626b787e10acc8b99b2c1bf52bac38bbafb62651c5daee659bd",
+      "size": 259289
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T1/hero.json",
+      "sha256": "4a3cbe20761f938ca39e5f736c792813f06173e994ae0ec69647af624ff2fd9d",
+      "size": 252993
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T1/hierarchy.json",
+      "sha256": "149ac23c92bd206f0becd3e868ed084424213849e03abf2bf0a05719c97aea06",
+      "size": 241491567
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T1/meta.json",
+      "sha256": "4de5476a1fbf5cc68a58d0ff4448a691759f961842e597714be9c09dd5571f53",
+      "size": 399
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T1/playerdata.json",
+      "sha256": "6cebfcbb484e34f4a21937c1c1a1d50131f3ad1494a4dfb3cfbd2f3e8a091d4a",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T2/hero.json",
+      "sha256": "b8eab920ca5375cd8ed1c37997f735d963321913d3d2940d58ccedc80ae2c55f",
+      "size": 252992
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T2/hierarchy.json",
+      "sha256": "0d9bd6218c42061743b50bed32e24231aca44e48fd032a14f32ea71a3aca7cf6",
+      "size": 241491616
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T2/meta.json",
+      "sha256": "5fbcedfd3fcae81519af8281844dd1f5288aed8d5937673fcfec3e70bed25693",
+      "size": 398
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T2/playerdata.json",
+      "sha256": "6cebfcbb484e34f4a21937c1c1a1d50131f3ad1494a4dfb3cfbd2f3e8a091d4a",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T3/hero.json",
+      "sha256": "8ba98120a1a5434a56523b963014d03f415a8df8435ef98205ba5446aa9ed32a",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T3/hierarchy.json",
+      "sha256": "4e63a63eb2e78602619d8a4c3d5f618397f1bcd287ad2064edf5e85e90ec18de",
+      "size": 241491450
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T3/meta.json",
+      "sha256": "fe23d78dc572594210b50ac8034356f1f80162f7e6849632147c3fb6093f2277",
+      "size": 398
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Flukemarm__T3/playerdata.json",
+      "sha256": "6cebfcbb484e34f4a21937c1c1a1d50131f3ad1494a4dfb3cfbd2f3e8a091d4a",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T1/hero.json",
+      "sha256": "8d2640e4d68d1a9e26b8ba5cb8739b2656e7df07819dc3b9ff4d479c53469ec0",
+      "size": 253005
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T1/hierarchy.json",
+      "sha256": "87b3d7e8992b0efa63466117370ff62f9f48f1aac00aba0c87d21f963c6c2d1c",
+      "size": 240905541
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T1/meta.json",
+      "sha256": "0fc494fd27ee306c6acca7bbd4a0c27f24948963b51df7ae604c4af95d5b892d",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T1/playerdata.json",
+      "sha256": "4c10c28c295162aa6b4e73432e551df25f5f80a1dd1b520def71827cfbfb2fb2",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T2/hero.json",
+      "sha256": "e46ab0bb24a446b3ae3261d9a7e6124505e1c88fcb8e7ee428a152e8a414ee10",
+      "size": 253007
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T2/hierarchy.json",
+      "sha256": "15092bdfa4f99e2e8f33a68f0085369088629786e771aa2cb0068ea7b362ffc7",
+      "size": 240884731
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T2/meta.json",
+      "sha256": "87fcda87d429193b053cfa3ccd90d4bb5fa45d8c93ad421e5063b18b728b8a7e",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T2/playerdata.json",
+      "sha256": "4c10c28c295162aa6b4e73432e551df25f5f80a1dd1b520def71827cfbfb2fb2",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T3/hero.json",
+      "sha256": "ee303e7255b102fe8590d308fb7419d5e77f87d64fcd5858fb8d536854985657",
+      "size": 253007
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T3/hierarchy.json",
+      "sha256": "0b4a40e29f1b8e9a9ed5a002fc342629e1a45c1fcc0fbcfe91248e5f706b4e87",
+      "size": 240905558
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T3/meta.json",
+      "sha256": "c266b6b72bb305ee8ce6d23b9ca0fd0763e080a65e70e149595d73972b1f3427",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T3/playerdata.json",
+      "sha256": "5c5f2970091b5152724961394cb88029a0eb3160b5b7bde6b16b13f27dffd714",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Gorb_V__T2/hero.json",
+      "sha256": "b7f8ae342f1abae4df2a45a409678985f50c1a810cd7d14cc182a6656866f64c",
+      "size": 252992
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Gorb_V__T2/hierarchy.json",
+      "sha256": "1e3c36542cdd86bf8804dcbb616c2b9a28b292918823eefb1f20c3d2f4cbb0b5",
+      "size": 240433319
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Gorb_V__T2/meta.json",
+      "sha256": "6e68853b1514217db1213b9d7afaba62d5dd6c18b97c9da43595a744013309fb",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Gorb_V__T2/playerdata.json",
+      "sha256": "f7e2acdc72a688f885a66309a66c8dc316d7e5521420a746a6307e60a118b24f",
+      "size": 259280
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Gorb_V__T3/hero.json",
+      "sha256": "fef60b0cdd83e194c47ff20dea92fa833129dda5c42e933a4c21096dcbfc11c5",
+      "size": 252990
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Gorb_V__T3/hierarchy.json",
+      "sha256": "ad6d4c9f908220a3dd05fc689593e688b56d3228570d0b9d1ca7adaa2b9e124a",
+      "size": 240433310
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Gorb_V__T3/meta.json",
+      "sha256": "855f57556af1ae2e84b3bfd6ac87f62b892273de265135d0278cbc65caf03cd5",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Gorb_V__T3/playerdata.json",
+      "sha256": "f7e2acdc72a688f885a66309a66c8dc316d7e5521420a746a6307e60a118b24f",
+      "size": 259280
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Hu__T2/hero.json",
+      "sha256": "9193b16cb93b3ae833a3bfb31262b2d89dee6e9d211119ac3ecf6144157f1dc7",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Hu__T2/hierarchy.json",
+      "sha256": "2a5807bfdb64bf9085587c3f24b326e62fcacae42f4555392f443bba4b4f62e3",
+      "size": 241087706
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Hu__T2/meta.json",
+      "sha256": "4db4f6968c6806bc489a8550fa937cc64c806fd01fcabff65d2cbccf20e1d20e",
+      "size": 396
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Hu__T2/playerdata.json",
+      "sha256": "4070a149ffc1ece3b46e13feeab7c1391f190243af2b7c24177df7b238aa5fb2",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Hu__T3/hero.json",
+      "sha256": "cc476480208b678f549329efabdd9c310b5925e2e52ba46ebcd82ecbec1736be",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Hu__T3/hierarchy.json",
+      "sha256": "6e649a1711c09b552f70e8574a79165a277c281d1fd5a617e72d8b2afcb67cfa",
+      "size": 241087705
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Hu__T3/meta.json",
+      "sha256": "6cad89e2d7cc1ef73335adf85dc2f5e669eeaaa623ec0ecea00ddcd0f8d021b5",
+      "size": 396
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Hu__T3/playerdata.json",
+      "sha256": "6ac39665629e6db7dc4fd497a44caf7949c81d28fdaf3c368e328ce0aae01575",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Markoth_V__T2/hero.json",
+      "sha256": "341a0e32b78a9c86a4588d4c596e098e8ca645bfac072cecaaa53679814aee2f",
+      "size": 252987
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Markoth_V__T2/hierarchy.json",
+      "sha256": "e8dbca6a257ceb6da7b0eeee1dd86c011681964019bcc83ae8f8a9a8330df1e7",
+      "size": 241027894
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Markoth_V__T2/meta.json",
+      "sha256": "fe9dc43c7dc259f80520789dfc89490f3da7b721247ed952c2f46e192501711e",
+      "size": 410
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Markoth_V__T2/playerdata.json",
+      "sha256": "f7ea847a587b9cb6d72123b3b3724f8be5491a79c9be1c5239a2e92a81b1fba9",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Markoth_V__T3/hero.json",
+      "sha256": "5172907724d4ba32bd2b343b8725964c6e25bdf0ec75c5a395f34c105060d75e",
+      "size": 252987
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Markoth_V__T3/hierarchy.json",
+      "sha256": "2f08f95a4be5b6c36ded2daa6a9e08827bd30ca6a093ad26cb2ad51d7a04e63b",
+      "size": 241027850
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Markoth_V__T3/meta.json",
+      "sha256": "95e888e758b5f78ab733d6eba0c34b215e78dfa5d14d8a2b5c56af568de38a63",
+      "size": 410
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Markoth_V__T3/playerdata.json",
+      "sha256": "e9f609d22f1fef35d42f5d9ebc7952a283ea68fac6ccb749a2989dc27eff1124",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Marmu_V__T2/hero.json",
+      "sha256": "fd1a8217a9df1c53714d7337ddec12eb86dd8de4ca91e55107edbe4971371389",
+      "size": 252990
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Marmu_V__T2/hierarchy.json",
+      "sha256": "14ca31cd1f04031948276d50323516c895d14e9e9062bc9fd2119fc583088dd6",
+      "size": 240632778
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Marmu_V__T2/meta.json",
+      "sha256": "b1429493d9903e18ba8f6a61ae5b9f3ffcf7ebed2ebb038ee2b385296d1602d4",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Marmu_V__T2/playerdata.json",
+      "sha256": "dafa6b3bc1b8e6a04bbf188b048486e8f8cabb011ab91b5d3882c7d24f9f2e86",
+      "size": 259282
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Marmu_V__T3/hero.json",
+      "sha256": "f0de54a5e24b45ff057b4987d624052e8959930482212ca295f724ccca0de295",
+      "size": 252990
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Marmu_V__T3/hierarchy.json",
+      "sha256": "a4c76b3d743f221b37683dce80a85b447656fb57f5120d9a5bbff9c51eeedce7",
+      "size": 240632740
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Marmu_V__T3/meta.json",
+      "sha256": "70f037bb96bb3fa0e6b243b7b94b4d9746fb6139e9a2c1803709ac3f82dc39e3",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Marmu_V__T3/playerdata.json",
+      "sha256": "dafa6b3bc1b8e6a04bbf188b048486e8f8cabb011ab91b5d3882c7d24f9f2e86",
+      "size": 259282
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_No_Eyes_V__T2/hero.json",
+      "sha256": "ebedbc5798353670db209eea1d280756854dcd77c520bde36195964659febfd2",
+      "size": 252985
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_No_Eyes_V__T2/hierarchy.json",
+      "sha256": "8577f50aa51928ef7f5f276ce99a330d36cf4663a7452895ec7bf58b5175b4d9",
+      "size": 240979782
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_No_Eyes_V__T2/meta.json",
+      "sha256": "32164838011188ec6043979cb22944aa19e11d020c5af7f46b3232f52d6de36c",
+      "size": 410
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_No_Eyes_V__T2/playerdata.json",
+      "sha256": "7afbae8c8eb42b71f8e0a32dfaeb365486d03106f1ff3d93ecd9695e374f31b0",
+      "size": 259281
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_No_Eyes_V__T3/hero.json",
+      "sha256": "b9084807ffe19eeae5a2a32da7166586764a7f0da3103f7b20320c8d565a6723",
+      "size": 252985
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_No_Eyes_V__T3/hierarchy.json",
+      "sha256": "7203ad55af5e3c673d3258e9dfdc2bbe44a3ae57a910285638f8567c8e4919f6",
+      "size": 240979761
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_No_Eyes_V__T3/meta.json",
+      "sha256": "ac6f7b57d9f851675532713e985a4af84a0c980facac4e51870d16adf7798415",
+      "size": 410
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_No_Eyes_V__T3/playerdata.json",
+      "sha256": "e826c48fb7f2e3e4522a6a5e0b13ac4e077c06ce6002d0c0d294e2a6f89df79e",
+      "size": 259281
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Xero_V__T2/hero.json",
+      "sha256": "b3eedc2f21e269aae8c4f0e4cb1c67ea519e9d8d069c22636d9ba7bd64d7980c",
+      "size": 252998
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Xero_V__T2/hierarchy.json",
+      "sha256": "16ed6c8a8ed99aec838de5fffe728d8a38530b0ca360d6fe36f81fe81d3939d3",
+      "size": 240703621
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Xero_V__T2/meta.json",
+      "sha256": "35cbf2a6243f620118a150cf815f3c0c6da91b15a96006f41874b75f24371945",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Xero_V__T2/playerdata.json",
+      "sha256": "66f214d8c96f6ee5286863eb0387f72a21d6b7bd7c4f55616eff4dfea6c5cffc",
+      "size": 259282
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Xero_V__T3/hero.json",
+      "sha256": "d46d55ab77fdee3907a5c6926c08ebae069125a3cc59fc5661b5bd514353368a",
+      "size": 252998
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Xero_V__T3/hierarchy.json",
+      "sha256": "5f9f068e8489690c27c3802da4a439b4560d5790ba451da03c664e88bc57b272",
+      "size": 240703608
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Xero_V__T3/meta.json",
+      "sha256": "bdae8452db4fa55c10bb3746055ce2a7314a3ba1d67b175cd6dd61c5f1b112bd",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Xero_V__T3/playerdata.json",
+      "sha256": "66f214d8c96f6ee5286863eb0387f72a21d6b7bd7c4f55616eff4dfea6c5cffc",
+      "size": 259282
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T1/hero.json",
+      "sha256": "779922041dadf1963e89209d1fc91497103ad9c797efa7bfb55ac2ea959c7e78",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T1/hierarchy.json",
+      "sha256": "b75680f1d1367cd038f46007a51fd3f6c28fd09c993922b935f4d2d2926f5f8d",
+      "size": 241207276
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T1/meta.json",
+      "sha256": "322aabb480cf90d4f9f75b81833751b924399491d1a63915924ff30101f836e6",
+      "size": 398
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T1/playerdata.json",
+      "sha256": "52e7fe2f91c5f3b25f38fc60d9709e905bc84949e0f5336df43df081f7f51a8d",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T2/hero.json",
+      "sha256": "0744c7dfd023562035a4e890cdecfab4fb5af3867a38f1404b25f4db0f4cfa27",
+      "size": 252993
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T2/hierarchy.json",
+      "sha256": "43c1a95f943d677c381e7c4eaab93a4992ed1ad70925fb50e5fb4156eb2a2203",
+      "size": 241207272
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T2/meta.json",
+      "sha256": "f11a1c648d2024863104da89532adb969457fbe0742519634eb1864875a074a2",
+      "size": 398
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T2/playerdata.json",
+      "sha256": "093e0dad949a1b03249f5446f0403c4cd68ceda948088789feed9f561daeab1b",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T3/hero.json",
+      "sha256": "bf89f16c518eee3477946b38ac17db906f01c192a8da01e088309d0c02ebf685",
+      "size": 252993
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T3/hierarchy.json",
+      "sha256": "7b420b032a199fa43edc857df569329519abb407ce7a758e9e0d74be467e1227",
+      "size": 241207312
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T3/meta.json",
+      "sha256": "107ea99287883b64f9d575833258340b69f9c7ccbd9c9c63581e1ef6a50bdad6",
+      "size": 398
+    },
+    {
+      "path": "analysis/dumps_v2/GG_God_Tamer__T3/playerdata.json",
+      "sha256": "52e7fe2f91c5f3b25f38fc60d9709e905bc84949e0f5336df43df081f7f51a8d",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T1/hero.json",
+      "sha256": "db5f31419c879b08045a634504731c6f7e291dae5a37fe921e1dd5967815622b",
+      "size": 252988
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T1/hierarchy.json",
+      "sha256": "a052628c742f0322b83a6d105bbf9eef94b5ba626ce9d0d186bfbb39024b4805",
+      "size": 246053814
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T1/meta.json",
+      "sha256": "c2a6a4c99e1f22488b9f162ab0437c86cf0c6915aa676ec8e4bacdeb5db6a98c",
+      "size": 412
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T1/playerdata.json",
+      "sha256": "cef28a7c78c26b65c257ea87010b179c37552eb39ea8a82babd18754415e691a",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T2/hero.json",
+      "sha256": "eabeb5362d19f1452b8d78c642eec8cb4811c2e81eb5c7bc11b091878d85167b",
+      "size": 252990
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T2/hierarchy.json",
+      "sha256": "5c7df2e036ac40c6a7b3b6f65a482c69d9cbfc7b76a996efd83478a9d683af12",
+      "size": 246053744
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T2/meta.json",
+      "sha256": "bd5af2b5f5c6ca6a2029e837403a9edd8c32c8ecd060bf121414a4c228e1aca0",
+      "size": 412
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T2/playerdata.json",
+      "sha256": "86e83675ee7694b9c85e97ca9fe5c4ee38fb7342644b69920663a63767b4dfc1",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T3/hero.json",
+      "sha256": "65bd06777e6712c7a012159b076e865a5d193f483d4f1dfbe51a7dd11de00ac4",
+      "size": 252988
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T3/hierarchy.json",
+      "sha256": "462202fb0f869b28fe06342d007e25eab1280b8b8bdd99773d3862ee037c11b8",
+      "size": 246053827
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T3/meta.json",
+      "sha256": "a743eec47eabc71de1de9a725911e3ee002d541ac1eabec3445eb84182da4042",
+      "size": 412
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grey_Prince_Zote__T3/playerdata.json",
+      "sha256": "86e83675ee7694b9c85e97ca9fe5c4ee38fb7342644b69920663a63767b4dfc1",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm_Nightmare__T2/hero.json",
+      "sha256": "ac8fb73d61b4d355f6281865336ea6551d22282de4d30a498f6cef65b243c2d1",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm_Nightmare__T2/hierarchy.json",
+      "sha256": "b7a3aeaa62e586ab86fa5b1935f2a8eacfb7c3fd998a9ff1c85cc5f74f50552c",
+      "size": 242542785
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm_Nightmare__T2/meta.json",
+      "sha256": "2122ec6c5036fe5a4e993601d3ea62f50ced0dd802f029c8d874b66f764ebff2",
+      "size": 410
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm_Nightmare__T2/playerdata.json",
+      "sha256": "d2de0ed90b5f2c5e7e295e5101edbb5b91f075dd42ad65b3bb34aee52c0d8bd7",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm_Nightmare__T3/hero.json",
+      "sha256": "28d24c20927545981ecae2cd6a98db909e27e5f51410baab1ea671aaa9b4b14d",
+      "size": 252989
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm_Nightmare__T3/hierarchy.json",
+      "sha256": "d63c7e78df1ac82871def545f3bdebaea9b3d8e6b66703e9c429f9e541aa5080",
+      "size": 242542824
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm_Nightmare__T3/meta.json",
+      "sha256": "f85a805a6b1a72c042bf83e0045854c9320cc52204d70b72f47cc7858e0069ac",
+      "size": 410
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm_Nightmare__T3/playerdata.json",
+      "sha256": "d2de0ed90b5f2c5e7e295e5101edbb5b91f075dd42ad65b3bb34aee52c0d8bd7",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T1/hero.json",
+      "sha256": "83e761d5014d35c1b0ce094da1ed0e3a8734eedeabf60f6729af2f4f10485fec",
+      "size": 252978
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T1/hierarchy.json",
+      "sha256": "9a010ac89d51f3dfe126f6991fd2bd9149912d96d8696955b09e401472843d6b",
+      "size": 241648732
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T1/meta.json",
+      "sha256": "7e3c4de087fecb90abf1db5374d67cfb7e6b28e226012a3a9bdaaaa2b0d54289",
+      "size": 390
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T1/playerdata.json",
+      "sha256": "802188260e0f9077717be79210d1abb38bfe18991285e97dd642f95c58e89119",
+      "size": 259280
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T2/hero.json",
+      "sha256": "c4afe74d415243b9acee598eef0b75c0345dadc996be62e2f3e0c3ad8b21bdaa",
+      "size": 252980
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T2/hierarchy.json",
+      "sha256": "204b90b68eb870a71c099117da45393ee3972046b7afd00ea59cef00d994a5f5",
+      "size": 241648794
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T2/meta.json",
+      "sha256": "30bd93d7bb103e0870e56c9846e05dd2b1cb9c082b275024b8973ff91d87bc41",
+      "size": 390
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T2/playerdata.json",
+      "sha256": "802188260e0f9077717be79210d1abb38bfe18991285e97dd642f95c58e89119",
+      "size": 259280
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T3/hero.json",
+      "sha256": "53b379358f00b4d46c5ae9ea528b9448a81d7f13965f09fc940bfd7928738a7d",
+      "size": 252980
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T3/hierarchy.json",
+      "sha256": "d1389661c967d132330dcd06d497b6f2bd17ae04ac7ff55a7667b42adc671b4f",
+      "size": 241648729
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T3/meta.json",
+      "sha256": "026f95d58eac8d1cf8c6c1df59b374b18808e89c70db59b5303f8b797b5a42f6",
+      "size": 390
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Grimm__T3/playerdata.json",
+      "sha256": "802188260e0f9077717be79210d1abb38bfe18991285e97dd642f95c58e89119",
+      "size": 259280
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Gruz_Mother_V__T3/hero.json",
+      "sha256": "db6c44b5f420c3c5fdcd1ac1106d6bc1e3e9cb144a5434686daaaeacdaee2d77",
+      "size": 252989
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Gruz_Mother_V__T3/hierarchy.json",
+      "sha256": "77bb061ed7a6a45bc399bdd3db24df075958d1fc9a4ba06d64f61b6e78a1a548",
+      "size": 240765959
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Gruz_Mother_V__T3/meta.json",
+      "sha256": "2dc6ab6a37c5540b16771ac2219c0e46efc9f42943f4434b108c3d9ea0fdd3e5",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Gruz_Mother_V__T3/playerdata.json",
+      "sha256": "7a2ccdc76d06939d0d0b2738c65fe0cb5e72229a6f8ef06c58c0eb96d3f2549c",
+      "size": 259281
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T1/hero.json",
+      "sha256": "b8fc3e01d196811ec0bcfbadbe3677abcc894e433e6d7b474288242da8c4c3d1",
+      "size": 253003
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T1/hierarchy.json",
+      "sha256": "6e55523a6a180485d884cf08dc48a7de09c90ea11fa8ae28057ab1a302aa3e36",
+      "size": 241271766
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T1/meta.json",
+      "sha256": "d8b8dc4d3be593a957923c092461df7e4e63ef61f59e272a166a727a63a8b03b",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T1/playerdata.json",
+      "sha256": "6d63f8e9660d634d0190eb28d1cda706aa40776342a3a5519c5d0ce9dc3c94b7",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T2/hero.json",
+      "sha256": "088d4e8458c6fa056484879d4300f542c48878056eae8aad07ce0b704b8d15bb",
+      "size": 253001
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T2/hierarchy.json",
+      "sha256": "7cb575628d763a94fbb33a7760c6e330938c5f63bc133854f1d312a22841f08e",
+      "size": 241271701
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T2/meta.json",
+      "sha256": "a97fad5f04abdf1831dce10e1e9d83b58ce6e615220d5e602b81360700ff7518",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T2/playerdata.json",
+      "sha256": "48b546b771eeaa5d80f3320478439894cd7f9f45a860fcbd92f51116f9580b9a",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T3/hero.json",
+      "sha256": "f5fca1be9e6e1ff02c35cb63eb0c10b56ed616410716f8fa1703ce6f9911124d",
+      "size": 253003
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T3/hierarchy.json",
+      "sha256": "58eea6c0cdbf140479b672285300d8d49865c382ee033fdc38e0d5c5ba2def8c",
+      "size": 241271701
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T3/meta.json",
+      "sha256": "4bb325a3a7f12b072629bad23c51648b430e22ce689cebc1601078a8f7c36bec",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T3/playerdata.json",
+      "sha256": "6d63f8e9660d634d0190eb28d1cda706aa40776342a3a5519c5d0ce9dc3c94b7",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T1/hero.json",
+      "sha256": "9812d9b24f8c87e5d191c5fb393d5fe7ea5ff71002d9f8ea890d0dce67272f0c",
+      "size": 252987
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T1/hierarchy.json",
+      "sha256": "7768e45a263720eed80d79c9395223ebc09f27e3a9904a9ef2d31306fbd87bfc",
+      "size": 241610297
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T1/meta.json",
+      "sha256": "05b36656a28ed1b2f6b939773fc8bc0f0d01cf8e8435f656c211d1de154a387f",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T1/playerdata.json",
+      "sha256": "424c9510f9c98e6fefd01928b9d3573beac4b889e63546cf4bca91fa84a8d986",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T2/hero.json",
+      "sha256": "845128eff3564ab1aae0bd409da357589cfc6380dbdb0389d63c9a7cf68cfa7a",
+      "size": 252987
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T2/hierarchy.json",
+      "sha256": "ae5c689748cd643b4214f292e416a3d1363613a6202e6e657aed2c27be7799a0",
+      "size": 241610206
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T2/meta.json",
+      "sha256": "6f26c92411a11e5e2b61a299807b33e5cbfc185dd85ce4805644dd2682eba4fe",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T2/playerdata.json",
+      "sha256": "424c9510f9c98e6fefd01928b9d3573beac4b889e63546cf4bca91fa84a8d986",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T3/hero.json",
+      "sha256": "08f0ba828c6c842251f9cfd99980b72229c2da1b4a6328b03a24f924ad771e03",
+      "size": 252987
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T3/hierarchy.json",
+      "sha256": "d6728ef15622ab989bfcb9e745037a6acaa1b8d91cd276fc4566c05db477f7b4",
+      "size": 241610075
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T3/meta.json",
+      "sha256": "30778154eb49c85ad23a43127ad09da5a62c3b35d246abac581f09b706f981ec",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T3/playerdata.json",
+      "sha256": "da81e3547b9ab77e41d2104f4dd24bea0875ffd641ad874784b0354e28b22a86",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_1__T2/hero.json",
+      "sha256": "5de3f04ce8dc81f78ea1dafb33cc48f0fe7b62e8ab412122a8d012280d0a726b",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_1__T2/hierarchy.json",
+      "sha256": "e338398aecdebc89c06f5b6ccaf8233b3973e041b99eef9269bdd53b60259a99",
+      "size": 240854934
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_1__T2/meta.json",
+      "sha256": "079561b0a5b213f1ef6fea8b2e1fa036210afa7c3ad459944ba581b183d02b3f",
+      "size": 397
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_1__T2/playerdata.json",
+      "sha256": "432a701684af7524b459d56a520924c36b8b11f70bad1a6cb8870929e4c57ea8",
+      "size": 259284
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_1__T3/hero.json",
+      "sha256": "1b37edd3e665f397b18fac7b9d463993f264fc98ec4c9c91859312e4ac62d0fa",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_1__T3/hierarchy.json",
+      "sha256": "590dac5f3a62e4b5f6fa6e44035ef5a648c3d040655d6ee4f61b67f212cb364f",
+      "size": 240854962
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_1__T3/meta.json",
+      "sha256": "a45f8a2dcda1a180cd58b1475719e8b41ceb5427630184efd38dcae44f41541d",
+      "size": 397
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_1__T3/playerdata.json",
+      "sha256": "432a701684af7524b459d56a520924c36b8b11f70bad1a6cb8870929e4c57ea8",
+      "size": 259284
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_2__T2/hero.json",
+      "sha256": "fa31ae3d0ce5409c8d17df50c62bacf67d5b792c85f3fbccbec673ca284e6059",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_2__T2/hierarchy.json",
+      "sha256": "c0c1a9ddfc9ef404bbd2611f4a9379a4f3f109d802493bd7794c7a124cba30f8",
+      "size": 240973128
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_2__T2/meta.json",
+      "sha256": "f1fec7ab2a0f2079e1526969077eac3cd4905c4bf211779d55ef443a13f7bc57",
+      "size": 396
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_2__T2/playerdata.json",
+      "sha256": "5f7dddd54c15274229337eb5018ae94830b13e28035ba6a14b1b85b8bf69ed93",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_2__T3/hero.json",
+      "sha256": "c78edefcf66e21502cc4b2f5a81a1dad12f4ab36b725c9958d0a5f99d960ead2",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_2__T3/hierarchy.json",
+      "sha256": "3938bcd36854c2b0bd86738ed874170f925a1c2f2279e0f70c7a029fcd3a21ec",
+      "size": 240973100
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_2__T3/meta.json",
+      "sha256": "1df4a426842e27ca4bad09813c8190db55c00c63dc6d9fccdc8b92a66249bff6",
+      "size": 397
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hornet_2__T3/playerdata.json",
+      "sha256": "5f7dddd54c15274229337eb5018ae94830b13e28035ba6a14b1b85b8bf69ed93",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T1/hero.json",
+      "sha256": "def60bb7c99a868390dd4967085768b20ee4198f173722cd82b5a6e21e42f4cb",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T1/hierarchy.json",
+      "sha256": "6a6ebd1763de3b37da7c3b604509a116f362f0b14fbd472d89fe9ea5237da828",
+      "size": 241772716
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T1/meta.json",
+      "sha256": "dcc0bed844a36af0eabeccb926a080feae169d8b1b38ad1a181cf49060d9b930",
+      "size": 397
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T1/playerdata.json",
+      "sha256": "093753088a8c5b0de2e194435bc516b31be18f611c2ccaee8d30dbf0d62d4513",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T2/hero.json",
+      "sha256": "12c1890aa4ac09f72747caec3e86ea56dd40cea6d09083e0e2dcfdf0517c7f7f",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T2/hierarchy.json",
+      "sha256": "23aacabbac7a9aedaf635003f437e2bbd224ba3f9e97dfe5f5283a4d3d0acc2b",
+      "size": 241772720
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T2/meta.json",
+      "sha256": "cb921e0563269ba02523e18238f23ecec95c54accce947399fd3836c14a0f4da",
+      "size": 397
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T2/playerdata.json",
+      "sha256": "bc8d32b952264dc6bafa1347e7d77076cf6ad6e29272e983c75b7cfb1a392adf",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T3/hero.json",
+      "sha256": "0008d0d28792025e7daa034ba5510d3060061b00a2f9caee3083a6acfccb39df",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T3/hierarchy.json",
+      "sha256": "ac79b7ef9408c50a22bb46019bd513687adb6503b946b2f9a140bbcb6f0ab55d",
+      "size": 241772587
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T3/meta.json",
+      "sha256": "8a9668193fdaa58effa915703d43e5c19655a60d0b7f54611bc5fdc2b9627822",
+      "size": 397
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Lost_Kin__T3/playerdata.json",
+      "sha256": "093753088a8c5b0de2e194435bc516b31be18f611c2ccaee8d30dbf0d62d4513",
+      "size": 259283
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight_V__T2/hero.json",
+      "sha256": "65ebf84bd97953177cba8bfe359145340ce806ac39b329b8a6e4f336af24653d",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight_V__T2/hierarchy.json",
+      "sha256": "d627c05d22af5de17d9c4c7fdc3dd051db15f17b18a96bd4e38d0f32c1738bd4",
+      "size": 242188030
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight_V__T2/meta.json",
+      "sha256": "b8f4d4a527b51a2def50783c7f342a5cccdda53cb7659ae564feb2765d08f81d",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight_V__T2/playerdata.json",
+      "sha256": "77effd322a9e43c374f211d6001338e17864981dddd8faa870c3ef315b3de038",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight_V__T3/hero.json",
+      "sha256": "4cbb6cd28b781262cb43b0a6c2202540cc3ad72cdca540a987e127353f25a0e4",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight_V__T3/hierarchy.json",
+      "sha256": "2dadb21d91bdbd0c62e9d79e3c2eab71170fe62a32166ede9f84f7259ab7c1b0",
+      "size": 242188046
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight_V__T3/meta.json",
+      "sha256": "8f52ad876f3a7107cde26c37f34ff9fa56f1ad64ddd12eedd38f6f7bd1f96fbb",
+      "size": 406
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight_V__T3/playerdata.json",
+      "sha256": "a7ea9926a25effad33ec7013c63268e1a1e6357efe7d3b983cb066690af37ae0",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight__T1/hero.json",
+      "sha256": "00f987638c7665526ff971515705900dced066720f5d05dcf3795a5fcdc18887",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight__T1/hierarchy.json",
+      "sha256": "a98200a8d55f256fed3c09524f4389bc60457fc01913cf558c92c9f31ba9961a",
+      "size": 240817404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight__T1/meta.json",
+      "sha256": "27a9986dde04005c184b4160c46af41abfed576cc7b148a0d736a8a789895cc7",
+      "size": 403
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mage_Knight__T1/playerdata.json",
+      "sha256": "77effd322a9e43c374f211d6001338e17864981dddd8faa870c3ef315b3de038",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T1/hero.json",
+      "sha256": "52b5ba375b8ff4d0bf3bf4fc811f352cab8febee937a3d4331e25fd3b19090c2",
+      "size": 253011
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T1/hierarchy.json",
+      "sha256": "1ff7a6d258e5befb1ecf41d19a905c0fc91ac5354dbb75e3ab0ee2c31212ae84",
+      "size": 241235613
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T1/meta.json",
+      "sha256": "9a51adce5db53908525e66706d4bbf9f6d940357124d4b26ec60482df158e06c",
+      "size": 408
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T1/playerdata.json",
+      "sha256": "29b3283a1d37410dd73cdb837819b60fbf3e8eda7ba0338420049c859be0dffc",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T2/hero.json",
+      "sha256": "65fdf12ab60bdbde78a71eef9ddececab3ca09d5c4e7be95e04350748efcd1c0",
+      "size": 253009
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T2/hierarchy.json",
+      "sha256": "9c4eee1e84dc6f7e2e25f291dc731f27ad6df4a9138281dbc0ea3a4cb29e58cb",
+      "size": 241235642
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T2/meta.json",
+      "sha256": "694f38c5b1124fbe435a80511834eddd6a3a7508d2765a11a49ee77d3456c298",
+      "size": 408
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T2/playerdata.json",
+      "sha256": "862d77fd6e38855f6ff4a1ef7c1781be1d21f045135037a0f85e9e209832c177",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T3/hero.json",
+      "sha256": "b1918ac70423641e3b7e77c322d39acabfcf780601eb1ea837a4748d880d4011",
+      "size": 253011
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T3/hierarchy.json",
+      "sha256": "3ca4e502569699580bc90d3cb78728fd16cec39178eb1906a9aaa2e04c6152ec",
+      "size": 241235566
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T3/meta.json",
+      "sha256": "7c1af29a62d0f9d066cfacb5b489cff389460c913d75e9e02a3dd6905b53e2c7",
+      "size": 408
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords_V__T3/playerdata.json",
+      "sha256": "29b3283a1d37410dd73cdb837819b60fbf3e8eda7ba0338420049c859be0dffc",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T1/hero.json",
+      "sha256": "42b74a4c585b62d987b1490f7207871ec6bda521a7ca9e6c33e30052d7b02233",
+      "size": 253010
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T1/hierarchy.json",
+      "sha256": "206b747529ca4d163f7ee4d631f8ca9a7acc63da51286812e8f6cfe9001ca256",
+      "size": 241063664
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T1/meta.json",
+      "sha256": "80e8d698417866a9ed8efc2d2f19d3b7ed4923f42d9086feb4db1620a45d75e1",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T1/playerdata.json",
+      "sha256": "24a843467a6f46a5b490b028c1e734bb8a150779475bb8eb8f99d4b1fbdebd7c",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T2/hero.json",
+      "sha256": "ba7c909d264ba3a2c3dfbb4b965fd369d98586d229e7530438cd348c5aac35e3",
+      "size": 253011
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T2/hierarchy.json",
+      "sha256": "97b533ec7857b2de9df98f037c4f00e3c4b743b58e3b7c46a7d2a39cd2d73390",
+      "size": 241063624
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T2/meta.json",
+      "sha256": "a022f81764d042d2f5806569ca1f7364133bf3caece786d82e4ec044dee808cf",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T2/playerdata.json",
+      "sha256": "24a843467a6f46a5b490b028c1e734bb8a150779475bb8eb8f99d4b1fbdebd7c",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T3/hero.json",
+      "sha256": "59e44206835a28069fbc44983199940bc73c9c9edef63bf493ceaad492172dd1",
+      "size": 253009
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T3/hierarchy.json",
+      "sha256": "ff405c43d272978ac05cda3a397cddab171a7643364f18bb54025cc5b2c36aaa",
+      "size": 241063627
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T3/meta.json",
+      "sha256": "dbaafe65b4183137c297b51e8621615c2e2a7b4aae0fc9aa876bc59afc07cfb9",
+      "size": 405
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mantis_Lords__T3/playerdata.json",
+      "sha256": "710516ec7e009f64353ed759f4b26907a7c866549716ea080b5398997f8c4c97",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mega_Moss_Charger__T2/hero.json",
+      "sha256": "f452ed066ef4860e5b46e10bb05e7df6970d090b844975934120735179df74b7",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mega_Moss_Charger__T2/hierarchy.json",
+      "sha256": "5d63c55a3335ff8d6ecb1be1d84116d182486fd5723d3ccc5e412368aabd6a7e",
+      "size": 241468092
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mega_Moss_Charger__T2/meta.json",
+      "sha256": "6d9b115413876b0f5e6d47e9b4e6ce3bcc78c1d362a1c432ac6a247bb0c3f0e9",
+      "size": 415
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mega_Moss_Charger__T2/playerdata.json",
+      "sha256": "2ab8da164ccea9ad2f59a864b0b103695e056e59cd775396defd24877b429bbb",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mega_Moss_Charger__T3/hero.json",
+      "sha256": "71b6d687ed017bcd208b15603c7c35ebb53ee0fac510e731c8ed43bad70c9bc0",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mega_Moss_Charger__T3/hierarchy.json",
+      "sha256": "2c3e51fea941578701e1a812f4ab3179de761d5d174671f8bb86096601755bc4",
+      "size": 241468080
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mega_Moss_Charger__T3/meta.json",
+      "sha256": "4d000c760da323b2f31d88f10f206485032d667905e3372efec2fc6279ace6cc",
+      "size": 414
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mega_Moss_Charger__T3/playerdata.json",
+      "sha256": "d386f0dd558c761bc99ce7540f5b5dd0d84a41298a9681e8264ceb8919c6ca44",
+      "size": 259291
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T1/hero.json",
+      "sha256": "afabaaf3f7f21452d32059c13e59ab36f33b6e46d18a83961cee2f79eaf3c1e4",
+      "size": 253011
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T1/hierarchy.json",
+      "sha256": "1cea089ea4da80537ce2478351b3ebe9f31ea79a0f12a1ea38e369e76fe5ee32",
+      "size": 240824140
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T1/meta.json",
+      "sha256": "15e769a33292aee76a0c148afd0da1b176adb5d26b6c207e614e5a7daa934e86",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T1/playerdata.json",
+      "sha256": "3ca6d88481d763a329e3fabaa03f151ff47c14fd621b0d225ffa0a32b67c1c8b",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T2/hero.json",
+      "sha256": "453833eea778be387855e6bf1e7218d460c83b774aadcb77179165950e685067",
+      "size": 253011
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T2/hierarchy.json",
+      "sha256": "e9fb7babeb358b7fe93eeec5045518722bce2cc281354060a6b5548f4751c939",
+      "size": 240824100
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T2/meta.json",
+      "sha256": "ae55aae1e24414df427d5cb4f7a59b09428a47c04879a79b95c66acba5750cff",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T2/playerdata.json",
+      "sha256": "1ca3624fd7501a11e12c1a8af4e4b0942e21ba330d28f6d1192fd3c0a34d71e2",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T3/hero.json",
+      "sha256": "69b30c4511f8611dfce84540500a4a63dd544f071b9858c5dae09faeeb6d77b2",
+      "size": 253011
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T3/hierarchy.json",
+      "sha256": "ba0431240d70baa35ad04ba0d2f83aa5a3f6ae3a04d2642b532a33b5f784c5da",
+      "size": 240824080
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T3/meta.json",
+      "sha256": "33606f337011157d99b0b7764cd0b5f6ed9ac173abd6ca529a1827f33d4e01d6",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T3/playerdata.json",
+      "sha256": "1ca3624fd7501a11e12c1a8af4e4b0942e21ba330d28f6d1192fd3c0a34d71e2",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T1/hero.json",
+      "sha256": "e2602d36226145d27acd97cfef29f347d31f7ce00ee026c80e40100be62f27e7",
+      "size": 253017
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T1/hierarchy.json",
+      "sha256": "e0cc5be18f1890d87faf9476157d94bca07d0ae94136e652a74c84e41c57ad1a",
+      "size": 241598911
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T1/meta.json",
+      "sha256": "c152d412cc13aa3d7b23781e7d08dd6f94e44187ca1a7ef12e8866e93aca19b3",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T1/playerdata.json",
+      "sha256": "5da995e019f635a548f8956243b5f386e6be2df51a83c1fce590f1adcadedade",
+      "size": 259284
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T2/hero.json",
+      "sha256": "503c6bcbda22700203fe0070fe2593dacea591c747cfd622a26dbd26c1351586",
+      "size": 253017
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T2/hierarchy.json",
+      "sha256": "e96105c833273dfbbcba13ee3c15c565c7cd10cefb1533ecced1ce3f8c2f2e5f",
+      "size": 241598933
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T2/meta.json",
+      "sha256": "1de0289cc4b8b273c48148eb932de03a521ef800e7d4647273b8319ff130a164",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T2/playerdata.json",
+      "sha256": "5da995e019f635a548f8956243b5f386e6be2df51a83c1fce590f1adcadedade",
+      "size": 259284
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T3/hero.json",
+      "sha256": "5bfef0c34b980d5aa9222988618df8cb10f81a558dc7af7a607dea86b44f7bac",
+      "size": 253015
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T3/hierarchy.json",
+      "sha256": "c98732aa2793a51cf0990452665274ac030201f9d074f0ba14df147496ff9677",
+      "size": 241598808
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T3/meta.json",
+      "sha256": "33de26cd160ec0d88ec97602ac1a1be406a109f1483931424ccf6e7df626ceec",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_Hornet__T3/playerdata.json",
+      "sha256": "1ba38762bc952d5582e278e6724a31b263d647f3ee06ecd752b2df98471331ba",
+      "size": 259284
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_V__T2/hero.json",
+      "sha256": "f5995fbe0a2308f69684894b041efcfde8f5f5cab5faba081208d80477c0b887",
+      "size": 253019
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_V__T2/hierarchy.json",
+      "sha256": "bbaa561062b006413e0ef0fdfc39d4b580b61b001c355e653bc2204af4584322",
+      "size": 241135846
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_V__T2/meta.json",
+      "sha256": "edbab069b7f6f11784c0967395e8a8a8be3d732df39a8e62e288faf96628c85e",
+      "size": 392
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_V__T2/playerdata.json",
+      "sha256": "b92a9dd11aed582b8a53f90bf6a4df4d4146eb23fe0f3a269ef0160709802fb5",
+      "size": 259315
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_V__T3/hero.json",
+      "sha256": "8a01507d5d121e01cbc97a9eba3862b0d77c7b3920c256b19dd7924bddd4a6ac",
+      "size": 253021
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_V__T3/hierarchy.json",
+      "sha256": "991a74a09eeb44de942323dc14de0dbf28470f3ec2bfcfe8cc77a58c1bf264c0",
+      "size": 241135897
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_V__T3/meta.json",
+      "sha256": "5058da6d135ec9285f848770d347016661b875b6110910f9e8aeeeffcf2bfa01",
+      "size": 392
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_V__T3/playerdata.json",
+      "sha256": "b05eca9b536a51661b89593e8ede40af9d4c27f43cf12476ba050f735726d3a8",
+      "size": 259315
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T1/hero.json",
+      "sha256": "a377a1399e2056ef98ceea500941641e5d4c76b06ed9639b38985800b329c37c",
+      "size": 252992
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T1/hierarchy.json",
+      "sha256": "21f5d4d10feadca18d5f088711f0be7c1bb924af66e7dcb6195a1b5a3dbf2298",
+      "size": 241119851
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T1/meta.json",
+      "sha256": "3058633ddaf2c9ea6d3daaae87640fd8c934ab96d06e724ba9a80ff252dcecb2",
+      "size": 399
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T1/playerdata.json",
+      "sha256": "148e9b5f18f49f7b9a58f5f1f0cc25fd59c1645672b624638d0d2dd2ed8ad84f",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T2/hero.json",
+      "sha256": "7def85775ea93de0d50b081e6acdef559dd317821284ed5abb785628fe70161e",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T2/hierarchy.json",
+      "sha256": "c5123bf384ac62ec89982e3a6e71b1f01cc418459f7f5d16122596ef70833b84",
+      "size": 241119790
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T2/meta.json",
+      "sha256": "cd1b8c48df029edcaa2ed6e8937240abf08ca7bda42568076858433cb0c9e760",
+      "size": 399
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T2/playerdata.json",
+      "sha256": "18c888714e01ac0be64e1edadec90403e9f744763f7c8545647876de42376ba1",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T3/hero.json",
+      "sha256": "c8c69f8ddfee3d3f821f5809ab5007e948f188e796e7c4baaa47227eabe6622d",
+      "size": 252992
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T3/hierarchy.json",
+      "sha256": "b68d30020a69cc13898c59517a70c593ffa17921d1f458433bc685d61c501732",
+      "size": 241119845
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T3/meta.json",
+      "sha256": "f8a75fd4bb92b40cdc053c5fb1faa7721f40b3e8f5da0dfc4560a7a6534cf300",
+      "size": 398
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T3/playerdata.json",
+      "sha256": "18c888714e01ac0be64e1edadec90403e9f744763f7c8545647876de42376ba1",
+      "size": 259286
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T1/hero.json",
+      "sha256": "d264aa269afe144cdb73310a182addb05ed9074d9def6888a47f72b7e8e9c59f",
+      "size": 252990
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T1/hierarchy.json",
+      "sha256": "957f9a68bc1a49253efd92bb71f101d197efb0b87b6610d9286198a264658a81",
+      "size": 241360967
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T1/meta.json",
+      "sha256": "497b0e73f24ab4b47510133bd0390e063020967214f7bc22da2cf21162a4dfbf",
+      "size": 394
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T1/playerdata.json",
+      "sha256": "5d06ceef177faa52fe28dc6865bd974630fd6e22d909e10104e8c1f079e2e160",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T2/hero.json",
+      "sha256": "54c68278b81f90cbfbe79c0c684882622a94f1e53759f93836fd0d77de149e47",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T2/hierarchy.json",
+      "sha256": "61ce30f01f7255ea22b310676e04aa129d8d349d42e3de493195a1a5d20f179f",
+      "size": 241361102
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T2/meta.json",
+      "sha256": "379a788d7023244d7bb6e1ceaf8f8d6bdd2aa5866e0697256055a4590b6928df",
+      "size": 395
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T2/playerdata.json",
+      "sha256": "6a6e496ded47b445474eddbfc593abd2a6d891dec57af7f0375bede91d8ee2bf",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T3/hero.json",
+      "sha256": "0bd54dbf0de99bcf68aa83c48b22bba3dbd08b0932d38b91ccd6151d2000f3ab",
+      "size": 252991
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T3/hierarchy.json",
+      "sha256": "41d4df540d1a52d29e9a82473c0a2be1ba1d2d233f832d722bfe5d8470bfbfaf",
+      "size": 241360994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T3/meta.json",
+      "sha256": "028d9ef3fdb70194f44edcbfda159fb1ccca9da28170c83dc69f2a2489dcc381",
+      "size": 395
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Painter__T3/playerdata.json",
+      "sha256": "6a6e496ded47b445474eddbfc593abd2a6d891dec57af7f0375bede91d8ee2bf",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T1/hero.json",
+      "sha256": "cb4eb503828840a2b11861a7107fb8647a112c0b03f1e61a30d34ad2631d955c",
+      "size": 253015
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T1/hierarchy.json",
+      "sha256": "994465423845291b52ef91d4c646d2d77b877d2454d3c1306c4f781d8e76bdee",
+      "size": 242699757
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T1/meta.json",
+      "sha256": "396e2c9b3589677cbe8ace1eb7b4372ca2d122f517e9e0aa6213d7c417b846f2",
+      "size": 397
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T1/playerdata.json",
+      "sha256": "99537926b5a949845ce7cc6434c086518d847f93193b41590bb662f76ca3c036",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T2/hero.json",
+      "sha256": "99b97bcd5b2ff784a05ab5600824ee7618272f4d8544dd70a64428a6290f7317",
+      "size": 253017
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T2/hierarchy.json",
+      "sha256": "b2f9b5da267eb33b679c1374b3c094d434e601a62688083fcb92c16c93785f8d",
+      "size": 242699822
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T2/meta.json",
+      "sha256": "2de8acd0758819bbc7ebf19a13bde6cf50bed13f2af955a3c34cab346e494e0c",
+      "size": 397
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T2/playerdata.json",
+      "sha256": "ec6c443080f987d06c58e4322ddc016779bf372d11587a31f0a0d62e68193d83",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T3/hero.json",
+      "sha256": "b2098684906e679b3a45f5f5a0642748f942e58f682bfc98ac97e646ab3fc180",
+      "size": 253015
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T3/hierarchy.json",
+      "sha256": "5b5460397d9180ac3319fd2607338bc77e00e94c3b9f6d7a9f9bcc624a5ca11d",
+      "size": 242699734
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T3/meta.json",
+      "sha256": "7304a0b13ccc6b939cfbb55d3c0ac2546d7617e1256ce0fd16fc8d6941995d2a",
+      "size": 397
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Radiance__T3/playerdata.json",
+      "sha256": "99537926b5a949845ce7cc6434c086518d847f93193b41590bb662f76ca3c036",
+      "size": 259285
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T1/hero.json",
+      "sha256": "2de5c5f14e4dc20da88460bc21439d911f7ab69f44b37beaec2aae923188e15f",
+      "size": 252983
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T1/hierarchy.json",
+      "sha256": "58b66bdf690fe6349a54571a3e61668ae2dafe5597f9f46c77bb52b17388e6ca",
+      "size": 240778846
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T1/meta.json",
+      "sha256": "a8f570e082d94ae2613c165526f491f59f084d4171dc9966161bd6da8542c798",
+      "size": 386
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T1/playerdata.json",
+      "sha256": "f2b424eb1eb9b6b508a79e148269a533c12eb2600327849fcb20e64800743f51",
+      "size": 259279
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T2/hero.json",
+      "sha256": "f357b2de9599a17e7205f29a6fc378c0e4eeed577789501574de94f7bcb68bbc",
+      "size": 252983
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T2/hierarchy.json",
+      "sha256": "eec2158eb962c985100e6150a583d0db5e0c6eccff95250ba5d620379f3ed554",
+      "size": 240778865
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T2/meta.json",
+      "sha256": "70d8fcc41f782f4bd9702cd707451db0380ec4ea2b86b4d5ec9c0bce6de1decd",
+      "size": 386
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T2/playerdata.json",
+      "sha256": "eded538a687db52c445a84d391a281cf6cbf67138950afcc97999b568f909cee",
+      "size": 259279
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T3/hero.json",
+      "sha256": "3e6d3b441ef77698ce06db85069b0f4b764ab7bb1bf0bf68b5f61b1e1c081356",
+      "size": 252981
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T3/hierarchy.json",
+      "sha256": "3a12856871042a0bc8feb6d3ab870608ab0c85990196ebd1f7c446232cf0c900",
+      "size": 240778979
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T3/meta.json",
+      "sha256": "0be751b5c1283042416061a73825c64dfadaeb9f1617d9cfe3cac38fec81791f",
+      "size": 387
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Sly__T3/playerdata.json",
+      "sha256": "f2b424eb1eb9b6b508a79e148269a533c12eb2600327849fcb20e64800743f51",
+      "size": 259279
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Master__T2/hero.json",
+      "sha256": "95f3001f40392d11b927a29e272c0413bac6ffa489ba5e1c6a2135541b12c704",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Master__T2/hierarchy.json",
+      "sha256": "67e3af9b050ee695696f1d46e71fe91941c79bd6dc60f72824815b8954b66f1a",
+      "size": 241060883
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Master__T2/meta.json",
+      "sha256": "d1532110faeecc27b702b9da0ff7a9c910d12d8a20d23e501ad281ba4aabfef8",
+      "size": 403
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Master__T2/playerdata.json",
+      "sha256": "f65c082f47cd97a23d24f49e370c30e1a0cd0498c13fafce078b378af780d9a9",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Master__T3/hero.json",
+      "sha256": "9bdebba00e2abcf8a09801aaac5083b7e7ff8eaae1d69c689c105a68c1716a21",
+      "size": 252992
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Master__T3/hierarchy.json",
+      "sha256": "2cd5d1c6c17f6d9c5f4bc96569ad5efb927e7c23b8285e52505c4f9268b3c958",
+      "size": 241060864
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Master__T3/meta.json",
+      "sha256": "0d1bc6c1dacd59be4785720918a6476cc1b6ccf8437cff9ff6609adf27b13870",
+      "size": 403
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Master__T3/playerdata.json",
+      "sha256": "fd4a4c721a0f387f608d938e9068dbbe10323cc169eb5e3ddb624f87940fe06a",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T1/hero.json",
+      "sha256": "d29120ba615f5b65d1a33ed9839e726f78268a1c72934e9f6c9afc614d34f1c1",
+      "size": 252999
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T1/hierarchy.json",
+      "sha256": "5d173d7313d91d13a9c23ce3a044d8bd1e0228fb4e0f5a2f149782ad6ff1934a",
+      "size": 241175145
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T1/meta.json",
+      "sha256": "7f671c260724b738c2b09337eee9ed0069f2381eb97ecb1b478f6b024b9d7331",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T1/playerdata.json",
+      "sha256": "9d2061216b74cdf68e0d319b4221ae1f28525c025cd10249f82aadde0ba27137",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T2/hero.json",
+      "sha256": "aa74e2e9b7cae5a3fb98842c4ab00f73e156641041d679ff55ecf831f70cbd20",
+      "size": 252999
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T2/hierarchy.json",
+      "sha256": "2eaf376e7f1bc6b38b5c8ba4bbd9c7c8f98ccd1442aa86679caac364cef2e071",
+      "size": 241175040
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T2/meta.json",
+      "sha256": "1de9b01e4edd460cfdbd4c424c624b899eef529eb2b7adcf37ddc14a27e7c1ae",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T2/playerdata.json",
+      "sha256": "6b00ee6fbe02c0f398799160b8ac8f544eb044da264c494e575ab40f045d0517",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T3/hero.json",
+      "sha256": "8fde5243cbe0cd80eae3ea7a76c9a9c9290597b27481c0e55b421411a0e76563",
+      "size": 252999
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T3/hierarchy.json",
+      "sha256": "840e690b0fbf98c11ce9d9664fc138725e88b15d187377aa0d616b41ba544abb",
+      "size": 241175199
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T3/meta.json",
+      "sha256": "1986e677113fb393e1e0d6bd62bf8657b3686748ac572f9e70a891b2f39d743f",
+      "size": 402
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T3/playerdata.json",
+      "sha256": "6b00ee6fbe02c0f398799160b8ac8f544eb044da264c494e575ab40f045d0517",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T1/hero.json",
+      "sha256": "bc6ca039a51bf277c68c813d9b588a39a9c978fc8aee9cf3e4f6fe6d35ba3e59",
+      "size": 252997
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T1/hierarchy.json",
+      "sha256": "f16e8f887121caf94a84acd6f419131102871c10bd02c36ecf2ba26219a855c3",
+      "size": 241165239
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T1/meta.json",
+      "sha256": "cc021f5863d6cbd2491c19b34403d63adcc928a11d13f4a9fb9baf2aa4440315",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T1/playerdata.json",
+      "sha256": "7e2bb2bf21b58ede89511b4d02a5e5314efcb338929c616160f5752ddfb8702b",
+      "size": 259288
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T2/hero.json",
+      "sha256": "cc68af5f039e071a80029fc80365782313d3ca691f40ebac89ea84c49c854ba6",
+      "size": 253000
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T2/hierarchy.json",
+      "sha256": "c9f1b98c8d1cbbb24eb67582bc8097d1224bef4a5fe174b12c09717a53c17e87",
+      "size": 241165259
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T2/meta.json",
+      "sha256": "3eeba366e0ab01189d3326d4f4989fa33a2eb29def76f9c6b4097ee37d2da2a4",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T2/playerdata.json",
+      "sha256": "7e2bb2bf21b58ede89511b4d02a5e5314efcb338929c616160f5752ddfb8702b",
+      "size": 259288
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T3/hero.json",
+      "sha256": "29fadc5f13f689129be277eaf701c350c3fc1dbd00143a0a834eac63e7941385",
+      "size": 253000
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T3/hierarchy.json",
+      "sha256": "674aba61074d032ea982af191d760ade3b7a7a4ba6df0e9e3850c0571ccd1d7e",
+      "size": 241165487
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T3/meta.json",
+      "sha256": "5a0701fab5adb5f77cdbc504be3f9d4c5ca9866067a0eabc47238bfdbc24205f",
+      "size": 404
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Traitor_Lord__T3/playerdata.json",
+      "sha256": "24a621c2f4771203ff8edce0d7650124d9ca7d5a2121b312792cb11867da72e1",
+      "size": 259288
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu_V__T2/hero.json",
+      "sha256": "20da2f9dc74fd2edae3b26a3675fb9ea59f4795095e0b9eb6c04376e9aec62fc",
+      "size": 252999
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu_V__T2/hierarchy.json",
+      "sha256": "f87ef922974f61142c65171fbd03a3b8ad1b8f117db486f44dfea8bfaab92377",
+      "size": 242209600
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu_V__T2/meta.json",
+      "sha256": "6d921c092fb6157a69347060559dca90f2c9516726d735e81c2addf0fc8d9214",
+      "size": 394
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu_V__T2/playerdata.json",
+      "sha256": "2cf79f82349f0e8e1ef9012c043cbe13e086b236120ffa0ef7234ca053cd2456",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu_V__T3/hero.json",
+      "sha256": "8bdcba8898d1a46ec80b70d50eb88fbc2e63fc9dc0134db248fc70e196f49dde",
+      "size": 252999
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu_V__T3/hierarchy.json",
+      "sha256": "df285cd3461c227eb384f185e8be9cccbcce81470f9527e1ae56df2bc2b604b4",
+      "size": 242209510
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu_V__T3/meta.json",
+      "sha256": "747fcaa4856ef4140cacf62ed62a9c5b71278013d260b5e41161b708522963c4",
+      "size": 394
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu_V__T3/playerdata.json",
+      "sha256": "2cf79f82349f0e8e1ef9012c043cbe13e086b236120ffa0ef7234ca053cd2456",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu__T1/hero.json",
+      "sha256": "837a83eafc05d78f275d4fdde32717002fe9cdf7079778b7be7d40f28641d2be",
+      "size": 252999
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu__T1/hierarchy.json",
+      "sha256": "ba844dc839f26dd01652b8a543a6fd575b198592c4d5d84171715890651f3672",
+      "size": 242119863
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu__T1/meta.json",
+      "sha256": "c75d35c5daa6a28af8f3e6b8ac0e7a8f2b47090aff610dc7fe54e2c8adf10c62",
+      "size": 390
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Uumuu__T1/playerdata.json",
+      "sha256": "5f1523e4dc97a4fd24e8e0947a72b6430567e981925682184b04080a2a49a699",
+      "size": 259287
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly_V__T2/hero.json",
+      "sha256": "f94a2f4f375b011ac035e7768daae1a5cf4667d317db96ae2028e5d9c2b934aa",
+      "size": 252998
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly_V__T2/hierarchy.json",
+      "sha256": "82388098db410a72d319ad788dab5d0f38f55a1d9a58c89f98ca8229ddac9329",
+      "size": 243372471
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly_V__T2/meta.json",
+      "sha256": "d45d992a2c925e5395dec6aedb6efaf6416304197b6206f70735b49abaa5df97",
+      "size": 400
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly_V__T2/playerdata.json",
+      "sha256": "4b86eb46650d36015a28235ed844c992653e2d7738a8dc2b800ffd0f70b35c99",
+      "size": 259290
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly_V__T3/hero.json",
+      "sha256": "483cb39124926e055e6eb1e240cb92679dbfd20b48e70418abdd0213776ce4ec",
+      "size": 252998
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly_V__T3/hierarchy.json",
+      "sha256": "68338a8a6b79ac55f50340520ab76f2939da882bbdd67e61a087f26192edf9f2",
+      "size": 243372455
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly_V__T3/meta.json",
+      "sha256": "97e2cbefdb5308328a0322d2b32ee3f856ce815ed474098c270610f232d63346",
+      "size": 400
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly_V__T3/playerdata.json",
+      "sha256": "4b86eb46650d36015a28235ed844c992653e2d7738a8dc2b800ffd0f70b35c99",
+      "size": 259290
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly__T1/hero.json",
+      "sha256": "4adfa4e73b0d92fac6013293b416f0e07d3e48551fc45c7c3af161e593cbba31",
+      "size": 252996
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly__T1/hierarchy.json",
+      "sha256": "dee98745e6285e02503db17ca10fe493d8125cb73b6e5e2c7674bbc0e4784c2f",
+      "size": 242075888
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly__T1/meta.json",
+      "sha256": "f6dd7f81bc941987524f5b7cd54215e6a2c23f599eedaa044ab1f30d874505b6",
+      "size": 396
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Vengefly__T1/playerdata.json",
+      "sha256": "e27b014848e9a0570cdd8097c235273e373aeec556d5576c1a449d3ad72d4191",
+      "size": 259290
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T1/hero.json",
+      "sha256": "b15285e377d6157d88caea22d56a189086b069119eb33fa056ebcc23850a85b4",
+      "size": 252992
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T1/hierarchy.json",
+      "sha256": "bef51ea5d5e9595fea2f720a644a1df837c7e85b5c2b3b4434bcaa7395a07854",
+      "size": 242130496
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T1/meta.json",
+      "sha256": "5eb5adf20babeb0086a22a861cd7df535a4e06bfcf6bb71bb972582bae3e4b44",
+      "size": 410
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T1/playerdata.json",
+      "sha256": "e53eb0182d052c8296c1cff439a022d472ace41a7b6f6f54a6c62ef2048640a2",
+      "size": 259294
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T2/hero.json",
+      "sha256": "4bd19ec73197a0f906844cb3ca67d99a9f9fede9c2a507b723c7a467700076c2",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T2/hierarchy.json",
+      "sha256": "5c5122066678f584924492b6b9529212f0c198624feab1c45c672bb9899dbc3b",
+      "size": 242130623
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T2/meta.json",
+      "sha256": "a1367a0294746e23419b5054af8c2dfaca28a4c587f35500f47b9b9f13120d32",
+      "size": 410
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T2/playerdata.json",
+      "sha256": "a1ba69f8369791350001f7b8663eed5be40019af0bac09184c532e6d774170c3",
+      "size": 259294
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T3/hero.json",
+      "sha256": "e9511ff591b4e4db39cad3a9e9545a4ff8c895bf23d6070ac5db61a6270fd492",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T3/hierarchy.json",
+      "sha256": "2dbfda0f5713cd8e49ef75c61ddbfde18b603f74132a7bc8d0cc62588595d1bc",
+      "size": 242130578
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T3/meta.json",
+      "sha256": "72ecf7dee533d2f987876fdabc38356510a29deff8c552c03779f4c0abc6e612",
+      "size": 410
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Watcher_Knights__T3/playerdata.json",
+      "sha256": "e53eb0182d052c8296c1cff439a022d472ace41a7b6f6f54a6c62ef2048640a2",
+      "size": 259294
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T1/hero.json",
+      "sha256": "3281cbb733bd90fcadcb7649efbf5352ffc506a9751e7a80e6053dbf1dab3e03",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T1/hierarchy.json",
+      "sha256": "35a02d0c226ab98aba55e63f9472b7e653fffa4aee53b8ee190665c290a8ed3a",
+      "size": 241249852
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T1/meta.json",
+      "sha256": "62a3d4463cc42c87c6ce4413661788dceb30e8d508d44db7ceb8ae4791bcf05a",
+      "size": 408
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T1/playerdata.json",
+      "sha256": "8ab07ef7dec26909d75b81b0ab06bb729597b2e2992b7ec0f45661f35fab42b7",
+      "size": 259290
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T2/hero.json",
+      "sha256": "d3a945847c8cccc417be2e8b4a428a255830f8d5871e85b23663580c2839b85b",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T2/hierarchy.json",
+      "sha256": "7ebb8fd9c0ed4f5d22c9f45ec7387a9c28e8edf8624df60457035e9967bebb6f",
+      "size": 241249763
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T2/meta.json",
+      "sha256": "1609bbd8989d64230deb8908d479279f49a6141532275aae164f8e1d055cdc97",
+      "size": 408
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T2/playerdata.json",
+      "sha256": "8ab07ef7dec26909d75b81b0ab06bb729597b2e2992b7ec0f45661f35fab42b7",
+      "size": 259290
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T3/hero.json",
+      "sha256": "924e221b67151e2f53f76e3aa3abd8957fedbf42c1f368160a164d710f2df40f",
+      "size": 252992
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T3/hierarchy.json",
+      "sha256": "bb45f2008e731d770806773d9802e099290a5ce9a2b68ed1fb9ecb5b75d9c28b",
+      "size": 241249843
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T3/meta.json",
+      "sha256": "85a4a3107a63810d1ac12e3ca045441cedd8547d81fa66e3bba06e520fae3f48",
+      "size": 408
+    },
+    {
+      "path": "analysis/dumps_v2/GG_White_Defender__T3/playerdata.json",
+      "sha256": "d60dbd0c21946af26c9e771937bd36d040076a69800bd07c61163b4415451724",
+      "size": 259290
+    },
+    {
+      "path": "analysis/traces/p0/r2_move.a.hktrace",
+      "sha256": "2b2b7b9baf2a0afee76330fa9ef52b13fad10ec2673f731c108f336b052c8e25",
+      "size": 7121914
+    }
+  ],
+  "scene": "*"
+}

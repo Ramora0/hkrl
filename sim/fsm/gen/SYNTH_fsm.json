@@ -1,0 +1,8149 @@
+{
+ "scene": "SYNTH_fsm",
+ "levelRequested": "SYNTH_fsm",
+ "timestampUtc": "synthetic",
+ "unityVersion": "n/a",
+ "fsms": [
+  {
+   "path": "Synth",
+   "gameObject": "Synth",
+   "scene": "SYNTH_fsm",
+   "instanceID": 71983,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Chain",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Chain",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "A",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "FINISHED",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "A",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "B",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "B",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "C",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "C",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "D",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.Wait",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "time",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0.05
+         }
+        },
+        {
+         "name": "finishEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "FINISHED",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "realTime",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "D",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "E",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.NextFrameEvent",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "sendEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "FINISHED",
+          "isGlobal": false
+         }
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "E",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Synth",
+   "gameObject": "Synth",
+   "scene": "SYNTH_fsm",
+   "instanceID": 7784,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Defer",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Defer",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [
+     {
+      "__fsm": "FsmInt",
+      "name": "x",
+      "useVariable": true,
+      "value": 0
+     },
+     {
+      "__fsm": "FsmInt",
+      "name": "y",
+      "useVariable": true,
+      "value": 0
+     }
+    ],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.BoolTest",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "boolVariable",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": true
+         }
+        },
+        {
+         "name": "isTrue",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "GO",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "isFalse",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": null
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetIntValue",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "intVariable",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "x",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "intValue",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 1
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 1
+      }
+     ]
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetIntValue",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "intVariable",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "y",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "intValue",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 1
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Synth",
+   "gameObject": "Synth",
+   "scene": "SYNTH_fsm",
+   "instanceID": 13576,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Consume",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Consume",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [
+     {
+      "__fsm": "FsmInt",
+      "name": "h1",
+      "useVariable": true,
+      "value": 0
+     },
+     {
+      "__fsm": "FsmInt",
+      "name": "h2",
+      "useVariable": true,
+      "value": 0
+     }
+    ],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "PING",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "PING",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.HKSimTestConsumeEvent",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "eventName",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": "PING"
+         }
+        },
+        {
+         "name": "consume",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": true
+         }
+        },
+        {
+         "name": "hits",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "h1",
+          "useVariable": true,
+          "value": 0
+         }
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.HKSimTestConsumeEvent",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "eventName",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": "PING"
+         }
+        },
+        {
+         "name": "consume",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": false
+         }
+        },
+        {
+         "name": "hits",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "h2",
+          "useVariable": true,
+          "value": 0
+         }
+        }
+       ],
+       "index": 1
+      }
+     ]
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Synth",
+   "gameObject": "Synth",
+   "scene": "SYNTH_fsm",
+   "instanceID": 80555,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Consume2",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Consume2",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [
+     {
+      "__fsm": "FsmInt",
+      "name": "h1",
+      "useVariable": true,
+      "value": 0
+     },
+     {
+      "__fsm": "FsmInt",
+      "name": "h2",
+      "useVariable": true,
+      "value": 0
+     }
+    ],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "PING",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "PING",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.HKSimTestConsumeEvent",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "eventName",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": "PING"
+         }
+        },
+        {
+         "name": "consume",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": false
+         }
+        },
+        {
+         "name": "hits",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "h1",
+          "useVariable": true,
+          "value": 0
+         }
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.HKSimTestConsumeEvent",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "eventName",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": "PING"
+         }
+        },
+        {
+         "name": "consume",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": true
+         }
+        },
+        {
+         "name": "hits",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "h2",
+          "useVariable": true,
+          "value": 0
+         }
+        }
+       ],
+       "index": 1
+      }
+     ]
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Synth",
+   "gameObject": "Synth",
+   "scene": "SYNTH_fsm",
+   "instanceID": 60743,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Loop",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Loop",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "LOOP",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "LOOP",
+       "toState": "S",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SendEvent",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "eventTarget",
+         "type": "HutongGames.PlayMaker.FsmEventTarget",
+         "value": {
+          "__type": "HutongGames.PlayMaker.FsmEventTarget",
+          "__unserialized": true,
+          "__reason": "unhandled-type",
+          "__fields": {
+           "target": {
+            "__enum": "HutongGames.PlayMaker.FsmEventTarget+EventTarget",
+            "name": "Self",
+            "value": 0
+           },
+           "excludeSelf": {
+            "__fsm": "FsmBool",
+            "name": null,
+            "useVariable": false,
+            "value": false
+           },
+           "gameObject": {
+            "__fsm": "FsmOwnerDefault",
+            "ownerOption": "UseOwner",
+            "gameObject": {
+             "__fsm": "FsmGameObject",
+             "name": null,
+             "useVariable": false,
+             "value": null
+            }
+           },
+           "fsmName": {
+            "__fsm": "FsmString",
+            "name": null,
+            "useVariable": false,
+            "value": ""
+           },
+           "sendToChildren": {
+            "__fsm": "FsmBool",
+            "name": null,
+            "useVariable": false,
+            "value": false
+           },
+           "fsmComponent": null
+          }
+         }
+        },
+        {
+         "name": "sendEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "LOOP",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "delay",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0.0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Synth/Two",
+   "gameObject": "Two",
+   "scene": "SYNTH_fsm",
+   "instanceID": 67596,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Restart",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Restart",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "A",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "FINISHED",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "A",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "B",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.Wait",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "time",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0.05
+         }
+        },
+        {
+         "name": "finishEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "FINISHED",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "realTime",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "B",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "C",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.Wait",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "time",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 10.0
+         }
+        },
+        {
+         "name": "finishEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "FINISHED",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "realTime",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "C",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Synth/Two",
+   "gameObject": "Two",
+   "scene": "SYNTH_fsm",
+   "instanceID": 97765,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Resume",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Resume",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "A",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": false,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "FINISHED",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "A",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "B",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.Wait",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "time",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0.05
+         }
+        },
+        {
+         "name": "finishEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "FINISHED",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "realTime",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "B",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "C",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.Wait",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "time",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 10.0
+         }
+        },
+        {
+         "name": "finishEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "FINISHED",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "realTime",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "C",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Synth",
+   "gameObject": "Synth",
+   "scene": "SYNTH_fsm",
+   "instanceID": 19326,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Delayed",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Delayed",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SendEvent",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "eventTarget",
+         "type": "HutongGames.PlayMaker.FsmEventTarget",
+         "value": {
+          "__type": "HutongGames.PlayMaker.FsmEventTarget",
+          "__unserialized": true,
+          "__reason": "unhandled-type",
+          "__fields": {
+           "target": {
+            "__enum": "HutongGames.PlayMaker.FsmEventTarget+EventTarget",
+            "name": "Self",
+            "value": 0
+           },
+           "excludeSelf": {
+            "__fsm": "FsmBool",
+            "name": null,
+            "useVariable": false,
+            "value": false
+           },
+           "gameObject": {
+            "__fsm": "FsmOwnerDefault",
+            "ownerOption": "UseOwner",
+            "gameObject": {
+             "__fsm": "FsmGameObject",
+             "name": null,
+             "useVariable": false,
+             "value": null
+            }
+           },
+           "fsmName": {
+            "__fsm": "FsmString",
+            "name": null,
+            "useVariable": false,
+            "value": ""
+           },
+           "sendToChildren": {
+            "__fsm": "FsmBool",
+            "name": null,
+            "useVariable": false,
+            "value": false
+           },
+           "fsmComponent": null
+          }
+         }
+        },
+        {
+         "name": "sendEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "GO",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "delay",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0.05
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Synth",
+   "gameObject": "Synth",
+   "scene": "SYNTH_fsm",
+   "instanceID": 23014,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Global",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Global",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GLOB",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [
+    {
+     "event": "GLOB",
+     "toState": "G",
+     "linkStyle": "Default",
+     "isGlobal": false
+    }
+   ],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GLOB",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    },
+    {
+     "name": "G",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Synth",
+   "gameObject": "Synth",
+   "scene": "SYNTH_fsm",
+   "instanceID": 59379,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "External",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "External",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [
+     {
+      "__fsm": "FsmInt",
+      "name": "z",
+      "useVariable": true,
+      "value": 0
+     }
+    ],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "EXT",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "EXT",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetIntValue",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "intVariable",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "z",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "intValue",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 5
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Synth",
+   "gameObject": "Synth",
+   "scene": "SYNTH_fsm",
+   "instanceID": 62192,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Sender",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Sender",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [
+     {
+      "__fsm": "FsmInt",
+      "name": "after",
+      "useVariable": true,
+      "value": 0
+     }
+    ],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SendEventByName",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "eventTarget",
+         "type": "HutongGames.PlayMaker.FsmEventTarget",
+         "value": {
+          "__type": "HutongGames.PlayMaker.FsmEventTarget",
+          "__unserialized": true,
+          "__reason": "unhandled-type",
+          "__fields": {
+           "target": {
+            "__enum": "HutongGames.PlayMaker.FsmEventTarget+EventTarget",
+            "name": "GameObject",
+            "value": 1
+           },
+           "excludeSelf": {
+            "__fsm": "FsmBool",
+            "name": null,
+            "useVariable": false,
+            "value": false
+           },
+           "gameObject": {
+            "__fsm": "FsmOwnerDefault",
+            "ownerOption": "SpecifyGameObject",
+            "gameObject": {
+             "__fsm": "FsmGameObject",
+             "name": null,
+             "useVariable": false,
+             "value": {
+              "type": "UnityEngine.GameObject",
+              "name": "Two",
+              "instanceID": 1000000,
+              "path": "Synth/Two"
+             }
+            }
+           },
+           "fsmName": {
+            "__fsm": "FsmString",
+            "name": null,
+            "useVariable": false,
+            "value": ""
+           },
+           "sendToChildren": {
+            "__fsm": "FsmBool",
+            "name": null,
+            "useVariable": false,
+            "value": false
+           },
+           "fsmComponent": null
+          }
+         }
+        },
+        {
+         "name": "sendEvent",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": "PING2"
+         }
+        },
+        {
+         "name": "delay",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0.0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetIntValue",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "intVariable",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "after",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "intValue",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 1
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Synth/Two",
+   "gameObject": "Two",
+   "scene": "SYNTH_fsm",
+   "instanceID": 54681,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Receiver",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Receiver",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [
+     {
+      "__fsm": "FsmInt",
+      "name": "got",
+      "useVariable": true,
+      "value": 0
+     }
+    ],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "PING2",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "PING2",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetIntValue",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "intVariable",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "got",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "intValue",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 1
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Synth",
+   "gameObject": "Synth",
+   "scene": "SYNTH_fsm",
+   "instanceID": 92406,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Seq",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Seq",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [
+     {
+      "__fsm": "FsmInt",
+      "name": "a",
+      "useVariable": true,
+      "value": 0
+     },
+     {
+      "__fsm": "FsmInt",
+      "name": "b",
+      "useVariable": true,
+      "value": 0
+     }
+    ],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "FINISHED",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": true,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetIntValue",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "intVariable",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "a",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "intValue",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 1
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.Wait",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "time",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0.05
+         }
+        },
+        {
+         "name": "finishEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": null
+        },
+        {
+         "name": "realTime",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 1
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetIntValue",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "intVariable",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "b",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "intValue",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 1
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 2
+      }
+     ]
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/Family",
+   "gameObject": "Family",
+   "scene": "SYNTH_fsm",
+   "instanceID": 60470,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Kids",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Kids",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/Family/Kid",
+   "gameObject": "Kid",
+   "scene": "SYNTH_fsm",
+   "instanceID": 66381,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Idle",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Idle",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/Family",
+   "gameObject": "Family",
+   "scene": "SYNTH_fsm",
+   "instanceID": 73348,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Test",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Test",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [
+     {
+      "__fsm": "FsmInt",
+      "name": "cc",
+      "useVariable": true,
+      "value": 0
+     }
+    ],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [
+     {
+      "__fsm": "FsmGameObject",
+      "name": "rc",
+      "useVariable": true,
+      "value": null
+     }
+    ],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "FINISHED",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "Done",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetChildCount",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "SpecifyGameObject",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": {
+            "type": "UnityEngine.GameObject",
+            "name": "Family",
+            "instanceID": 1000001,
+            "path": "Port/Family"
+           }
+          }
+         }
+        },
+        {
+         "name": "storeResult",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "cc",
+          "useVariable": true,
+          "value": 0
+         }
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetRandomChild",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "SpecifyGameObject",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": {
+            "type": "UnityEngine.GameObject",
+            "name": "Family",
+            "instanceID": 1000001,
+            "path": "Port/Family"
+           }
+          }
+         }
+        },
+        {
+         "name": "storeResult",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": "rc",
+          "useVariable": true,
+          "value": null
+         }
+        }
+       ],
+       "index": 1
+      }
+     ]
+    },
+    {
+     "name": "Done",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/Seq",
+   "gameObject": "Seq",
+   "scene": "SYNTH_fsm",
+   "instanceID": 4976,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Idle",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Idle",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/Seq/A",
+   "gameObject": "A",
+   "scene": "SYNTH_fsm",
+   "instanceID": 66743,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Idle",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Idle",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/Seq/B",
+   "gameObject": "B",
+   "scene": "SYNTH_fsm",
+   "instanceID": 67041,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Idle",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Idle",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/Seq",
+   "gameObject": "Seq",
+   "scene": "SYNTH_fsm",
+   "instanceID": 87071,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Walker",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Walker",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "Walk",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [
+     {
+      "__fsm": "FsmGameObject",
+      "name": "nc",
+      "useVariable": true,
+      "value": null
+     }
+    ],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "DONE",
+     "isGlobal": false
+    },
+    {
+     "name": "LOOP",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "Walk",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "LOOP",
+       "toState": "Walk",
+       "linkStyle": "Default",
+       "isGlobal": false
+      },
+      {
+       "event": "DONE",
+       "toState": "End",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetNextChild",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "SpecifyGameObject",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": {
+            "type": "UnityEngine.GameObject",
+            "name": "Seq",
+            "instanceID": 1000002,
+            "path": "Port/Seq"
+           }
+          }
+         }
+        },
+        {
+         "name": "storeNextChild",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": "nc",
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "loopEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "LOOP",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "finishedEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "DONE",
+          "isGlobal": false
+         }
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "End",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/Track",
+   "gameObject": "Track",
+   "scene": "SYNTH_fsm",
+   "instanceID": 10790,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Hit",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Hit",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "ZERO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "ZERO",
+       "toState": "Hit",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.AddTrackTrigger",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.CheckTrackTriggerCount",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "count",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "test",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        },
+        {
+         "name": "successEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "ZERO",
+          "isGlobal": false
+         }
+        }
+       ],
+       "index": 1
+      }
+     ]
+    },
+    {
+     "name": "Hit",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/Track2",
+   "gameObject": "Track2",
+   "scene": "SYNTH_fsm",
+   "instanceID": 44347,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Miss",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Miss",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "ZERO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "ZERO",
+       "toState": "Hit",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.AddTrackTrigger",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.CheckTrackTriggerCount",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "count",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 1
+         }
+        },
+        {
+         "name": "test",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        },
+        {
+         "name": "successEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "ZERO",
+          "isGlobal": false
+         }
+        }
+       ],
+       "index": 1
+      }
+     ]
+    },
+    {
+     "name": "Hit",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/HP",
+   "gameObject": "HP",
+   "scene": "SYNTH_fsm",
+   "instanceID": 38963,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Never",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Never",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [
+     {
+      "__fsm": "FsmInt",
+      "name": "hp",
+      "useVariable": true,
+      "value": 0
+     }
+    ],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetHPEveryFrame",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "storeValue",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "hp",
+          "useVariable": true,
+          "value": 0
+         }
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Port/AnimWait",
+   "gameObject": "AnimWait",
+   "scene": "SYNTH_fsm",
+   "instanceID": 66019,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Stuck",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Stuck",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.AnimatorPlayStateWait",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "stateName",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": "Whatever"
+         }
+        },
+        {
+         "name": "finishEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "DONE",
+          "isGlobal": false
+         }
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Port/Batch",
+   "gameObject": "Batch",
+   "scene": "SYNTH_fsm",
+   "instanceID": 89158,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "NoOps",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "NoOps",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [
+     {
+      "__fsm": "FsmFloat",
+      "name": "gyd",
+      "useVariable": true,
+      "value": -999.0
+     }
+    ],
+    "Int": [],
+    "Bool": [
+     {
+      "__fsm": "FsmBool",
+      "name": "car",
+      "useVariable": true,
+      "value": true
+     },
+     {
+      "__fsm": "FsmBool",
+      "name": "ccsh",
+      "useVariable": true,
+      "value": true
+     }
+    ],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [
+     {
+      "__fsm": "FsmGameObject",
+      "name": "hpm",
+      "useVariable": true,
+      "value": {
+       "type": "UnityEngine.GameObject",
+       "name": "Kid",
+       "instanceID": 1000003,
+       "path": "Port/Family/Kid"
+      }
+     },
+     {
+      "__fsm": "FsmGameObject",
+      "name": "spm",
+      "useVariable": true,
+      "value": {
+       "type": "UnityEngine.GameObject",
+       "name": "Kid",
+       "instanceID": 1000003,
+       "path": "Port/Family/Kid"
+      }
+     }
+    ],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "FINISHED",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "Done",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetIsDead",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "setValue",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": true
+         }
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetSpecialDeath",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "hasSpecialDeath",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": true
+         }
+        }
+       ],
+       "index": 1
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.CheckAlertRangeByName",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "storeResult",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": "car",
+          "useVariable": true,
+          "value": true
+         }
+        },
+        {
+         "name": "childName",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": ""
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": false
+         }
+        }
+       ],
+       "index": 2
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.CheckCanSeeHero",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "storeResult",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": "ccsh",
+          "useVariable": true,
+          "value": true
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": false
+         }
+        }
+       ],
+       "index": 3
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.WaitForBossLoad",
+       "enabled": true,
+       "fields": [],
+       "index": 4
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.MakeEnemyDreamnailReactionReady",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        }
+       ],
+       "index": 5
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.MenuStyleUnlockAction",
+       "enabled": true,
+       "fields": [],
+       "index": 6
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.HidePromptMarker",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "storedObject",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": "hpm",
+          "useVariable": true,
+          "value": null
+         }
+        }
+       ],
+       "index": 7
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.ShowPromptMarker",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "prefab",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": null
+         }
+        },
+        {
+         "name": "spawnPoint",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": null
+         }
+        },
+        {
+         "name": "storeObject",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": "spm",
+          "useVariable": true,
+          "value": null
+         }
+        }
+       ],
+       "index": 8
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.EnemyPusherIgnore",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "other",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "type": "UnityEngine.GameObject",
+           "name": "Kid",
+           "instanceID": 1000003,
+           "path": "Port/Family/Kid"
+          }
+         }
+        }
+       ],
+       "index": 9
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.StartWalker",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        }
+       ],
+       "index": 10
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.StopWalker",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        }
+       ],
+       "index": 11
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.SendEnemyMessage",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "Target",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "type": "UnityEngine.GameObject",
+           "name": "Kid",
+           "instanceID": 1000003,
+           "path": "Port/Family/Kid"
+          }
+         }
+        },
+        {
+         "name": "EventString",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": "GO LEFT"
+         }
+        }
+       ],
+       "index": 12
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetSpawnJarContents",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "storedObject",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "type": "UnityEngine.GameObject",
+           "name": "Kid",
+           "instanceID": 1000003,
+           "path": "Port/Family/Kid"
+          }
+         }
+        },
+        {
+         "name": "enemyPrefab",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": null
+         }
+        },
+        {
+         "name": "enemyHealth",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        }
+       ],
+       "index": 13
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.TrackSpawnedEnemiesAdd",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "Target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "SpawnedEnemy",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": null
+         }
+        }
+       ],
+       "index": 14
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.TrackSpawnedEnemiesGetInfo",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "Target",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        }
+       ],
+       "index": 15
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetLayer",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "layer",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 5
+         }
+        }
+       ],
+       "index": 16
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetYDistance",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": null
+         }
+        },
+        {
+         "name": "storeResult",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "gyd",
+          "useVariable": true,
+          "value": 0.0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": false
+         }
+        }
+       ],
+       "index": 17
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.DestroyComponent",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "component",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": "SomeMissingType"
+         }
+        }
+       ],
+       "index": 18
+      }
+     ]
+    },
+    {
+     "name": "Done",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/Trap",
+   "gameObject": "Trap",
+   "scene": "SYNTH_fsm",
+   "instanceID": 17873,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "AddComp",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "AddComp",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.AddComponent",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "component",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": "BounceShroom"
+         }
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Port/Trap",
+   "gameObject": "Trap",
+   "scene": "SYNTH_fsm",
+   "instanceID": 57136,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "SetProp",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "SetProp",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetProperty",
+       "enabled": true,
+       "fields": [],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Port/Trap",
+   "gameObject": "Trap",
+   "scene": "SYNTH_fsm",
+   "instanceID": 41879,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "PreSpawn",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "PreSpawn",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.PreSpawnGameObjects",
+       "enabled": true,
+       "fields": [],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Port/Pool/PrefabHome",
+   "gameObject": "PrefabHome",
+   "scene": "SYNTH_fsm",
+   "instanceID": 85910,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Idle",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Idle",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "Port/Pool",
+   "gameObject": "Pool",
+   "scene": "SYNTH_fsm",
+   "instanceID": 17927,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "CreatePool",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "CreatePool",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.CreatePoolObjects",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "type": "UnityEngine.GameObject",
+           "name": "PrefabHome",
+           "instanceID": 1000004,
+           "path": "Port/Pool/PrefabHome"
+          }
+         }
+        },
+        {
+         "name": "pool",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": null
+         }
+        },
+        {
+         "name": "position",
+         "type": "HutongGames.PlayMaker.FsmVector3",
+         "value": {
+          "__fsm": "FsmVector3",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "x": 0,
+           "y": 0,
+           "z": 0
+          }
+         }
+        },
+        {
+         "name": "amount",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Port/Pool",
+   "gameObject": "Pool",
+   "scene": "SYNTH_fsm",
+   "instanceID": 53996,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "SpawnOverTime",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "SpawnOverTime",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SpawnRandomObjectsOverTimeV2",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "type": "UnityEngine.GameObject",
+           "name": "PrefabHome",
+           "instanceID": 1000004,
+           "path": "Port/Pool/PrefabHome"
+          }
+         }
+        },
+        {
+         "name": "spawnPoint",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": null
+         }
+        },
+        {
+         "name": "position",
+         "type": "HutongGames.PlayMaker.FsmVector3",
+         "value": {
+          "__fsm": "FsmVector3",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "x": 0,
+           "y": 0,
+           "z": 0
+          }
+         }
+        },
+        {
+         "name": "frequency",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0.01
+         }
+        },
+        {
+         "name": "spawnMin",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "spawnMax",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "speedMin",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "speedMax",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "angleMin",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "angleMax",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "scaleMin",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 1.0
+         }
+        },
+        {
+         "name": "scaleMax",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 1.0
+         }
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Port/Pool",
+   "gameObject": "Pool",
+   "scene": "SYNTH_fsm",
+   "instanceID": 20629,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "SpawnOverTimeTrap",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "SpawnOverTimeTrap",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SpawnRandomObjectsOverTime",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "type": "UnityEngine.GameObject",
+           "name": "PrefabHome",
+           "instanceID": 1000004,
+           "path": "Port/Pool/PrefabHome"
+          }
+         }
+        },
+        {
+         "name": "spawnPoint",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": null
+         }
+        },
+        {
+         "name": "position",
+         "type": "HutongGames.PlayMaker.FsmVector3",
+         "value": {
+          "__fsm": "FsmVector3",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "x": 0,
+           "y": 0,
+           "z": 0
+          }
+         }
+        },
+        {
+         "name": "frequency",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0.01
+         }
+        },
+        {
+         "name": "spawnMin",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 1
+         }
+        },
+        {
+         "name": "spawnMax",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": null,
+          "useVariable": false,
+          "value": 1
+         }
+        },
+        {
+         "name": "speedMin",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "speedMax",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "angleMin",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        },
+        {
+         "name": "angleMax",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0
+         }
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "Port/Pool",
+   "gameObject": "Pool",
+   "scene": "SYNTH_fsm",
+   "instanceID": 30541,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "NextPreSpawned",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "NextPreSpawned",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [
+     {
+      "__fsm": "FsmInt",
+      "name": "npidx",
+      "useVariable": true,
+      "value": 0
+     }
+    ],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [
+     {
+      "__fsm": "FsmGameObject",
+      "name": "np",
+      "useVariable": true,
+      "value": null
+     }
+    ],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "FINISHED",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "Done",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetNextPreSpawnedGameObject",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "storedArray",
+         "type": "HutongGames.PlayMaker.FsmArray",
+         "value": {
+          "__fsm": "FsmArray",
+          "name": null,
+          "useVariable": false,
+          "elementType": "GameObject",
+          "values": [
+           {
+            "type": "UnityEngine.GameObject",
+            "name": "PrefabHome",
+            "instanceID": 1000004,
+            "path": "Port/Pool/PrefabHome"
+           }
+          ]
+         }
+        },
+        {
+         "name": "spawnPosition",
+         "type": "HutongGames.PlayMaker.FsmVector3",
+         "value": {
+          "__fsm": "FsmVector3",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "storeObject",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": "np",
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "currentIndex",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "npidx",
+          "useVariable": true,
+          "value": 0
+         }
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "Done",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "TestAF2",
+   "gameObject": "TestAF2",
+   "scene": "SYNTH_fsm",
+   "instanceID": 7767,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "AF2",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "AF2",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [
+     {
+      "__fsm": "FsmFloat",
+      "name": "af2_vx",
+      "useVariable": true,
+      "value": 0.0
+     },
+     {
+      "__fsm": "FsmFloat",
+      "name": "af2_vy",
+      "useVariable": true,
+      "value": 0.0
+     }
+    ],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.AddForce2dV2",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "atPosition",
+         "type": "HutongGames.PlayMaker.FsmVector2",
+         "value": {
+          "__fsm": "FsmVector2",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "vector",
+         "type": "HutongGames.PlayMaker.FsmVector2",
+         "value": {
+          "__fsm": "FsmVector2",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "x": 0,
+           "y": 0
+          }
+         }
+        },
+        {
+         "name": "x",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "y",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "vector3",
+         "type": "HutongGames.PlayMaker.FsmVector3",
+         "value": {
+          "__fsm": "FsmVector3",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "maxSpeed",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 10.0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetVelocity2d",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "vector",
+         "type": "HutongGames.PlayMaker.FsmVector2",
+         "value": {
+          "__fsm": "FsmVector2",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "x",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "af2_vx",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "y",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "af2_vy",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "space",
+         "type": "UnityEngine.Space",
+         "value": {
+          "__enum": "UnityEngine.Space",
+          "name": "World",
+          "value": 0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestSpeed",
+   "gameObject": "TestSpeed",
+   "scene": "SYNTH_fsm",
+   "instanceID": 24699,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Speed",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Speed",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [
+     {
+      "__fsm": "FsmFloat",
+      "name": "gs_result",
+      "useVariable": true,
+      "value": 0.0
+     }
+    ],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetSpeed",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "storeResult",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "gs_result",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestAngle",
+   "gameObject": "TestAngle",
+   "scene": "SYNTH_fsm",
+   "instanceID": 64881,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Angle",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Angle",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [
+     {
+      "__fsm": "FsmFloat",
+      "name": "angle_result",
+      "useVariable": true,
+      "value": 0.0
+     }
+    ],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetVelocityAsAngle",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "storeAngle",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "angle_result",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestTrig",
+   "gameObject": "TestTrig",
+   "scene": "SYNTH_fsm",
+   "instanceID": 65368,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Trig",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Trig",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetCollider2dIsTrigger",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "isTrigger",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": true
+         }
+        },
+        {
+         "name": "setAllColliders",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestSim",
+   "gameObject": "TestSim",
+   "scene": "SYNTH_fsm",
+   "instanceID": 96576,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Sim",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Sim",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetRigidbodySimulated2D",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "isSimulated",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": false
+         }
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestFlyTarget",
+   "gameObject": "TestFlyTarget",
+   "scene": "SYNTH_fsm",
+   "instanceID": 47823,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "FlyTarget",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "FlyTarget",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "TestWalkTarget",
+   "gameObject": "TestWalkTarget",
+   "scene": "SYNTH_fsm",
+   "instanceID": 97860,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "WalkTarget",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "WalkTarget",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "TestFlySelf",
+   "gameObject": "TestFlySelf",
+   "scene": "SYNTH_fsm",
+   "instanceID": 58121,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Fly",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Fly",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [
+     {
+      "__fsm": "FsmFloat",
+      "name": "fly_vx",
+      "useVariable": true,
+      "value": 0.0
+     },
+     {
+      "__fsm": "FsmFloat",
+      "name": "fly_vy",
+      "useVariable": true,
+      "value": 0.0
+     }
+    ],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.DistanceFly",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "type": "UnityEngine.GameObject",
+           "name": "TestFlyTarget",
+           "instanceID": 1000005,
+           "path": "TestFlyTarget"
+          }
+         }
+        },
+        {
+         "name": "distance",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 5.0
+         }
+        },
+        {
+         "name": "speedMax",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 100.0
+         }
+        },
+        {
+         "name": "acceleration",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 2.0
+         }
+        },
+        {
+         "name": "targetsHeight",
+         "type": "System.Boolean",
+         "value": false
+        },
+        {
+         "name": "height",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetVelocity2d",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "vector",
+         "type": "HutongGames.PlayMaker.FsmVector2",
+         "value": {
+          "__fsm": "FsmVector2",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "x",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "fly_vx",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "y",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "fly_vy",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "space",
+         "type": "UnityEngine.Space",
+         "value": {
+          "__enum": "UnityEngine.Space",
+          "name": "World",
+          "value": 0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestWalkSelf",
+   "gameObject": "TestWalkSelf",
+   "scene": "SYNTH_fsm",
+   "instanceID": 74265,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Walk",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Walk",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [
+     {
+      "__fsm": "FsmFloat",
+      "name": "walk_vx",
+      "useVariable": true,
+      "value": 0.0
+     },
+     {
+      "__fsm": "FsmFloat",
+      "name": "walk_vy",
+      "useVariable": true,
+      "value": 0.0
+     }
+    ],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.DistanceWalk",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "target",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "type": "UnityEngine.GameObject",
+           "name": "TestWalkTarget",
+           "instanceID": 1000006,
+           "path": "TestWalkTarget"
+          }
+         }
+        },
+        {
+         "name": "distance",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 5.0
+         }
+        },
+        {
+         "name": "speed",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 3.0
+         }
+        },
+        {
+         "name": "range",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 1.0
+         }
+        },
+        {
+         "name": "changeAnimation",
+         "type": "System.Boolean",
+         "value": false
+        },
+        {
+         "name": "spriteFacesRight",
+         "type": "System.Boolean",
+         "value": false
+        },
+        {
+         "name": "forwardAnimation",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": "Run"
+         }
+        },
+        {
+         "name": "backAnimation",
+         "type": "HutongGames.PlayMaker.FsmString",
+         "value": {
+          "__fsm": "FsmString",
+          "name": null,
+          "useVariable": false,
+          "value": "Run Back"
+         }
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetVelocity2d",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "vector",
+         "type": "HutongGames.PlayMaker.FsmVector2",
+         "value": {
+          "__fsm": "FsmVector2",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "x",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "walk_vx",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "y",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "walk_vy",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "space",
+         "type": "UnityEngine.Space",
+         "value": {
+          "__enum": "UnityEngine.Space",
+          "name": "World",
+          "value": 0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestSquash",
+   "gameObject": "TestSquash",
+   "scene": "SYNTH_fsm",
+   "instanceID": 30659,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Squash",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Squash",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [
+     {
+      "__fsm": "FsmFloat",
+      "name": "sq_x",
+      "useVariable": true,
+      "value": 0.0
+     },
+     {
+      "__fsm": "FsmFloat",
+      "name": "sq_y",
+      "useVariable": true,
+      "value": 0.0
+     },
+     {
+      "__fsm": "FsmFloat",
+      "name": "sq_z",
+      "useVariable": true,
+      "value": 0.0
+     }
+    ],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.ProjectileSquash",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "stretchFactor",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 1.0
+         }
+        },
+        {
+         "name": "stretchMinX",
+         "type": "System.Single",
+         "value": 0.5
+        },
+        {
+         "name": "stretchMaxY",
+         "type": "System.Single",
+         "value": 2.0
+        },
+        {
+         "name": "scaleModifier",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 1.0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetScale",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "vector",
+         "type": "HutongGames.PlayMaker.FsmVector3",
+         "value": {
+          "__fsm": "FsmVector3",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "xScale",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "sq_x",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "yScale",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "sq_y",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "zScale",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "sq_z",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "space",
+         "type": "UnityEngine.Space",
+         "value": {
+          "__enum": "UnityEngine.Space",
+          "name": "World",
+          "value": 0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestGhost",
+   "gameObject": "TestGhost",
+   "scene": "SYNTH_fsm",
+   "instanceID": 36527,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "Ghost",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "Ghost",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [
+     {
+      "__fsm": "FsmFloat",
+      "name": "gm_vx",
+      "useVariable": true,
+      "value": 0.0
+     },
+     {
+      "__fsm": "FsmFloat",
+      "name": "gm_vy",
+      "useVariable": true,
+      "value": 0.0
+     }
+    ],
+    "Int": [
+     {
+      "__fsm": "FsmInt",
+      "name": "gm_dirx",
+      "useVariable": true,
+      "value": 0
+     },
+     {
+      "__fsm": "FsmInt",
+      "name": "gm_diry",
+      "useVariable": true,
+      "value": 0
+     }
+    ],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.GhostMovement",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "xPosMin",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": -10.0
+         }
+        },
+        {
+         "name": "xPosMax",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 10.0
+         }
+        },
+        {
+         "name": "accel_x",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 1.0
+         }
+        },
+        {
+         "name": "speedMax_x",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 5.0
+         }
+        },
+        {
+         "name": "yPosMin",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": -10.0
+         }
+        },
+        {
+         "name": "yPosMax",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 10.0
+         }
+        },
+        {
+         "name": "accel_y",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 2.0
+         }
+        },
+        {
+         "name": "speedMax_y",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 5.0
+         }
+        },
+        {
+         "name": "direction_x",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "gm_dirx",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "direction_y",
+         "type": "HutongGames.PlayMaker.FsmInt",
+         "value": {
+          "__fsm": "FsmInt",
+          "name": "gm_diry",
+          "useVariable": true,
+          "value": 0
+         }
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetVelocity2d",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "vector",
+         "type": "HutongGames.PlayMaker.FsmVector2",
+         "value": {
+          "__fsm": "FsmVector2",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "x",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "gm_vx",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "y",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "gm_vy",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "space",
+         "type": "UnityEngine.Space",
+         "value": {
+          "__enum": "UnityEngine.Space",
+          "name": "World",
+          "value": 0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestColorShort",
+   "gameObject": "TestColorShort",
+   "scene": "SYNTH_fsm",
+   "instanceID": 98194,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "CIShort",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "CIShort",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "FINISHED",
+     "isGlobal": false
+    },
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "Done",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.ColorInterpolate",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "colors",
+         "type": "HutongGames.PlayMaker.FsmColor[]",
+         "value": [
+          {
+           "__fsm": "FsmColor",
+           "name": null,
+           "useVariable": false,
+           "value": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+           }
+          }
+         ]
+        },
+        {
+         "name": "time",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 1.0
+         }
+        },
+        {
+         "name": "storeColor",
+         "type": "HutongGames.PlayMaker.FsmColor",
+         "value": {
+          "__fsm": "FsmColor",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "r": 1.0,
+           "g": 1.0,
+           "b": 1.0,
+           "a": 1.0
+          }
+         }
+        },
+        {
+         "name": "finishEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "FINISHED",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "realTime",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "Done",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "TestColorLong",
+   "gameObject": "TestColorLong",
+   "scene": "SYNTH_fsm",
+   "instanceID": 53643,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "CILong",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "CILong",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "FINISHED",
+     "isGlobal": false
+    },
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "FINISHED",
+       "toState": "Done",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.ColorInterpolate",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "colors",
+         "type": "HutongGames.PlayMaker.FsmColor[]",
+         "value": [
+          {
+           "__fsm": "FsmColor",
+           "name": null,
+           "useVariable": false,
+           "value": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0,
+            "a": 1.0
+           }
+          },
+          {
+           "__fsm": "FsmColor",
+           "name": null,
+           "useVariable": false,
+           "value": {
+            "r": 0,
+            "g": 0,
+            "b": 0,
+            "a": 0
+           }
+          }
+         ]
+        },
+        {
+         "name": "time",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 0.05
+         }
+        },
+        {
+         "name": "storeColor",
+         "type": "HutongGames.PlayMaker.FsmColor",
+         "value": {
+          "__fsm": "FsmColor",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "r": 1.0,
+           "g": 1.0,
+           "b": 1.0,
+           "a": 1.0
+          }
+         }
+        },
+        {
+         "name": "finishEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "FINISHED",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "realTime",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "Done",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "TestFST",
+   "gameObject": "TestFST",
+   "scene": "SYNTH_fsm",
+   "instanceID": 41905,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "FST",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "FST",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    },
+    {
+     "name": "NEG",
+     "isGlobal": false
+    },
+    {
+     "name": "POS",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "NEG",
+       "toState": "Neg",
+       "linkStyle": "Default",
+       "isGlobal": false
+      },
+      {
+       "event": "POS",
+       "toState": "Pos",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.FloatSignTest",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "floatValue",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": -1.0
+         }
+        },
+        {
+         "name": "isPositive",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "POS",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "isNegative",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "NEG",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "Neg",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    },
+    {
+     "name": "Pos",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "TestGOC",
+   "gameObject": "TestGOC",
+   "scene": "SYNTH_fsm",
+   "instanceID": 57532,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "GOC",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "GOC",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [
+     {
+      "__fsm": "FsmBool",
+      "name": "goc_result",
+      "useVariable": true,
+      "value": false
+     }
+    ],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "EQ",
+     "isGlobal": false
+    },
+    {
+     "name": "GO",
+     "isGlobal": false
+    },
+    {
+     "name": "NEQ",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "EQ",
+       "toState": "Eq",
+       "linkStyle": "Default",
+       "isGlobal": false
+      },
+      {
+       "event": "NEQ",
+       "toState": "Neq",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.GameObjectCompare",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObjectVariable",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "compareTo",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "type": "UnityEngine.GameObject",
+           "name": "TestGOC",
+           "instanceID": 1000007,
+           "path": "TestGOC"
+          }
+         }
+        },
+        {
+         "name": "equalEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "EQ",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "notEqualEvent",
+         "type": "HutongGames.PlayMaker.FsmEvent",
+         "value": {
+          "__fsm": "FsmEvent",
+          "name": "NEQ",
+          "isGlobal": false
+         }
+        },
+        {
+         "name": "storeResult",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": "goc_result",
+          "useVariable": true,
+          "value": false
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    },
+    {
+     "name": "Eq",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    },
+    {
+     "name": "Neq",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "TestRA",
+   "gameObject": "TestRA",
+   "scene": "SYNTH_fsm",
+   "instanceID": 23005,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "RA",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "RA",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [
+     {
+      "__fsm": "FsmFloat",
+      "name": "ra_result",
+      "useVariable": true,
+      "value": 0.0
+     }
+    ],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.ReflectAngle",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "angle",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 30.0
+         }
+        },
+        {
+         "name": "reflectHorizontally",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": true
+         }
+        },
+        {
+         "name": "reflectVertically",
+         "type": "HutongGames.PlayMaker.FsmBool",
+         "value": {
+          "__fsm": "FsmBool",
+          "name": null,
+          "useVariable": false,
+          "value": false
+         }
+        },
+        {
+         "name": "storeResult",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "ra_result",
+          "useVariable": true,
+          "value": 0
+         }
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestDBP2",
+   "gameObject": "TestDBP2",
+   "scene": "SYNTH_fsm",
+   "instanceID": 95172,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "DBP2",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "DBP2",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [
+     {
+      "__fsm": "FsmFloat",
+      "name": "dbp2_result",
+      "useVariable": true,
+      "value": 0.0
+     }
+    ],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.DistanceBetweenPoints2D",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "distanceResult",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "dbp2_result",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "point1",
+         "type": "HutongGames.PlayMaker.FsmVector3",
+         "value": {
+          "__fsm": "FsmVector3",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "x": 0,
+           "y": 0,
+           "z": 0
+          }
+         }
+        },
+        {
+         "name": "point2",
+         "type": "HutongGames.PlayMaker.FsmVector3",
+         "value": {
+          "__fsm": "FsmVector3",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "x": 3,
+           "y": 4,
+           "z": 0
+          }
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestFinishFSM",
+   "gameObject": "TestFinishFSM",
+   "scene": "SYNTH_fsm",
+   "instanceID": 10531,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "FFSM",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "FFSM",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.FinishFSM",
+       "enabled": true,
+       "fields": [],
+       "index": 0
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "path": "TestSP2OTarget",
+   "gameObject": "TestSP2OTarget",
+   "scene": "SYNTH_fsm",
+   "instanceID": 16842,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "SP2OTarget",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "SP2OTarget",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": []
+    }
+   ]
+  },
+  {
+   "path": "TestSP2O",
+   "gameObject": "TestSP2O",
+   "scene": "SYNTH_fsm",
+   "instanceID": 34692,
+   "activeInHierarchy": true,
+   "activeSelf": true,
+   "enabled": true,
+   "isActiveAndEnabled": true,
+   "fsmName": "SP2O",
+   "template": null,
+   "initializedBeforeDump": true,
+   "name": "SP2O",
+   "description": "",
+   "dataVersion": 1,
+   "preprocessed": true,
+   "startState": "S",
+   "activeState": "",
+   "activeStateName": "",
+   "fsmActive": true,
+   "started": false,
+   "finished": false,
+   "handleFixedUpdate": false,
+   "handleLateUpdate": false,
+   "restartOnEnable": true,
+   "manualUpdate": false,
+   "keepDelayedEventsOnStateExit": false,
+   "maxLoopCountOverride": 0,
+   "maxLoopCount": 1000,
+   "exposedEvents": 0,
+   "hasHost": false,
+   "subFsmCount": 0,
+   "usedInTemplate": false,
+   "variables": {
+    "Float": [
+     {
+      "__fsm": "FsmFloat",
+      "name": "sp2o_x",
+      "useVariable": true,
+      "value": 0.0
+     },
+     {
+      "__fsm": "FsmFloat",
+      "name": "sp2o_y",
+      "useVariable": true,
+      "value": 0.0
+     },
+     {
+      "__fsm": "FsmFloat",
+      "name": "sp2o_zout",
+      "useVariable": true,
+      "value": 0.0
+     }
+    ],
+    "Int": [],
+    "Bool": [],
+    "String": [],
+    "Vector2": [],
+    "Vector3": [],
+    "Rect": [],
+    "Quaternion": [],
+    "Color": [],
+    "GameObject": [],
+    "Array": [],
+    "Enum": [],
+    "Object": [],
+    "Material": [],
+    "Texture": []
+   },
+   "events": [
+    {
+     "name": "GO",
+     "isGlobal": false
+    }
+   ],
+   "globalTransitions": [],
+   "states": [
+    {
+     "name": "S",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [
+      {
+       "event": "GO",
+       "toState": "T",
+       "linkStyle": "Default",
+       "isGlobal": false
+      }
+     ],
+     "actions": []
+    },
+    {
+     "name": "T",
+     "isSequence": false,
+     "isBreakpoint": false,
+     "transitions": [],
+     "actions": [
+      {
+       "type": "HutongGames.PlayMaker.Actions.SetPositionToObject",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "targetObject",
+         "type": "HutongGames.PlayMaker.FsmGameObject",
+         "value": {
+          "__fsm": "FsmGameObject",
+          "name": null,
+          "useVariable": false,
+          "value": {
+           "type": "UnityEngine.GameObject",
+           "name": "TestSP2OTarget",
+           "instanceID": 1000008,
+           "path": "TestSP2OTarget"
+          }
+         }
+        },
+        {
+         "name": "xOffset",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 1.0
+         }
+        },
+        {
+         "name": "yOffset",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": false,
+          "value": 2.0
+         }
+        },
+        {
+         "name": "zOffset",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        }
+       ],
+       "index": 0
+      },
+      {
+       "type": "HutongGames.PlayMaker.Actions.GetPosition",
+       "enabled": true,
+       "fields": [
+        {
+         "name": "gameObject",
+         "type": "HutongGames.PlayMaker.FsmOwnerDefault",
+         "value": {
+          "__fsm": "FsmOwnerDefault",
+          "ownerOption": "UseOwner",
+          "gameObject": {
+           "__fsm": "FsmGameObject",
+           "name": null,
+           "useVariable": false,
+           "value": null
+          }
+         }
+        },
+        {
+         "name": "vector",
+         "type": "HutongGames.PlayMaker.FsmVector3",
+         "value": {
+          "__fsm": "FsmVector3",
+          "name": null,
+          "useVariable": true,
+          "value": null
+         }
+        },
+        {
+         "name": "x",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "sp2o_x",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "y",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "sp2o_y",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "z",
+         "type": "HutongGames.PlayMaker.FsmFloat",
+         "value": {
+          "__fsm": "FsmFloat",
+          "name": "sp2o_zout",
+          "useVariable": true,
+          "value": 0
+         }
+        },
+        {
+         "name": "space",
+         "type": "UnityEngine.Space",
+         "value": {
+          "__enum": "UnityEngine.Space",
+          "name": "World",
+          "value": 0
+         }
+        },
+        {
+         "name": "everyFrame",
+         "type": "System.Boolean",
+         "value": false
+        }
+       ],
+       "index": 1
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "counts": {
+  "fsms": 53,
+  "actions": 80,
+  "distinctActionTypes": 59,
+  "actionErrors": 0,
+  "unserialized": 0,
+  "initDataForced": 0
+ }
+}

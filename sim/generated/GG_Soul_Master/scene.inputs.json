@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps/GG_Soul_Master/hero.json",
+      "sha256": "2ce0e50298e98bbbbc7d048a07b9db48b1c8f2d04efd26fe305fca50813e37b3",
+      "size": 252992
+    },
+    {
+      "path": "analysis/dumps/GG_Soul_Master/physics.json",
+      "sha256": "5385e0473cffbd0d5e2a248f2aea2091cb8e2dd067a73a6a08f32a03e403d995",
+      "size": 622067
+    },
+    {
+      "path": "analysis/dumps/GG_Soul_Master/scene.json",
+      "sha256": "4a91a1f85ec40fc7d80dffd1ab022ebe9c7ef1db70ee17b9cd8630c8ce9b7b3c",
+      "size": 18625291
+    }
+  ],
+  "scene": "GG_Soul_Master"
+}

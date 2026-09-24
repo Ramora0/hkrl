@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Mega_Moss_Charger__T2/hero.json",
+      "sha256": "f452ed066ef4860e5b46e10bb05e7df6970d090b844975934120735179df74b7",
+      "size": 252995
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mega_Moss_Charger__T2/physics.json",
+      "sha256": "55cfe39ea12c819fafe39c1c1c56c826b61c5386fce9a6849be6c3c867b6096b",
+      "size": 622008
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Mega_Moss_Charger__T2/scene.json",
+      "sha256": "da305d6c6a31d239d78de0aa29e50288fafe9960175e954d1425b85101093bda",
+      "size": 19372637
+    }
+  ],
+  "scene": "GG_Mega_Moss_Charger__T1"
+}

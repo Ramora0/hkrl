@@ -1,0 +1,5 @@
+{
+  "generator": "sim/fsm/gen/gen_tables.py",
+  "inputs": [],
+  "scene": "SYNTH_fsm"
+}

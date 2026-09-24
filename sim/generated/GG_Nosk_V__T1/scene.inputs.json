@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_V__T2/hero.json",
+      "sha256": "f5995fbe0a2308f69684894b041efcfde8f5f5cab5faba081208d80477c0b887",
+      "size": 253019
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_V__T2/physics.json",
+      "sha256": "5ae1181e4762d69e7bf4e33767c3c3e0da6be14fd0ec037fd0b417bc9b3db9d2",
+      "size": 622025
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nosk_V__T2/scene.json",
+      "sha256": "cc5a72b88758a2dca16cddfce68c88f77dbfbc89d08396509a2bd9f24d22d270",
+      "size": 19444330
+    }
+  ],
+  "scene": "GG_Nosk_V__T1"
+}

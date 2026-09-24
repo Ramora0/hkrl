@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek_V__T2/hero.json",
+      "sha256": "0977e343f9041a9544a49eb77a6827605121a79406597cc88c9a4ff70f41633c",
+      "size": 252994
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek_V__T2/physics.json",
+      "sha256": "bfb024b4df017bcfde1e70996826204131ef515fa8e1f34af76f00a6c50acb12",
+      "size": 622073
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Brooding_Mawlek_V__T2/scene.json",
+      "sha256": "2a60d8330ac4be9a1612a8bea45f888f414b733c783ab4b5143201951f0ce03d",
+      "size": 19426386
+    }
+  ],
+  "scene": "GG_Brooding_Mawlek_V@T1"
+}

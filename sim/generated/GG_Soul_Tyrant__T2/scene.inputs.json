@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T3/hero.json",
+      "sha256": "8fde5243cbe0cd80eae3ea7a76c9a9c9290597b27481c0e55b421411a0e76563",
+      "size": 252999
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T3/physics.json",
+      "sha256": "f50384b8b0770ed370c384ac0eab0f857feef991502c226af39c631a2131606f",
+      "size": 622081
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Soul_Tyrant__T3/scene.json",
+      "sha256": "8ffa670b22f1c5277bc12e817570c4a8a06780836be9afd06f0f0f4273bc65d7",
+      "size": 19464608
+    }
+  ],
+  "scene": "GG_Soul_Tyrant@T2"
+}

@@ -1,0 +1,10 @@
+<Project>
+  <!-- The game assemblies every C# project here compiles against, read-only: the oracle install's
+       ($HKRL_GAME, default <repo>\game; tools/make_oracle_install.ps1). Override with -p:HkManaged=<dir>.
+       MSBuild imports this before each project, so it sets HkManaged ahead of any project default. -->
+  <PropertyGroup>
+    <HkGame Condition="'$(HkGame)' == ''">$(HKRL_GAME)</HkGame>
+    <HkGame Condition="'$(HkGame)' == ''">$(MSBuildThisFileDirectory)game</HkGame>
+    <HkManaged Condition="'$(HkManaged)' == ''">$(HkGame)\oracle_Data\Managed</HkManaged>
+  </PropertyGroup>
+</Project>

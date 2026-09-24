@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T2/hero.json",
+      "sha256": "e46ab0bb24a446b3ae3261d9a7e6124505e1c88fcb8e7ee428a152e8a414ee10",
+      "size": 253007
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T2/physics.json",
+      "sha256": "eac250d2cee38d741e264eb0dc59b9b7f5937b314458724aa2be9a6063e6f541",
+      "size": 622270
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Ghost_Galien__T2/scene.json",
+      "sha256": "bac6568d4c40ef5a386abc80ae86ac73003241361e05c7c7bd61b2cb2c672b04",
+      "size": 19002130
+    }
+  ],
+  "scene": "GG_Ghost_Galien@T1"
+}

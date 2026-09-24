@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T3/hero.json",
+      "sha256": "c8c69f8ddfee3d3f821f5809ab5007e948f188e796e7c4baaa47227eabe6622d",
+      "size": 252992
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T3/physics.json",
+      "sha256": "636a51d52b01cea068fb69ba8c4a679272ba85aae095b638e3423ee52fac1528",
+      "size": 622099
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Oblobbles__T3/scene.json",
+      "sha256": "413b433aedde7db842c80e29d3426c8fb775a601d55a288e113c3f8b0e8128d4",
+      "size": 19511790
+    }
+  ],
+  "scene": "GG_Oblobbles@T2"
+}

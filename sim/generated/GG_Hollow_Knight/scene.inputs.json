@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T1/hero.json",
+      "sha256": "9812d9b24f8c87e5d191c5fb393d5fe7ea5ff71002d9f8ea890d0dce67272f0c",
+      "size": 252987
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T1/physics.json",
+      "sha256": "dffc0b921ae98626833d00ce92c0b94e8d66c195eff4c940362d34cc124ce11a",
+      "size": 621982
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hollow_Knight__T1/scene.json",
+      "sha256": "92a0c4de63156669f0c83db89438a07e7c91922a683a5e84fe41e43612255260",
+      "size": 19995070
+    }
+  ],
+  "scene": "GG_Hollow_Knight"
+}

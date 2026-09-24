@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T1/hero.json",
+      "sha256": "afabaaf3f7f21452d32059c13e59ab36f33b6e46d18a83961cee2f79eaf3c1e4",
+      "size": 253011
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T1/physics.json",
+      "sha256": "1d8ac7c1bc0e4e6a43e01e5ada7033a294af75773ff65797e1f72476fdea4616",
+      "size": 622217
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Nailmasters__T1/scene.json",
+      "sha256": "3e05450da745fc91aba9af9ef49275453b3b1a4b0e60da4a2c682c3fd8646231",
+      "size": 19253063
+    }
+  ],
+  "scene": "GG_Nailmasters"
+}

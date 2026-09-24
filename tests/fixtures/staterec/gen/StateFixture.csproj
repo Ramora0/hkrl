@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Writes tests/fixtures/staterec/known.hkstate with the mod's own encoder (oracle/Record/StateWriter.cs).
+       Run: dotnet run -c Release (project tests/fixtures/staterec/gen), argument = the output path. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="../../../../oracle/Record/StateWriter.cs" />
+  </ItemGroup>
+</Project>

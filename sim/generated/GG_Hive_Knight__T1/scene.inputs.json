@@ -1,0 +1,21 @@
+{
+  "generator": "sim/core/gen_scene.py",
+  "inputs": [
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T2/hero.json",
+      "sha256": "088d4e8458c6fa056484879d4300f542c48878056eae8aad07ce0b704b8d15bb",
+      "size": 253001
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T2/physics.json",
+      "sha256": "8aab39608a2f12a321b8513e7ba0f562151df70cb35d3d204dd9706d4a1949a4",
+      "size": 622082
+    },
+    {
+      "path": "analysis/dumps_v2/GG_Hive_Knight__T2/scene.json",
+      "sha256": "d7f16af2b2b33fb43a3598ac9d5a6ecb02e1db2fb5d71a494d167b107d91b70c",
+      "size": 19706550
+    }
+  ],
+  "scene": "GG_Hive_Knight@T1"
+}
