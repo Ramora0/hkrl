@@ -1,0 +1,27 @@
+{
+  "tag": "v0.1.0",
+  "repo": "Ramora0/hkrl",
+  "assets": [
+    {
+      "group": "sim",
+      "file": "hksim-win64.zip",
+      "dest": "sim/build",
+      "sha256": "99FFBAEF3BDB02A93272504C0128A8CC265DBB4850162EE3A89B8DD268EABD98",
+      "bytes": 100605252
+    },
+    {
+      "group": "sim",
+      "file": "kernels-torch2.11.0-cu128.zip",
+      "dest": "train/kernels/prebuilt",
+      "sha256": "25A7EBB61BA3F4CA3376F6040A76A434EF730C2FFE37A7B769A3A82133D67E97",
+      "bytes": 6220796
+    },
+    {
+      "group": "game",
+      "file": "HKOracle.zip",
+      "dest": "dist/HKOracle",
+      "sha256": "B21B3D19A1305FBBF48ECEE921B102D9431856D068990016D7EC090B022A1E50",
+      "bytes": 797131
+    }
+  ]
+}
