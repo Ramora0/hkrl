@@ -45,7 +45,7 @@ from ppo import NO_UPDATE, PPO, AsyncLearner                # noqa: E402
 from rollout import Actor, RolloutQueue                     # noqa: E402
 from sim_env import SimPool, close_all_pools                # noqa: E402
 from train import (KILL_LANDED_PCT, Evaluator, WandB, forced_str, make_boss_state,  # noqa: E402
-                   rollout_length, rotate_checkpoints, short)
+                   rollout_length, rotate_checkpoints, short, update_D)
 
 
 @dataclass
@@ -136,14 +136,17 @@ def segment_stats(roll, seg_landed):
     return done_segs
 
 
-def epoch_log(cfg, agent, epoch, env_steps, t_roll, m, t_train, roll, n_kills, segs, qs, env):
-    """One epoch's stdout line and wandb dict."""
+def epoch_log(cfg, agent, epoch, env_steps, t_roll, m, t_train, roll, n_kills, segs, qs, env,
+              boss_state):
+    """One epoch's stdout line and wandb dict. D is train.py's measure (% of
+    boss HP landed per hit taken), reported for comparison, not trained on."""
     sps = roll["dmg"].size / max(t_roll, 1e-9)
     ent = float((-effective_logp(roll)).mean())
     n_done = int(roll["done"].sum())
     seg_mean = float(np.mean(segs)) if segs else 0.0
+    D_str = " ".join(f"{short(b)}:{boss_state[b]['D']:.2f}" for b in cfg.boss_levels_list)
     print(f"ep {epoch:5d} | steps {env_steps:>9,} | {sps:6.0f} sps (roll {t_roll:.1f}s "
-          f"train {t_train:.1f}s) | eps {n_done:3d} kills {n_kills:2d} | landed "
+          f"train {t_train:.1f}s) | D {D_str} | eps {n_done:3d} kills {n_kills:2d} | landed "
           f"{roll['dmg'].sum():8.1f} hits {roll['hit'].sum():6.1f}{forced_str(roll)} | seg "
           f"{len(segs):4d} x {seg_mean:5.2f}% | H {ent:.2f} alpha {agent.alpha:.4f} | surr "
           f"{m['surrogate']:+.4f} kl {m['kl']:.4f} ev {m['ev_atk']:+.2f} | H m/d/a/j "
@@ -172,6 +175,11 @@ def epoch_log(cfg, agent, epoch, env_steps, t_roll, m, t_train, roll, n_kills, s
         "queue/env_waits": qs["env_waits"], "queue/policy_lag_mean": qs["lag_mean"],
         "queue/server_s": qs["server_s"],
     }
+    Ds = []
+    for b in cfg.boss_levels_list:
+        log[f"curriculum/D/{b}"] = boss_state[b]["D"]
+        Ds.append(max(boss_state[b]["D"], 1e-6))
+    log["curriculum/D_geomean"] = float(np.exp(np.log(Ds).mean()))
     return log
 
 
@@ -204,9 +212,10 @@ def train(cfg: HitlessConfig):
           f"params {sum(p.numel() for p in agent.policy.parameters()):,} | gamma {cfg.gamma} "
           f"lambda {cfg.gae_lambda} | H target {cfg.target_entropy} alpha0 {cfg.alpha_init} | "
           f"rollout {T} x {cfg.n_envs} = {steps_per_epoch} steps/epoch", flush=True)
-    # The learner's per-boss return-variance state (PPO.rollout_src); its D
-    # entries are unused here.
+    # The learner's per-boss return-variance state (PPO.rollout_src), and D,
+    # measured as train.py does (same lookback and slew limit) for comparison.
     boss_state = make_boss_state(cfg)
+    D_max_delta_eff = cfg.D_max_delta * steps_per_epoch / 8192
 
     os.makedirs(os.path.dirname(cfg.save_path) or ".", exist_ok=True)
     torch.cuda.set_stream(torch.cuda.Stream(priority=-1))
@@ -245,6 +254,11 @@ def train(cfg: HitlessConfig):
         roll, store = rq.next_store()
         t0, t_prev = t_prev, time.perf_counter()
         boss_per_env = list(env.env_boss)
+        fresh = ~roll["hard"]
+        for b in set(boss_per_env):
+            bm = np.array([x == b for x in boss_per_env])[None, :] & fresh
+            update_D(cfg, boss_state, b, float(roll["dmg"][bm].sum()),
+                     float(roll["hit"][bm].sum()), D_max_delta_eff)
         agent.adapt_alpha(float((-effective_logp(roll)).mean()))
         job = dict(roll=roll, store=store, D_per_env=ones, boss_per_env=boss_per_env,
                    value_var_state=boss_state,
@@ -261,7 +275,7 @@ def train(cfg: HitlessConfig):
             ep_landed[d] = 0.0
         segs = segment_stats(roll, seg_landed)
         log = epoch_log(cfg, agent, epoch, env_steps, t_prev - t0, m or NO_UPDATE, t_train,
-                        roll, n_kills, segs, rq.snapshot(), env)
+                        roll, n_kills, segs, rq.snapshot(), env, boss_state)
         wb.log(log, step=env_steps)
 
         if evaluator.due(epoch):
