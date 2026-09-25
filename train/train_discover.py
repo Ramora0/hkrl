@@ -21,7 +21,8 @@ The loss: sub-trajectory balance. R is a sum of per-step damage d_k, so the
 flow through a state factors as exp(beta * damage so far) * F(s), F(s) being
 the flow of what can still happen from s -- a function of the state alone
 (forward-looking flows, Pan et al. ICML 2023). The network's value head
-gives log F(s) = beta * u(s); a line's end has log F = 0. Every piece i -> j
+gives log F(s) = beta * u(s), reading the network's features without training
+them; a line's end has log F = 0. Every piece i -> j
 of a walk must balance,
 
     delta(i, j) = log F(s_i) + sum_{k=i}^{j-1} (log pi(a_k|s_k) - beta d_k) - log F(s_j),
@@ -285,7 +286,12 @@ class FlowAgent(PPO):
         acts = take("actions", torch.int64)
         actions = {h: acts[..., i] for i, h in enumerate(ACT_KEYS)}
         hx = torch.zeros((B, self.config.gru_dim), device=dev)
-        lp, _ent, u, _vd, _info, lp_a, _ea = self.policy.forward_sequence(obs, hx, actions)
+        lp, _ent, _va, _vd, info, lp_a, _ea = self.policy.forward_sequence(obs, hx, actions, head_in=True)
+        # The flow head on the features, detached: its beta-scaled residuals are
+        # orders of magnitude larger than the policy's, and through a shared trunk
+        # they drown the policy's gradient.
+        pol = self.policy
+        u = pol.critic_attack(pol.head_norm(info["head_in"].float()).detach()).view(B, L)
         live = (steps[None, :] < ln[:, None]).float()
         lp = (lp - take("committed", torch.float32) * lp_a) * live
         return lp, u * live, take("dmg", torch.float32) * live, ln
@@ -336,7 +342,11 @@ class FlowAgent(PPO):
             losses.append(loss.detach())
             wholes.append(whole.detach())
             lps.append(lp.detach().sum(1))
-        gn = float(torch.nn.utils.clip_grad_norm_(self.policy.parameters(), cfg.max_grad_norm))
+        flow_params = list(self.policy.critic_attack.parameters())
+        fid = {id(p) for p in flow_params}
+        gn = float(torch.nn.utils.clip_grad_norm_([p for p in self.policy.parameters() if id(p) not in fid],
+                                                  cfg.max_grad_norm))
+        gn_flow = float(torch.nn.utils.clip_grad_norm_(flow_params, cfg.max_grad_norm))
         self.optimizer.step()
         self.policy.refresh_shadow()
         drawn = np.concatenate(parts)
@@ -344,7 +354,7 @@ class FlowAgent(PPO):
         return {"subtb": float(torch.cat(losses).mean()),
                 "whole_gap": float(torch.cat(wholes).abs().mean()),
                 "logp_err": float(np.mean(np.abs(lp_now - f["logp"][drawn]) / f["length"][drawn])),
-                "grad_norm": gn,
+                "grad_norm": gn, "grad_norm_flow": gn_flow,
                 "fit_sps": float(f["length"][drawn].sum()) / max(time.perf_counter() - t0, 1e-9)}
 
     # ------------------------------------------------ the learner's entry
@@ -440,7 +450,7 @@ def train(cfg: DiscoverConfig):
               f"{len(recs):4d} x {wl:5.0f} steps, R {wR:5.2f} | record {best.R if best else 0:6.2f} over "
               f"{len(best.actions) if best else 0:5d} steps | kills {len(walks.kills)} | H {ent:.2f} | "
               f"beta {m.get('beta', 0):.3f} subtb {m.get('subtb', 0):9.2f} whole {m.get('whole_gap', 0):8.2f} "
-              f"logp_err/step {m.get('logp_err', 0):.4f} gn {m.get('grad_norm', 0):.2f} "
+              f"logp_err/step {m.get('logp_err', 0):.4f} gn {m.get('grad_norm', 0):.3g}/{m.get('grad_norm_flow', 0):.3g} "
               f"fit {m.get('fit_sps', 0):6.0f} sps", flush=True)
         wb.log({"env_steps": env_steps, "perf/steps_per_s": sps, "perf/train_s": t_train,
                 "discover/record": best.R if best else 0.0,

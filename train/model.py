@@ -381,10 +381,13 @@ class Policy(nn.Module):
         return (dict(zip(ACT_KEYS, a)), sum(lps), sum(ents), v_atk, v_def, hx_new,
                 lps[2], ents[2])
 
-    def forward_sequence(self, obs: Observation, hx, actions):
+    def forward_sequence(self, obs: Observation, hx, actions, head_in=False):
         """Truncated BPTT over (B, L) chunks. Everything but the GRU is
         per-timestep, so it runs over the flattened B*L.
-        -> (log_prob, entropy, v_atk, v_def, info, lp_a, ent_a), each (B, L)."""
+        -> (log_prob, entropy, v_atk, v_def, info, lp_a, ent_a), each (B, L).
+        head_in: info also holds the heads' input before head_norm, (B*L, 2d),
+        for a head trained on the network's features without training them
+        (train_discover)."""
         B, L = obs.global_state.shape[:2]
         flat = Observation(**{k: getattr(obs, k).reshape(B * L, *getattr(obs, k).shape[2:])
                               for k in obs.field_names()})
@@ -410,5 +413,7 @@ class Policy(nn.Module):
                 "head_ent": {name: (e.mean() / math.log(lg.shape[-1])).detach()
                              for name, e, lg in zip(("move", "dir", "act", "jump"),
                                                     ents, logits)}}
+        if head_in:
+            info["head_in"] = torch.cat([gout, mem], dim=-1)
         v = lambda x: x.view(B, L)                      # noqa: E731
         return v(sum(lps)), v(sum(ents)), v(v_atk), v(v_def), info, v(lps[2]), v(ents[2])
