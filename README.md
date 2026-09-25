@@ -25,10 +25,9 @@ The repo has three parts:
 
 ## Quick start
 
-You need Windows 10/11, an NVIDIA GPU from the RTX 30 series or newer,
-[uv](https://docs.astral.sh/uv/getting-started/installation/), and the [GitHub CLI](https://cli.github.com/)
-logged in (`gh auth login`; the repo is private, so its release files need your login). No compiler: the sim,
-the GPU kernels and the mod come prebuilt with each release.
+You need Windows 10/11, an NVIDIA GPU from the RTX 30 series or newer, and
+[uv](https://docs.astral.sh/uv/getting-started/installation/). No compiler: the sim, the GPU kernels and the
+mod come prebuilt with each release.
 
     git clone <this repo>
     cd hkrl
