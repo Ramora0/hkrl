@@ -3,6 +3,7 @@
 #include <string.h>
 #include "obs_batch.h"
 #include "core/alloc.h"
+#include "core/str_hash.h"
 
 /* ------------------------------------------------------------------------------------- vocab
  * Reserved ids are added in the constructor in this order: 0 "unknown", 1 "terrain" (train/sim_worker.py's
@@ -12,7 +13,15 @@
 struct hksim_vocab {
     char   **i2s;
     int32_t  n, cap, max_size;
+    int32_t *ix; uint32_t mask;        /* open-addressing index of i2s by hks_str_hash, at most half full */
 };
+
+static void vocab_index_put(hksim_vocab *v, int32_t id)
+{
+    uint32_t k = hks_str_hash(v->i2s[id]) & v->mask;
+    while (v->ix[k] >= 0) k = (k + 1) & v->mask;
+    v->ix[k] = id;
+}
 
 /* Caller-owned and shared by every instance, so it uses the process heap, not an instance arena. */
 hksim_vocab *hksim_vocab_create(int32_t max_size)
@@ -33,6 +42,7 @@ void hksim_vocab_destroy(hksim_vocab *v)
     if (!v) return;
     for (int32_t i = 0; i < v->n; i++) hks_sys_free(v->i2s[i]);
     hks_sys_free(v->i2s);
+    hks_sys_free(v->ix);
     hks_sys_free(v);
 }
 
@@ -47,9 +57,21 @@ int32_t hksim_vocab_intern(hksim_vocab *v, const char *str)
 {
     if (!v) return 0;
     if (!str || !str[0]) return 0;                      /* vocab.py:33-35 -> unknown */
-    for (int32_t i = 0; i < v->n; i++)
-        if (strcmp(v->i2s[i], str) == 0) return i;
+    uint32_t h = hks_str_hash(str);
+    if (v->ix)
+        for (uint32_t k = h & v->mask; v->ix[k] >= 0; k = (k + 1) & v->mask)
+            if (strcmp(v->i2s[v->ix[k]], str) == 0) return v->ix[k];
     if (v->n >= v->max_size) return 0;                  /* vocab.py:39-49 overflow sink */
+    if (!v->ix || 2u * (uint32_t)(v->n + 1) > v->mask + 1u) {
+        uint32_t size = 64;
+        while (size < 2u * (uint32_t)(v->n + 1)) size *= 2;
+        int32_t *ix = hks_sys_malloc(sizeof(int32_t) * size);
+        if (!ix) return 0;
+        hks_sys_free(v->ix);
+        v->ix = ix; v->mask = size - 1;
+        memset(v->ix, 0xff, sizeof(int32_t) * size);
+        for (int32_t i = 0; i < v->n; i++) vocab_index_put(v, i);
+    }
     if (v->n == v->cap) {
         int32_t cap = v->cap * 2;
         char **p = hks_sys_realloc(v->i2s, (size_t)cap * sizeof *p);
@@ -61,6 +83,7 @@ int32_t hksim_vocab_intern(hksim_vocab *v, const char *str)
     if (!copy) return 0;
     memcpy(copy, str, len);
     v->i2s[v->n] = copy;
+    vocab_index_put(v, v->n);
     return v->n++;
 }
 

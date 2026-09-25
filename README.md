@@ -16,7 +16,7 @@ The repo has three parts:
 | `sim/` | the C simulator: `core/` (ABI, frame scheduler, trace writer), `hero/`, `phys/`, `obs/`, and `fsm/`: the PlayMaker runtime and lifecycle, `actions/` (ported actions by category), `components/`, `bosses/`, and generated `tables_*`/`scene_*` |
 | `hkpy/` | Python binding and trace tools: `sim_driver`, `sim_config` (the one configuration every caller applies), `provenance` (corpus stamps), `ledger`, `hktrace`, `obs_codec`, `obs_parity`; the engine conformance scenarios and their sim mirror (`conformance_scenarios`, `conformance`); `staterec` (the state recorder's reader) |
 | `gate/` | sim-vs-game parity: `ledger` (event ledgers), `control` (game vs game), `boss_gate`, `parity_battery`, `combat_eval`, `build_oracle`, `sweep.sh`, freshness and duplicate checks |
-| `tools/` | `check.py`, `fingerprint.py`, `attack_gap` (per-attack sim/game gap), `iframe_window` (where the i-frame window ends, game vs sim), oracle launch/record/dump (`run_oracle`, `record_corpus`, `rerecord`, `dump_all`), `extract_assets` (the game's scenes and prefabs, read from its asset files), `lifecycle_rules`/`lifecycle_compare`, `conformance` (engine probes in the game) |
+| `tools/` | `check.py`, `fingerprint.py`, `attack_gap` (per-attack sim/game gap), `iframe_window` (where the i-frame window ends, game vs sim), oracle launch/record/dump (`run_oracle`, `record_corpus`, `rerecord`, `dump_all`), `extract_assets` (the game's scenes and prefabs, read from its asset files), `lifecycle_rules`/`lifecycle_compare`, `conformance` (engine probes in the game), `build_ref`/`sim_equal`/`sim_bench` (speed changes: `docs/sim-speed.md`) |
 | `tests/` | pytest for the sim; `tests/train/` for the trainer |
 | `train/` | the PPO trainer (`train/README.md`) |
 | `oracle/` | the game mod (`docs/oracle.md`) |
@@ -116,6 +116,7 @@ sources); the mod, the .NET SDK and the game install above (`HKRL_GAME` points t
 - `docs/porting.md`: silent failure modes when porting a boss
 - `docs/debugging.md`: methods for localising a divergence
 - `docs/method-oracle.md`: checking ported actions and component methods call by call against the game
+- `docs/sim-speed.md`: making the sim faster without changing what it computes: the equality and speed tools, and how each mechanism stays exact
 
 ## Hollow Knight
 

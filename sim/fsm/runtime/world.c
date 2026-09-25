@@ -10,6 +10,7 @@
 #include <stdio.h>
 #include "core/alloc.h"
 #include "core/tls.h"
+#include "core/str_hash.h"
 #include "fsm/fsm_scene_registry.inc"   /* generated: every sim/fsm/tables_*.h */
 
 /* TrainingEnv.cs:535-548 -- the rescan the mod falls back on when BossSceneController.bosses is
@@ -128,8 +129,10 @@ struct scene_cache {
     int32_t *fsm_base;                /* [sc->n_fsms] first ordinal of that FSM */
     int32_t n_acts;
     size_t blk_size;                  /* bytes the world's single structure block needs */
+    int32_t *str_ix; uint32_t str_mask;   /* open-addressing index of sc->strings by hks_str_hash, at most half full */
 };
 static scene_cache *g_scene_caches;
+const int32_t *world_string_index(const fsm_world *w, uint32_t *mask) { *mask = w->cache->str_mask; return w->cache->str_ix; }
 static hks_mutex g_once;              /* the cache is built once and read from every thread */
 HKS_CTOR hks_world_ctor(void) { HKS_MUTEX_INIT(&g_once); }
 
@@ -191,6 +194,17 @@ static const scene_cache *scene_cache_get(const hkfsm_scene_def *sc)
         }
     }
     HKSIM_ASSERT(ord == n, "scene cache walked %d actions but was sized for %d", ord, n);
+    uint32_t size = 64;
+    while (size < 2u * (uint32_t)sc->n_strings) size *= 2;
+    c->str_ix = hks_sys_malloc(sizeof(int32_t) * size);
+    HKSIM_ASSERT(c->str_ix != NULL, "out of memory indexing the scene strings");
+    memset(c->str_ix, 0xff, sizeof(int32_t) * size);
+    c->str_mask = size - 1;
+    for (int32_t i = 0; i < sc->n_strings; i++) {
+        uint32_t k = hks_str_hash(sc->strings[i]) & c->str_mask;
+        while (c->str_ix[k] >= 0 && strcmp(sc->strings[c->str_ix[k]], sc->strings[i]) != 0) k = (k + 1) & c->str_mask;
+        if (c->str_ix[k] < 0) c->str_ix[k] = i;   /* a repeated string keeps its lowest id */
+    }
     hks_sys_free(one.v);
     c->tmpl = all.v;
     c->n_tmpl = all.n;
@@ -380,7 +394,6 @@ static void go_init(fsm_world *w, int32_t i, col_inst *cols)
     if (d->rb >= 0) {
         const rb_def *r = &sc->rbs[d->rb];
         g->has_rb = 1; g->vel[0] = r->vel[0]; g->vel[1] = r->vel[1];
-        world_xf_track(w, i);
         g->gravity_scale = r->gravity_scale; g->kinematic = r->is_kinematic;
     }
     g->n_cols = d->n_cols;
@@ -463,6 +476,8 @@ fsm_world *world_create(const hkfsm_scene_def *sc)
     w->gos = calloc((size_t)w->cap_gos, sizeof(go_inst));
     for (int32_t i = 0; i < sc->n_gos; i++)
         go_init(w, i, blk_alloc(w, (size_t)(sc->gos[i].n_cols > 0 ? sc->gos[i].n_cols : 1) * sizeof(col_inst)));
+    w->xf_cover_stale = 1;                  /* go_inst.xf_covered: computed at the first use */
+    for (int32_t i = 0; i < sc->n_gos; i++) if (w->gos[i].has_rb) world_xf_track(w, i);
     /* camera parent: its transform is not in scene.json (no collider); ShakePositionV2 only moves the camera,
      * which the observation never reads (boss-hornet.md §6.4.1b "not the position writes") -> origin pose */
     for (int32_t g = sc->camera_parent_go; g >= 0; g = w->gos[g].parent)
@@ -864,6 +879,8 @@ int32_t world_instantiate(fsm_world *w, int32_t prefab, int32_t parent, bool poo
     } else {
         update_active_in_hierarchy_dfs(w, go0, true);
     }
+    for (int32_t i = 0; i < k; i++) if (w->gos[to[i]].has_rb) world_xf_track(w, to[i]);
+    world_xf_cover_subtree(w, go0);
     const scene_cache *sk = w->cache;
     for (int32_t j = 0; j < nf; j++) {
         int32_t id = fsm0 + j, t = fsm_tmpl[j];
@@ -1018,10 +1035,10 @@ void world_destroy(fsm_world *w)
     }
     for (int32_t i = 0; i < w->n_dyn; i++) free(w->dyn_strings[i]);
 
-    free(w->dyn_strings); free(w->event_registered); free(w->gos); free(w->fsms); free(w->fsm_list);
+    free(w->dyn_strings); free(w->dyn_ix); free(w->event_registered); free(w->gos); free(w->fsms); free(w->fsm_list);
     free(w->gvals); free(w->static_go); free(w->anims); free(w->hms); free(w->dhs); free(w->recoils);
     free(w->constrains); free(w->mecs); free(w->grimmballs); free(w->pd); free(w->log);
-    free(w->itweens); free(w->svars); free(w->lse_gos); free(w->xf_gos);
+    free(w->itweens); free(w->svars); free(w->lse_gos); free(w->xf_gos); free(w->xf_cov_bits);
     free(w->dirty_bits); free(w->drain_bits);
     world_grow_free(w);                                                /* the clones' blocks: their states were reached above */
     free(w->blk);                                                      /* last: everything above pointed into it */

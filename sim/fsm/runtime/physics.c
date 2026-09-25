@@ -773,15 +773,15 @@ void world_flush_dirty_shapes(fsm_world *w)
     /* Take the set and clear it, so anything marked DURING the drain waits for the next frame.  Word
      * then bit order visits GameObjects in ascending id order: the order the colliders are re-created in, and so
      * the order their new proxies take ids (PhysicsManager2D::SyncTransforms' own order is not in any source). */
-    memcpy(w->drain_bits, w->dirty_bits, sizeof(uint64_t) * (size_t)w->n_dirty_words);
+    world_shapes_dirty_set(w, w->drain_bits);
     memset(w->dirty_bits, 0, sizeof(uint64_t) * (size_t)w->n_dirty_words);
     for (int32_t word = 0; word < w->n_dirty_words; word++) {
         uint64_t bits = w->drain_bits[word];
         while (bits) {
             int32_t go = (word << 6) + __builtin_ctzll(bits);
             bits &= bits - 1;
-            if (!w->gos[go].shapes_dirty) continue;
-            w->gos[go].shapes_dirty = 0;
+            if (!go_shapes_dirty(w, &w->gos[go])) continue;
+            go_shapes_clean(w, &w->gos[go]);
             if (w->gos[go].body) { body_follow_parent(w, go, true); body_sync_scale(w, go); }
             /* A static collider's core-owned body pose is pushed by ensure_transform_clean;
              * autoSyncTransforms syncs every changed transform before the step, so resolve it here. */

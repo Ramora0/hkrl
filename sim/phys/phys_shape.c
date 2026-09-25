@@ -145,6 +145,40 @@ static void add_polygon(shape_t *s, const v2 *v, int n, float radius)
     }
 }
 
+/* add_polygon is a pure function of the scaled points and the radius, and a collider flips between two scales
+ * (the Knight's facing), so a re-baked polygon keeps its last two results and replays an identical input. */
+typedef struct { uint32_t n; float radius; v2 *in; int n_pieces; piece_t *pieces; } bake_slot;
+struct bake_memo { bake_slot slot[2]; int next; };
+
+static bool bake_replay(shape_t *s, const v2 *v, uint32_t n, float radius)
+{
+    if (!s->bake_memo) return false;
+    for (int k = 0; k < 2; k++) {
+        const bake_slot *m = &s->bake_memo->slot[k];
+        if (!m->in || m->n != n || memcmp(&m->radius, &radius, sizeof radius) != 0 || memcmp(m->in, v, n * sizeof(v2)) != 0)
+            continue;
+        for (int i = 0; i < m->n_pieces; i++) { piece_reserve(s); s->pieces[s->n_pieces++] = m->pieces[i]; }
+        return true;
+    }
+    return false;
+}
+static void bake_record(shape_t *s, const v2 *v, uint32_t n, float radius)
+{
+    if (!s->baked) { s->baked = true; return; }   /* baked once at creation: most polygons never re-bake */
+    if (!s->bake_memo) {
+        s->bake_memo = calloc(1, sizeof *s->bake_memo);
+        HKSIM_ASSERT(s->bake_memo != NULL, "phys: out of memory keeping a polygon bake");
+    }
+    bake_slot *m = &s->bake_memo->slot[s->bake_memo->next];
+    s->bake_memo->next ^= 1;
+    m->in = realloc(m->in, n * sizeof(v2));
+    m->pieces = realloc(m->pieces, (size_t)(s->n_pieces > 0 ? s->n_pieces : 1) * sizeof(piece_t));
+    HKSIM_ASSERT(m->in && m->pieces, "phys: out of memory keeping a polygon bake");
+    memcpy(m->in, v, n * sizeof(v2));
+    memcpy(m->pieces, s->pieces, (size_t)s->n_pieces * sizeof(piece_t));
+    m->n = n; m->radius = radius; m->n_pieces = s->n_pieces;
+}
+
 void ph_shape_bake(phys_world *w, shape_t *s, const body_t *b)
 {
     (void)w;
@@ -182,7 +216,10 @@ void ph_shape_bake(phys_world *w, shape_t *s, const body_t *b)
         v2 v[64];
         for (uint32_t i = 0; i < s->n_points; i++)
             v[i] = V2(sx * (s->offset.x + s->points[i].x), sy * (s->offset.y + s->points[i].y));
-        add_polygon(s, v, (int)s->n_points, radius);
+        if (!bake_replay(s, v, s->n_points, radius)) {
+            add_polygon(s, v, (int)s->n_points, radius);
+            bake_record(s, v, s->n_points, radius);
+        }
         break;
     }
     case PHYS_SHAPE_EDGE: {

@@ -141,6 +141,8 @@ typedef struct {
     /* Baked pieces, heap-grown by piece_reserve up to PH_MAX_PIECES. */
     int n_pieces, cap_pieces;
     piece_t *pieces;
+    /* A re-baked polygon's last two decompositions (ph_shape_bake), NULL until its second bake. */
+    struct bake_memo *bake_memo; bool baked;
     /* b2Fixture: a shape is a fixture while it is enabled (Unity destroys the fixture on disable and creates it
      * on enable); its proxies exist while it is a fixture of an active (simulated) body. */
     bool is_fixture;

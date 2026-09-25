@@ -120,9 +120,15 @@ typedef struct { int32_t *sent; int32_t n, cap; int8_t prev; } go_lse;
 typedef struct {
     const go_def *def;
     int32_t id;
-    uint8_t active_self, active_in_hierarchy, destroyed, transform_dirty;
+    uint8_t active_self, active_in_hierarchy, destroyed;
+    /* Dirty marks.  An object under a body (xf_covered) is also dirty whenever fsm_world.xf_epoch has moved on
+     * since it was last clean (xf_clean / shape_clean): world_invalidate_body_transforms marks every such object
+     * by advancing the epoch.  go_transform_dirty / go_shapes_dirty (gameobject.c) read both. */
+    uint8_t transform_dirty;
     uint8_t shapes_dirty;   /* transform moved since the last physics-step shape flush (E-2 deferred flush) */
     uint8_t xf_tracked;     /* already on fsm_world.xf_gos */
+    uint8_t xf_covered;     /* this object or an ancestor is on fsm_world.xf_gos (xf_refresh_cover) */
+    uint32_t xf_clean, shape_clean;
     uint8_t has_static_body;   /* any col with rb_go < 0 bound to a core static body: ensure_transform_clean pushes to it */
     uint8_t rot_pending;       /* the last physics step turned the body: rot_pending_deg awaits the write-back */
     uint8_t rot_from_body;     /* the transform's rotation was just written from the body: record it, don't push it */
@@ -130,6 +136,9 @@ typedef struct {
     int32_t parent, first_child, next_sibling;
     float local_pos[3], local_scale[3], local_euler_z;
     float world_pos[3], lossy_scale[3], world_euler_z;
+    /* The inputs world_pos / world_euler_z / lossy_scale were last folded from (ensure_transform_clean): this level's
+     * pose_in, and the parent's computation numbered pose_parent_gen.  pose_gen numbers this computation. */
+    float pose_in[7]; uint32_t pose_gen, pose_parent_gen; uint8_t pose_ok;
     /* The local rotation as Unity stores it, a unit quaternion (x, y, z, w) (native-transform_time.md §1 T0):
      * localEulerAngles = (0, 0, local_euler_z) through EulerToQuaternion and SetLocalR (gameobject.c local_q),
      * recomputed when local_euler_z's bits change. */
@@ -307,6 +316,7 @@ struct fsm_world {
     unsigned char *act_st;             /* one zeroed block for every action's private state; act_inst.st points in */
     /* runtime string table: [0..sc->n_strings) static, then interned at runtime */
     char **dyn_strings; int32_t n_dyn, cap_dyn;
+    int32_t *dyn_ix; uint32_t dyn_mask;     /* hash index over dyn_strings (events.c) */
     /* registered FsmEvent names: bitset over string ids (FsmEvent.cs eventLookup) */
     uint8_t *event_registered; int32_t cap_event_registered;
     /* The instance arrays below keep GROW_RESERVE (world.c) spare slots so a runtime Instantiate
@@ -369,9 +379,15 @@ struct fsm_world {
     uint32_t hero_body;                     /* phys body of the Knight (core-created), bound by world_bind_hero_body */
     int32_t *static_go; uint32_t n_static_go;  /* HKSIM_USER_STATIC_BASE + i -> owning GO, -1 unknown (world_bind_statics) */
     int32_t *lse_gos; int32_t n_lse_gos;    /* GameObjects carrying a LimitSendEvents (lifecycle.c LCT_LSE) */
-    /* GameObjects that own a physics body or rigidbody: the roots world_invalidate_body_transforms
-     * walks.  Append-only -- nothing ever clears go_inst.body or .has_rb. */
+    /* GameObjects that own a physics body or rigidbody: world_invalidate_body_transforms dirties their subtrees.
+     * Append-only -- nothing ever clears go_inst.body or .has_rb. */
     int32_t *xf_gos; int32_t n_xf_gos, cap_xf_gos;
+    /* go_inst.xf_covered as a bitset, kept up to date as the hierarchy and xf_gos change; recomputed in full at
+     * the first use after the world is built (xf_cover_stale).  xf_epoch advances at every
+     * world_invalidate_body_transforms. */
+    uint32_t xf_epoch; uint8_t xf_cover_stale;
+    uint32_t pose_gen;                      /* go_inst.pose_gen source */
+    uint64_t *xf_cov_bits; int32_t n_cov_words;
     /* GameObjects whose shapes need rescaling before the next physics step.  Set by
      * invalidate_transform_dfs, drained by world_flush_dirty_shapes; go_inst.shapes_dirty
      * doubles as the already-set bit, so an object is rescaled at most once per flush.

@@ -1,6 +1,8 @@
 /* Strings, FsmEvent interning, the trace event log and event fan-out: PM/FsmEvent.cs, PM/Fsm.cs
  * (Event / BroadcastEvent), HK/FSMUtility.cs. */
 #include "fsm/fsm.h"
+#include "world_internal.h"
+#include "core/str_hash.h"
 #include <stdlib.h>
 #include <string.h>
 #include "core/alloc.h"
@@ -15,11 +17,39 @@ const char *w_str(const fsm_world *w, int32_t id)
     return "";
 }
 
+/* The lowest id holding `s`: the scene's strings are distinct, and w_intern appends only unknown ones. */
 int32_t w_find_string(const fsm_world *w, const char *s)
 {
-    for (int32_t i = 0; i < w->sc->n_strings; i++) if (strcmp(w->sc->strings[i], s) == 0) return i;
-    for (int32_t i = 0; i < w->n_dyn; i++) if (strcmp(w->dyn_strings[i], s) == 0) return w->sc->n_strings + i;
+    uint32_t h = hks_str_hash(s), mask;
+    const int32_t *ix = world_string_index(w, &mask);
+    for (uint32_t k = h & mask; ix[k] >= 0; k = (k + 1) & mask)
+        if (strcmp(w->sc->strings[ix[k]], s) == 0) return ix[k];
+    if (w->dyn_ix)
+        for (uint32_t k = h & w->dyn_mask; w->dyn_ix[k] >= 0; k = (k + 1) & w->dyn_mask)
+            if (strcmp(w->dyn_strings[w->dyn_ix[k]], s) == 0) return w->sc->n_strings + w->dyn_ix[k];
     return -1;
+}
+
+/* Open addressing over dyn_strings, at most half full. */
+static void dyn_index_add(fsm_world *w, int32_t i)
+{
+    if (2u * (uint32_t)(w->n_dyn + 1) > w->dyn_mask + 1u || !w->dyn_ix) {
+        uint32_t size = 64;
+        while (size < 2u * (uint32_t)(w->n_dyn + 1)) size *= 2;
+        free(w->dyn_ix);
+        w->dyn_ix = malloc(sizeof(int32_t) * size);
+        HKSIM_ASSERT(w->dyn_ix != NULL, "out of memory indexing the runtime strings");
+        memset(w->dyn_ix, 0xff, sizeof(int32_t) * size);
+        w->dyn_mask = size - 1;
+        for (int32_t j = 0; j < i; j++) {
+            uint32_t k = hks_str_hash(w->dyn_strings[j]) & w->dyn_mask;
+            while (w->dyn_ix[k] >= 0) k = (k + 1) & w->dyn_mask;
+            w->dyn_ix[k] = j;
+        }
+    }
+    uint32_t k = hks_str_hash(w->dyn_strings[i]) & w->dyn_mask;
+    while (w->dyn_ix[k] >= 0) k = (k + 1) & w->dyn_mask;
+    w->dyn_ix[k] = i;
 }
 
 int32_t w_intern(fsm_world *w, const char *s)
@@ -31,6 +61,7 @@ int32_t w_intern(fsm_world *w, const char *s)
         w->dyn_strings = realloc(w->dyn_strings, sizeof(char *) * (size_t)w->cap_dyn);
     }
     w->dyn_strings[w->n_dyn] = strdup(s);
+    dyn_index_add(w, w->n_dyn);
     return w->sc->n_strings + w->n_dyn++;
 }
 

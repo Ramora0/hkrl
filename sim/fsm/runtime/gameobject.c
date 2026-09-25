@@ -158,30 +158,101 @@ static void go_require_pose(const fsm_world *w, int32_t go)
         HKSIM_UNIMPLEMENTED("transform of '%s' is not in any dump (no collider row in scene.json)", go_path(w, go));
 }
 
+/* The shape-flush set (world_flush_dirty_shapes), allocated at the first mark. */
+static void dirty_bits_alloc(fsm_world *w)
+{
+    if (w->dirty_bits) return;
+    w->n_dirty_words = (w->n_gos + 63) >> 6;
+    w->dirty_bits = calloc((size_t)w->n_dirty_words, sizeof(uint64_t));
+    w->drain_bits = calloc((size_t)w->n_dirty_words, sizeof(uint64_t));
+    HKSIM_ASSERT(w->dirty_bits && w->drain_bits, "out of memory marking a dirty shape");
+}
+static void mark_shapes_dirty(fsm_world *w, int32_t go)
+{
+    dirty_bits_alloc(w);
+    w->gos[go].shapes_dirty = 1;
+    w->dirty_bits[go >> 6] |= (uint64_t)1 << (go & 63);
+}
+
+/* go_inst.xf_covered for the subtree of `go`, mirrored in xf_cov_bits.  An object that leaves the covered set keeps
+ * the marks the epoch gave it; one that joins it is clean at the current epoch, as the next
+ * world_invalidate_body_transforms is what dirties it. */
+static void cover_dfs(fsm_world *w, int32_t go, bool parent_covered)
+{
+    go_inst *g = &w->gos[go];
+    bool cov = parent_covered || g->xf_tracked;
+    if (g->xf_covered && !cov) {
+        if (g->xf_clean != w->xf_epoch) g->transform_dirty = 1;
+        if (g->shape_clean != w->xf_epoch && !g->shapes_dirty) mark_shapes_dirty(w, go);
+    } else if (!g->xf_covered && cov) {
+        g->xf_clean = g->shape_clean = w->xf_epoch;
+    }
+    if ((go >> 6) >= w->n_cov_words) {
+        int32_t nw = (w->cap_gos + 63) >> 6;
+        w->xf_cov_bits = realloc(w->xf_cov_bits, sizeof(uint64_t) * (size_t)nw);
+        HKSIM_ASSERT(w->xf_cov_bits != NULL, "out of memory growing the covered-transform set");
+        memset(w->xf_cov_bits + w->n_cov_words, 0, sizeof(uint64_t) * (size_t)(nw - w->n_cov_words));
+        w->n_cov_words = nw;
+    }
+    uint64_t bit = (uint64_t)1 << (go & 63);
+    if (cov) w->xf_cov_bits[go >> 6] |= bit; else w->xf_cov_bits[go >> 6] &= ~bit;
+    g->xf_covered = cov;
+    for (int32_t c = g->first_child; c >= 0; c = w->gos[c].next_sibling) cover_dfs(w, c, cov);
+}
+static void xf_refresh_cover(fsm_world *w)
+{
+    w->xf_cover_stale = 0;
+    for (int32_t i = 0; i < w->n_gos; i++) if (w->gos[i].parent < 0) cover_dfs(w, i, false);
+}
+/* The subtree of `go` moved or gained a tracked object.  While a full recompute is due (the world is being built)
+ * that recompute covers it. */
+void world_xf_cover_subtree(fsm_world *w, int32_t go)
+{
+    if (w->xf_cover_stale) return;
+    int32_t p = w->gos[go].parent;
+    cover_dfs(w, go, p >= 0 && w->gos[p].xf_covered);
+}
+
+bool go_transform_dirty(fsm_world *w, const go_inst *g)
+{
+    if (w->xf_cover_stale) xf_refresh_cover(w);
+    return g->transform_dirty || (g->xf_covered && g->xf_clean != w->xf_epoch);
+}
+bool go_shapes_dirty(fsm_world *w, const go_inst *g)
+{
+    if (w->xf_cover_stale) xf_refresh_cover(w);
+    return g->shapes_dirty || (g->xf_covered && g->shape_clean != w->xf_epoch);
+}
+/* The objects the next shape flush visits, into `bits`: the marked ones and every covered one the epoch dirtied. */
+void world_shapes_dirty_set(fsm_world *w, uint64_t *bits)
+{
+    if (w->xf_cover_stale) xf_refresh_cover(w);
+    memcpy(bits, w->dirty_bits, sizeof(uint64_t) * (size_t)w->n_dirty_words);
+    int32_t nw = w->n_cov_words < w->n_dirty_words ? w->n_cov_words : w->n_dirty_words;
+    for (int32_t k = 0; k < nw; k++)
+        for (uint64_t cov = w->xf_cov_bits[k]; cov; cov &= cov - 1) {
+            int32_t go = (k << 6) + __builtin_ctzll(cov);
+            if (w->gos[go].shape_clean != w->xf_epoch) bits[k] |= (uint64_t)1 << (go & 63);
+        }
+}
+void go_shapes_clean(fsm_world *w, go_inst *g) { g->shapes_dirty = 0; g->shape_clean = w->xf_epoch; }
+
 void invalidate_transform_dfs(fsm_world *w, int32_t go)
 {
     if (go < 0) return;
     go_inst *g = &w->gos[go];
     g->transform_dirty = 1;
-    if (!g->shapes_dirty) {   /* cleared only by world_flush_dirty_shapes, unlike transform_dirty
-                               * which any intervening read clears before the flush can see it. */
-        g->shapes_dirty = 1;
-        if (!w->dirty_bits) {
-            w->n_dirty_words = (w->n_gos + 63) >> 6;
-            w->dirty_bits = calloc((size_t)w->n_dirty_words, sizeof(uint64_t));
-            w->drain_bits = calloc((size_t)w->n_dirty_words, sizeof(uint64_t));
-            HKSIM_ASSERT(w->dirty_bits && w->drain_bits, "out of memory marking a dirty shape");
-        }
-        w->dirty_bits[go >> 6] |= (uint64_t)1 << (go & 63);
-    }
+    /* The shape mark is cleared only by world_flush_dirty_shapes, unlike transform_dirty, which any intervening
+     * read clears before the flush can see it. */
+    if (!go_shapes_dirty(w, g)) mark_shapes_dirty(w, go);
     for (int32_t c = g->first_child; c >= 0; c = w->gos[c].next_sibling) {
         invalidate_transform_dfs(w, c);
     }
 }
 
 
-/* Remember a GameObject that has acquired a body or a rigidbody, so the invalidate walk below has a
- * list to iterate instead of all n_gos to filter. */
+/* Remember a GameObject that has acquired a body or a rigidbody: world_invalidate_body_transforms dirties its
+ * subtree from now on. */
 void world_xf_track(fsm_world *w, int32_t go)
 {
     if (go < 0 || w->gos[go].xf_tracked) return;
@@ -192,6 +263,7 @@ void world_xf_track(fsm_world *w, int32_t go)
     }
     w->gos[go].xf_tracked = 1;
     w->xf_gos[w->n_xf_gos++] = go;
+    world_xf_cover_subtree(w, go);
 }
 
 /* Signed float sign, 0 treated as +1 (degenerate zero-scale objects report no rotation flip either way). */
@@ -223,7 +295,10 @@ void world_invalidate_body_transforms(fsm_world *w)
             }
         }
     }
-    for (int32_t k = 0; k < w->n_xf_gos; k++) invalidate_transform_dfs(w, w->xf_gos[k]);
+    /* Every object under a tracked one is now dirty: its transform and its shapes. */
+    if (w->xf_cover_stale) xf_refresh_cover(w);
+    if (w->n_xf_gos > 0) dirty_bits_alloc(w);
+    w->xf_epoch++;
     if (due)
         for (int32_t k = 0; k < w->n_xf_gos; k++) {
             const go_inst *g = &w->gos[w->xf_gos[k]];
@@ -424,22 +499,50 @@ static void fol_anchor(fsm_world *w, int32_t go)
     g->fol_pscale[0] = ps[0]; g->fol_pscale[1] = ps[1]; g->fol_valid = 1;
 }
 
+/* What the world pose of an object is folded from, per level of its chain: the translation, scale and eulerZ the
+ * Transform maths read (local_t, local_s, local_euler_z). */
+static void pose_inputs(const fsm_world *w, const go_inst *g, float in[7])
+{
+    local_t(w, g, in); local_s(w, g, in + 3); in[6] = g->local_euler_z;
+}
+/* The world pose cached on `g` is still the fold of its chain: at every level the inputs are bit-identical to the
+ * ones that level's pose was computed from, and each parent is the same computation its child last folded over. */
+static bool pose_memo_valid(const fsm_world *w, const go_inst *g)
+{
+    for (;;) {
+        if (!g->pose_ok) return false;
+        float in[7]; pose_inputs(w, g, in);
+        if (memcmp(in, g->pose_in, sizeof in) != 0) return false;
+        if (g->parent < 0) return true;
+        const go_inst *p = &w->gos[g->parent];
+        if (p->pose_gen != g->pose_parent_gen) return false;
+        g = p;
+    }
+}
+
 void ensure_transform_clean(fsm_world *w, int32_t go)
 {
     go_require_pose(w, go);
     go_inst *g = &w->gos[go];
-    if (!g->transform_dirty) return;
+    if (!go_transform_dirty(w, g)) return;
     if (g->parent >= 0) ensure_transform_clean(w, g->parent);
     /* A nested body whose parent moved is carried along BEFORE its pose is used (body_follow_parent), on the read
      * and not only at the pre-step flush: in the game a child never lags its parent by a step
      * (Knight/Spells/Scr Heads 2 in analysis/polbat_hornet/ph_ep02.a.hktrace frames 22541-22547). */
     if (g->body && g->body != w->hero_body && g->parent >= 0 && w->phys) body_follow_parent(w, go, false);
-    float t[3], r[4];
-    local_t(w, g, t);
-    transform_point(w, g->parent, t, g->world_pos);
-    global_rotation(w, go, r);
-    g->world_euler_z = quat_euler_z(r);
-    lossy_scale(w, go, r, g->lossy_scale);
+    if (!pose_memo_valid(w, g)) {
+        float t[3], r[4];
+        local_t(w, g, t);
+        transform_point(w, g->parent, t, g->world_pos);
+        global_rotation(w, go, r);
+        g->world_euler_z = quat_euler_z(r);
+        lossy_scale(w, go, r, g->lossy_scale);
+        pose_inputs(w, g, g->pose_in);
+        g->pose_parent_gen = g->parent >= 0 ? w->gos[g->parent].pose_gen : 0;
+        g->pose_gen = ++w->pose_gen;
+        /* Reusable only if every ancestor's recorded inputs are the ones this fold just read. */
+        g->pose_ok = g->parent < 0 || pose_memo_valid(w, &w->gos[g->parent]);
+    }
     /* phys stores the body's WORLD rotation, and this is the only place world_euler_z is derived, so
      * pushing from here covers every writer and every parent-driven rotation. */
     if (g->body && w->phys) {
@@ -461,6 +564,7 @@ void ensure_transform_clean(fsm_world *w, int32_t go)
         }
     }
     g->transform_dirty = 0;
+    g->xf_clean = w->xf_epoch;
 }
 
 /* PhysicsManager2D::Simulate (UP!0x180beb390, native-physics2d.md §3.2) walks the bodies root to leaf and writes each
@@ -671,6 +775,7 @@ void go_set_parent(fsm_world *w, int32_t go, int32_t parent)
         if (pg->first_child < 0) pg->first_child = go;
         else { int32_t c = pg->first_child; while (w->gos[c].next_sibling >= 0) c = w->gos[c].next_sibling; w->gos[c].next_sibling = go; }
     }
+    world_xf_cover_subtree(w, go);
     /* keep the world pose */
     float ps[3] = { 1, 1, 1 }; float pez = 0.0f;
     if (parent >= 0) { go_lossy_scale(w, parent, ps); pez = go_euler_z(w, parent); }
