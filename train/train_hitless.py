@@ -17,10 +17,22 @@ dodge there keeps masks that buy damage later, so every dodge counts. A hit
 costs what it takes off V -- no mask price, no D, no heal term, no defense
 critic.
 
+The hit discount (hit_discount, beta): every hit multiplies what comes after
+it -- and the damage landed on its own step -- by beta, and time costs nothing,
+
+    G_t = beta^hit_t * (dmg_t + G_t+1)
+
+so V(s) is the damage of roughly the next 1 / (1 - beta) hits, from every
+state alike. beta 1 is damage before death (above); beta 0 is damage before
+the next hit, the hitless objective. With immortal (a training knight's
+health goes back to max after every hit, so only the boss's death ends an
+episode) and hide_hp (the HP column is a constant), the return does not
+depend on which mask the knight is on, and the policy cannot tell.
+
 Entropy in the reward (maximum-entropy RL; for a problem where every state
 has one history this is the GFlowNet objective, Tiapkin et al. AISTATS 2024):
 
-    r'_t = dmg_t * (1 - hit_t * done_t)  +  alpha * (-log pi(a_t|s_t) - H_target)
+    r'_t = beta^hit_t * dmg_t * (1 - hit_t * done_t)  +  alpha * (-log pi(a_t|s_t) - H_target)
 
 log pi is the joint log-prob of the four heads, less the action head on a
 hard-commit step (the agent did not choose it). alpha is the Lagrange
@@ -58,6 +70,8 @@ class HitlessConfig(Config):
     # The hit budget: max masks per training episode, uniform (see the module
     # docstring); evals play the game's 9/9.
     train_max_health: str = "1,9"
+    # beta: the factor every hit puts on what follows (module docstring).
+    hit_discount: float = 1.0
     # The reward carries the entropy (see the module docstring).
     entropy_coeff: float = 0.0
     # No defense critic: a hit costs what it takes off V.
@@ -97,27 +111,29 @@ class HitlessPPO(PPO):
         self.log_alpha += cfg.alpha_lr * (cfg.target_entropy - entropy)
 
     def soft_reward(self, roll, alpha):
-        killed = (roll["hit"] > 0) & roll["done"]
+        hit = roll["hit"] > 0
+        w = np.where(hit, self.config.hit_discount, 1.0) * ~(hit & roll["done"])
         bonus = alpha * (-effective_logp(roll) - self.config.target_entropy)
-        return (np.where(killed, 0.0, roll["dmg"]) + bonus).astype(np.float32)
+        return (w * roll["dmg"] + bonus).astype(np.float32)
 
     def _gae_all(self, reward, hits_taken, hp_healed, values, values_def, D_per_env, dones):
-        """GAE with a terminal at every episode end (death or the boss's).
-        Same (adv, adv_atk, adv_def, atk_ret, def_ret) layout as PPO's; the
-        defense parts are zeros (no defense critic). hits_taken, hp_healed and
-        D are unused."""
+        """GAE with a terminal at every episode end (death or the boss's) and
+        the hit discount on every step that costs health. Same (adv, adv_atk,
+        adv_def, atk_ret, def_ret) layout as PPO's; the defense parts are
+        zeros (no defense critic). hp_healed and D are unused."""
         cfg = self.config
         T, N = reward.shape
-        gamma, gl = np.float32(cfg.gamma), np.float32(cfg.gamma * cfg.gae_lambda)
+        beta, lam = np.float32(cfg.hit_discount), np.float32(cfg.gae_lambda)
         z = np.float32(0.0)
         adv, ret = np.empty((T, N), np.float32), np.empty((T, N), np.float32)
         g = np.zeros(N, np.float32)
         for t in reversed(range(T)):
             term = np.asarray(dones[t], bool)
+            gamma = np.float32(cfg.gamma) * np.where(hits_taken[t] > 0, beta, np.float32(1.0))
             next_v = np.where(term, z, values[t + 1])
             g = np.where(term, z, g)
             delta = reward[t] + gamma * next_v - values[t]
-            g = delta + gl * g
+            g = delta + gamma * lam * g
             adv[t] = g
             ret[t] = g + values[t]
         zeros = np.zeros((T, N), np.float32)

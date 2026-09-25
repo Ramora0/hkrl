@@ -5,7 +5,9 @@ rollouts -- no sim needed.
      episode end, and a hit is not one.
   2. With lambda 1 and zero values the return is the damage landed from each
      step up to the knight's death, the killing step's own damage excluded.
-  3. The soft reward: the entropy bonus is zero at the target, hard-commit
+  3. The hit discount: every hit scales what follows it, and its own step's
+     damage, by beta (beta 0 = damage before the next hit).
+  4. The soft reward: the entropy bonus is zero at the target, hard-commit
      steps leave the action head out, and alpha moves toward the target.
 
     python tests/train/test_hitless.py      (or pytest tests/train)
@@ -25,21 +27,21 @@ def mk(**kw):
 
 def gae_reference(cfg, reward, hits, values, dones):
     T = len(reward)
-    gl = cfg.gamma * cfg.gae_lambda
     adv, ret = np.empty(T, np.float32), np.empty(T, np.float32)
     g = 0.0
     for t in reversed(range(T)):
+        gamma = cfg.gamma * (cfg.hit_discount if hits[t] > 0 else 1.0)
         if dones[t]:
             next_v, g = 0.0, 0.0
         else:
             next_v = values[t + 1]
-        g = reward[t] + cfg.gamma * next_v - values[t] + gl * g
+        g = reward[t] + gamma * next_v - values[t] + gamma * cfg.gae_lambda * g
         adv[t], ret[t] = g, g + values[t]
     return adv, ret
 
 
-def test_gae_matches_scalar_loop():
-    a = mk()
+def test_gae_matches_scalar_loop(beta=1.0):
+    a = mk(hit_discount=beta)
     rng = np.random.default_rng(0)
     T, N = 64, 29
     rew = rng.standard_normal((T, N)).astype(np.float32)
@@ -69,6 +71,22 @@ def test_return_is_damage_before_death():
     print(f"  return = damage before death: {ret[:, 0].tolist()}")
 
 
+def test_hit_discount():
+    test_gae_matches_scalar_loop(beta=0.8)
+    dmg = np.array([1, 2, 0, 5, 3, 4, 0, 7], np.float32)[:, None]
+    hit = np.array([0, 0, 0, 1, 0, 0, 1, 0], np.float32)[:, None]
+    done = np.zeros((8, 1), bool)
+    roll = {"dmg": dmg, "hit": hit, "done": done, "lp": np.zeros((8, 1), np.float32),
+            "lp_a": np.zeros((8, 1), np.float32), "committed": np.zeros((8, 1), bool)}
+    for beta, want in ((0.0, [3, 2, 0, 0, 7, 4, 0, 7]),
+                       (0.5, [10.75, 9.75, 7.75, 7.75, 10.5, 7.5, 3.5, 7])):
+        a = mk(gae_lambda=1.0, target_entropy=0.0, hit_discount=beta)
+        r = a.soft_reward(roll, alpha=0.0)
+        _, _, _, ret, _ = a._gae_all(r, hit, None, np.zeros((9, 1), np.float32), None, None, done)
+        assert np.allclose(ret[:, 0], want), (beta, ret[:, 0].tolist())
+    print("  hit discount: beta 0 = damage before the next hit, beta 0.5 halves what each hit leaves")
+
+
 def test_soft_reward_and_alpha():
     a = mk(target_entropy=1.5)
     roll = {"dmg": np.zeros((2, 2), np.float32), "hit": np.zeros((2, 2), np.float32),
@@ -91,5 +109,6 @@ def test_soft_reward_and_alpha():
 if __name__ == "__main__":
     test_gae_matches_scalar_loop()
     test_return_is_damage_before_death()
+    test_hit_discount()
     test_soft_reward_and_alpha()
     print("PASS")

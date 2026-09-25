@@ -59,6 +59,12 @@ class Config:
     # late phases a 9-mask policy rarely sees.
     train_max_health: str = "5,15"
     start_health_low_p: float = 0.25
+    # Training knights that never die: health back to max after every hit
+    # (sim_worker.EpisodeStart.refill). Evals keep the game's 9/9 and its deaths.
+    immortal: bool = False
+    # The knight's HP column is the constant HIDDEN_HP in every observation,
+    # sim (sim_worker.Worker.fill_obs) and game (game_eval.GameFleet._batch).
+    hide_hp: bool = False
     # Hard starts (sim_worker.HardStarts): the chance a training episode starts
     # from a saved state 1-2 x hard_start_every steps before a hit the policy
     # took, instead of a fresh fight. Each env keeps its last hard_start_pool

@@ -48,6 +48,11 @@ from collections import deque
 
 import numpy as np
 
+# The knight's HP column of global_state (observation.GS.HP) and the value it
+# reads under config.hide_hp: the game's 9 masks.
+GS_HP = 2
+HIDDEN_HP = 9.0
+
 HKSIM_OBS_BATCH = 2
 # hksim_vocab_create seeds these two itself and never emits them on a row.
 VOCAB_RESERVED = ("unknown", "terrain")
@@ -114,6 +119,7 @@ class EpisodeStart:
         self.eval = False
         self.rngs = [seed_stream(seed, 1_000_000 + int(e)) for e in env_ids]
         self.configured = [False] * len(env_ids)
+        self.max_health = [0] * len(env_ids)
 
     def _set(self, s, key, value):
         if self.lib.hksim_set_value(s, key.encode(), float(value)) != 0:
@@ -132,6 +138,13 @@ class EpisodeStart:
         h = m if r.random() >= self.p_low else int(r.integers(1, m + 1))
         self._set(s, "hero.pd.maxHealth", m)
         self._set(s, "hero.pd.health", h)
+        self._set(s, "hp.resync", 1)
+        self.max_health[j] = m
+
+    def refill(self, s, j):
+        """Health back to this episode's max after a hit (config.immortal),
+        not scored as a heal."""
+        self._set(s, "hero.pd.health", self.max_health[j])
         self._set(s, "hp.resync", 1)
 
 
@@ -553,17 +566,22 @@ class Worker:
                       f"{self.steps_trimmed} env-steps trimmed to the nearest {C}, "
                       f"{self.rows_dropped} rows dropped so far", flush=True)
 
+    def _finish_obs(self):
+        self._fit_combat()
+        if self.cfg.hide_hp:
+            self.arrays["global_state"][self.lo:self.hi, GS_HP] = HIDDEN_HP
+
     def fill_obs(self, envs=None):
         """Pack every env, or local envs `envs`, and never publish ids the
         trainer has not blessed."""
         while True:
             self._pack(envs)
             if self.lib.hksim_vocab_size(self.vocab) <= len(self.canon):
-                self._fit_combat()
+                self._finish_obs()
                 return
             self.report(("vocab", read_vocab(self.lib, self.vocab, len(self.canon))))
             if not self.adopt(self._recv_canon()[1]):
-                self._fit_combat()
+                self._finish_obs()
                 return          # our ids already are the canonical ones
             # rebuilt: the buffers hold stale ids, so pack again
 
@@ -602,7 +620,10 @@ class Worker:
         self.done_out[j] = res.done
         if res.done:
             self._reset_env(j)
-        elif self.hard is not None and not self.start.eval:
+            return
+        if self.cfg.immortal and res.hits_taken > 0 and not self.start.eval:
+            self.start.refill(s, j)
+        if self.hard is not None and not self.start.eval:
             self.hard.after_step(s, j, res.hits_taken, tuple(int(x) for x in a))
 
     def _reset_env(self, j):

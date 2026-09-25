@@ -41,6 +41,7 @@ import attack_gap                                                   # noqa: E402
 from game_client import GameConn, Instances                         # noqa: E402
 from model import ACT_KEYS                                          # noqa: E402
 from observation import CB, TR, VIEW_H, VIEW_W, Observation         # noqa: E402
+from sim_worker import GS_HP, HIDDEN_HP                             # noqa: E402
 
 PORT = 8766                 # FK_SERVER_URL; not the mod's default 8765
 SOLO_PORT = PORT + 1        # a standalone eval (main), so it runs beside a training run's fleet
@@ -256,6 +257,8 @@ class GameFleet:
             m = len(terrain[i])
             thb[i, :m], tmask[i, :m] = terrain[i], 1.0
         gs = np.stack([np.asarray(r[2], np.float32) for r in raws])
+        if self.cfg.hide_hp:
+            gs[:, GS_HP] = HIDDEN_HP
         return Observation(combat_hb=chb, combat_mask=cmask, combat_kind_ids=ckid,
                            combat_parent_ids=cpid, terrain_hb=thb, terrain_mask=tmask,
                            global_state=gs)
