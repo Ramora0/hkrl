@@ -89,6 +89,7 @@ Each test file also runs as a script. They need CUDA and the built sim DLL.
 | `config.py` | every knob, one dataclass, `--flag` for each; the defaults are the recipe |
 | `train.py` | the run: rollout queue -> async learner, the adaptive-difficulty curriculum (D), evals, logging, checkpoints |
 | `train_hitless.py` | the same run on the hitless objective (below): its own PPO subclass and loop, everything else shared |
+| `train_discover.py` | discovery on one fixed-seed fight, onezero-style: flow (trajectory balance) as max-ent PPO, lines end at the first hit, restarts from the best lines |
 | `rollout.py` | the actor (one CUDA graph per batch size: preprocessing kernels over the page-locked sim buffers, the policy, the readback) and the queue that forwards whichever envs are ready and fills per-env store segments |
 | `ppo.py` | normalizers, decomposed GAE, the PPO update as one CUDA graph per minibatch, the learner thread, checkpoints |
 | `model.py` | the policy network (PyTorch reference) and the switch to its fused kernels |

@@ -166,6 +166,7 @@ class SimPool:
         self.forced_arr = self.arrays["forced"]
         self.step_arr = self.arrays["step"]
         self.done_arr = self.arrays["done"]
+        self.walk_arr = self.arrays["walk"]
         self.seq_arr = self.arrays["seq"]
         self.wmsg_arr = self.arrays["wmsg"]
         # Called first thing in close(): whoever page-locked the block lets go.
@@ -276,6 +277,13 @@ class SimPool:
         st = self.step_arr
         return (make_obs(self.cfg, self.arrays, self.counters), st[:, 0].copy(),
                 st[:, 1].copy(), st[:, 2].copy(), self.done_arr.astype(bool))
+
+    def send_bank(self, lines):
+        """[(line_id, (L, 4) int8 actions)] to every worker, replacing its
+        bank (sim_worker.Worker._fast_forward). No reply, so it can go
+        mid-rollout."""
+        for w in range(self.n_workers):
+            self._send(w, ("bank", lines))
 
     def set_eval(self, on):
         """Eval episodes play the game's 9/9 masks. Workers must be idle."""

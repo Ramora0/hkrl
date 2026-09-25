@@ -594,6 +594,7 @@ class RolloutQueue:
         self.rs = np.zeros((S, T, N, 3), np.float32)
         self.rf = np.zeros((S, T, N), bool)       # the worker replayed a demo action
         self.rh = np.zeros((S, T, N), bool)       # a step of a hard-start episode
+        self.rw = np.full((S, T, N), -1, np.int64)  # the walk each step belongs to
         self.boot = np.zeros((S, N, 2), np.float32)
         # ---- stores: bank b holds store bank_store[b]
         self.bank_store = np.full(S, -1, np.int64)
@@ -657,6 +658,7 @@ class RolloutQueue:
             self.ri[b, t, new, R_DONE] = env.done_arr[new]
             fz = env.forced_arr[new]
             self.rh[b, t, new] = (fz[:, 0] & 2) != 0
+            self.rw[b, t, new] = env.walk_arr[new]
             f = (fz[:, 0] & 1) != 0
             if f.any():
                 # the action the env actually took (sim_worker.HardStarts demos)
@@ -731,6 +733,7 @@ class RolloutQueue:
         self.rs[b] = 0.0
         self.rf[b] = False
         self.rh[b] = False
+        self.rw[b] = -1
         self.open_iv[k] = self.n_complete
 
     # ---------------------------------------------------------------- batch
@@ -834,6 +837,7 @@ class RolloutQueue:
                 "done": x[..., R_DONE].astype(bool),
                 "committed": x[..., P_COMMIT].astype(bool),
                 "forced": self.rf[b].copy(), "hard": self.rh[b].copy(),
+                "walk": self.rw[b].copy(),
                 "actions": {kk: c_(x[..., i]) for i, kk in enumerate(ACT_KEYS)},
                 "_versions": x[..., R_VER].copy(), "_bank": b, "_k": k}
         self.completed.append((roll, st))

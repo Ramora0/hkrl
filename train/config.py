@@ -65,6 +65,13 @@ class Config:
     # The knight's HP column is the constant HIDDEN_HP in every observation,
     # sim (sim_worker.Worker.fill_obs) and game (game_eval.GameFleet._batch).
     hide_hp: bool = False
+    # Discovery on one fight (train_discover.py): every reset uses this seed
+    # (0 = a fresh seed per episode), an episode ends at the first step that
+    # costs health, and a reset starts from a prefix of a line the trainer
+    # banked (fast-forwarded, exact under the fixed seed) with this chance.
+    fixed_seed: int = 0
+    end_on_hit: bool = False
+    restart_frac: float = 0.0
     # Hard starts (sim_worker.HardStarts): the chance a training episode starts
     # from a saved state 1-2 x hard_start_every steps before a hit the policy
     # took, instead of a fresh fight. Each env keeps its last hard_start_pool

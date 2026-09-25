@@ -48,6 +48,8 @@ from collections import deque
 
 import numpy as np
 
+WALK_CUT_BITS = 20
+
 # The knight's HP column of global_state (observation.GS.HP) and the value it
 # reads under config.hide_hp: the game's 9 masks.
 GS_HP = 2
@@ -394,6 +396,11 @@ ARRAYS = (
     # bit 1 = the step belongs to an episode restored from a hard state
     # (HardStarts). Written with the step's results, before seq.
     ("forced",        (5,),               np.int32),
+    # The walk a step belongs to: -1 for one from a fresh reset, else
+    # line_id << WALK_CUT_BITS | cut for one fast-forwarded through the first
+    # `cut` actions of banked line line_id (Worker.bank). Written before the
+    # step, so a step that ends a walk carries that walk's tag.
+    ("walk",          (),                 np.int64),
     # The substep handshake, after everything the actor page-locks: seq[e]
     # counts env e's published results; wmsg[lo] counts the pipe messages
     # worker (lo, hi) sent mid-substep. Written only by the worker.
@@ -490,6 +497,10 @@ class Worker:
         self.vocab = seed_vocab(self.lib, self.canon, cfg.kind_vocab_size)
         self.act = self.arrays["actions"][lo:hi]
         self.forced = self.arrays["forced"][lo:hi]
+        self.walk_out = self.arrays["walk"][lo:hi]
+        self.tags = np.full(hi - lo, -1, np.int64)
+        self.bank = []                       # [(line_id, (L, 4) int8 actions)]
+        self.bank_rng = seed_stream(seed, 2_000_000 + lo)
         self.step_out = self.arrays["step"][lo:hi]
         self.done_out = self.arrays["done"][lo:hi]
         self.seq = self.arrays["seq"][lo:hi]
@@ -604,6 +615,7 @@ class Worker:
     # -------------------------------------------------------------- steps
     def _step_env(self, j):
         s, a, res = self.sims[j], self.act[j], self._res
+        self.walk_out[j] = self.tags[j]
         h = self.hard if not self.start.eval else None
         fa = h.forced_action(j) if h is not None else None
         flags = 2 if h is not None and h.restored[j] else 0
@@ -617,8 +629,9 @@ class Worker:
             raise RuntimeError(f"hksim_step(env {self.lo + j}, {self.env_boss[j]}, "
                                f"action {list(a)}): {self._err(s)}")
         self.step_out[j] = (res.damage_landed, res.hits_taken, res.hp_healed)
-        self.done_out[j] = res.done
-        if res.done:
+        ended = res.done or (self.cfg.end_on_hit and res.hits_taken > 0 and not self.start.eval)
+        self.done_out[j] = ended
+        if ended:
             self._reset_env(j)
             return
         if self.cfg.immortal and res.hits_taken > 0 and not self.start.eval:
@@ -632,7 +645,8 @@ class Worker:
         if h is not None and h.restart(s, j):
             h.begin(s, j)
             return
-        if self.lib.hksim_reset(s, next_seed(self.rngs[j])) != 0:
+        seed = self.cfg.fixed_seed or next_seed(self.rngs[j])
+        if self.lib.hksim_reset(s, seed) != 0:
             raise RuntimeError(f"hksim_reset(env {self.lo + j}): {self._err(s)}")
         self.start(s, j)
         if self.hard is not None:
@@ -640,6 +654,26 @@ class Worker:
             self.hard.restored[j] = False
         if h is not None:
             h.begin(s, j)
+        self.tags[j] = -1
+        if self.bank and not self.start.eval and self.bank_rng.random() < self.cfg.restart_frac:
+            self._fast_forward(s, j)
+
+    def _fast_forward(self, s, j):
+        """Play the first `cut` actions of a banked line, cut uniform over its
+        plies. Under the fixed seed this reaches the exact state the line was
+        in; a banked line costs no health before its last action, so the
+        prefix cannot end the episode."""
+        line_id, acts = self.bank[int(self.bank_rng.integers(len(self.bank)))]
+        cut = int(self.bank_rng.integers(len(acts)))
+        res, a = self._res, self._a
+        for t in range(cut):
+            a[0], a[1], a[2], a[3] = (int(x) for x in acts[t])
+            if self.lib.hksim_step(s, a, ctypes.byref(res)) != 0:
+                raise RuntimeError(f"hksim_step(env {self.lo + j}, prefix of line {line_id}): {self._err(s)}")
+            if res.done or res.hits_taken > 0:
+                raise RuntimeError(f"env {self.lo + j}: line {line_id} ended at ply {t} of its prefix "
+                                   f"(cut {cut}): the replay diverged from the banked line")
+        self.tags[j] = (int(line_id) << WALK_CUT_BITS) | cut
 
     def reset(self):
         for j in range(len(self.sims)):
@@ -718,6 +752,8 @@ def worker_main(cfg, conn, shm_name, lay, lo, hi, seed, sig):
             elif cmd == "reset":
                 w.reset()
                 conn.send(("ok", None))
+            elif cmd == "bank":
+                w.bank = msg[1]         # no reply: sent mid-rollout
             elif cmd == "eval_mode":
                 w.start.eval = bool(msg[1])
                 conn.send(("ok", None))
