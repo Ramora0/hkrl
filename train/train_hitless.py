@@ -1,22 +1,26 @@
-"""The hitless trainer: PPO on "boss damage before the next hit", with the
-entropy in the reward.
+"""The hitless trainer: PPO on "boss damage before the knight dies", with the
+knight's masks as the hit budget and the entropy in the reward.
 
     python train/train_hitless.py --boss_levels GG_Grimm_Nightmare --save_path runs/x
 
-The objective. A segment runs from any step to the next step that costs the
-knight health (any damage, a pit included) or to the end of the fight; its
-return is the % of boss HP landed in it, undiscounted (gamma 1). The value
-head (the attack critic) learns V(s) = the damage still to come before the
-next hit. A hit is a terminal for the return, not for the sim: the fight goes
-on and the next step starts a new segment. Damage landed on the step of a hit
-is a trade and does not count. The cost of a hit is therefore the damage it
-forfeits, V(s), and nothing else: no mask price, no D, no heal term, no
-defense critic.
+The objective. The return is the % of boss HP landed before the episode ends
+(the knight's death or the boss's), undiscounted (gamma 1); the value head
+(the attack critic) learns V(s) = the damage still to come before death.
+Damage landed on the step that kills the knight is a trade and does not
+count. With m masks and 2-mask hits this is "damage before the k-th hit",
+k ~ m/2, and the policy sees its masks (global_state HP), so the return is
+Markov. Training episodes draw the knight's max masks from train_max_health
+(1..9: every k at once, 9 being the game's and the evals'): a 1-2 mask
+episode is the hitless objective itself, where only a hitless passage
+through a no-damage phase (NKG's Balloon) pays anything; with more masks a
+dodge there keeps masks that buy damage later, so every dodge counts. A hit
+costs what it takes off V -- no mask price, no D, no heal term, no defense
+critic.
 
 Entropy in the reward (maximum-entropy RL; for a problem where every state
 has one history this is the GFlowNet objective, Tiapkin et al. AISTATS 2024):
 
-    r'_t = dmg_t * (1 - hit_t)  +  alpha * (-log pi(a_t|s_t) - H_target)
+    r'_t = dmg_t * (1 - hit_t * done_t)  +  alpha * (-log pi(a_t|s_t) - H_target)
 
 log pi is the joint log-prob of the four heads, less the action head on a
 hard-commit step (the agent did not choose it). alpha is the Lagrange
@@ -51,9 +55,12 @@ from train import (KILL_LANDED_PCT, Evaluator, WandB, forced_str, make_boss_stat
 @dataclass
 class HitlessConfig(Config):
     gamma: float = 1.0
+    # The hit budget: max masks per training episode, uniform (see the module
+    # docstring); evals play the game's 9/9.
+    train_max_health: str = "1,9"
     # The reward carries the entropy (see the module docstring).
     entropy_coeff: float = 0.0
-    # No defense critic: a hit is a terminal of the one return.
+    # No defense critic: a hit costs what it takes off V.
     def_value_coeff: float = 0.0
     # Joint entropy of the four heads the temperature holds, in nats (the
     # joint maximum is ln(3*3*8*2) = 4.97).
@@ -90,14 +97,15 @@ class HitlessPPO(PPO):
         self.log_alpha += cfg.alpha_lr * (cfg.target_entropy - entropy)
 
     def soft_reward(self, roll, alpha):
-        hit = roll["hit"] > 0
+        killed = (roll["hit"] > 0) & roll["done"]
         bonus = alpha * (-effective_logp(roll) - self.config.target_entropy)
-        return (np.where(hit, 0.0, roll["dmg"]) + bonus).astype(np.float32)
+        return (np.where(killed, 0.0, roll["dmg"]) + bonus).astype(np.float32)
 
     def _gae_all(self, reward, hits_taken, hp_healed, values, values_def, D_per_env, dones):
-        """GAE with a terminal at every hit and every episode end. Same
-        (adv, adv_atk, adv_def, atk_ret, def_ret) layout as PPO's; the defense
-        parts are zeros (no defense critic). hp_healed and D are unused."""
+        """GAE with a terminal at every episode end (death or the boss's).
+        Same (adv, adv_atk, adv_def, atk_ret, def_ret) layout as PPO's; the
+        defense parts are zeros (no defense critic). hits_taken, hp_healed and
+        D are unused."""
         cfg = self.config
         T, N = reward.shape
         gamma, gl = np.float32(cfg.gamma), np.float32(cfg.gamma * cfg.gae_lambda)
@@ -105,7 +113,7 @@ class HitlessPPO(PPO):
         adv, ret = np.empty((T, N), np.float32), np.empty((T, N), np.float32)
         g = np.zeros(N, np.float32)
         for t in reversed(range(T)):
-            term = np.asarray(dones[t], bool) | (hits_taken[t] > 0)
+            term = np.asarray(dones[t], bool)
             next_v = np.where(term, z, values[t + 1])
             g = np.where(term, z, g)
             delta = reward[t] + gamma * next_v - values[t]

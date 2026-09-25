@@ -2,9 +2,9 @@
 rollouts -- no sim needed.
 
   1. The vectorized GAE equals a per-env scalar loop with a terminal at every
-     hit and every episode end.
+     episode end, and a hit is not one.
   2. With lambda 1 and zero values the return is the damage landed from each
-     step up to the next hit, the hit step's own damage excluded.
+     step up to the knight's death, the killing step's own damage excluded.
   3. The soft reward: the entropy bonus is zero at the target, hard-commit
      steps leave the action head out, and alpha moves toward the target.
 
@@ -29,7 +29,7 @@ def gae_reference(cfg, reward, hits, values, dones):
     adv, ret = np.empty(T, np.float32), np.empty(T, np.float32)
     g = 0.0
     for t in reversed(range(T)):
-        if dones[t] or hits[t] > 0:
+        if dones[t]:
             next_v, g = 0.0, 0.0
         else:
             next_v = values[t + 1]
@@ -54,24 +54,25 @@ def test_gae_matches_scalar_loop():
     print(f"  GAE: vectorized == per-env loop ({T}x{N}, {int(hit.sum())} hits, {int(done.sum())} ends)")
 
 
-def test_return_is_damage_before_next_hit():
+def test_return_is_damage_before_death():
     a = mk(gae_lambda=1.0, target_entropy=0.0)
-    dmg = np.array([1, 2, 0, 5, 3, 4, 0, 7], np.float32)[:, None]
+    dmg = np.array([1, 2, 0, 5, 3, 4, 6, 7], np.float32)[:, None]
     hit = np.array([0, 0, 0, 1, 0, 0, 1, 0], np.float32)[:, None]
-    done = np.zeros((8, 1), bool)
-    roll = {"dmg": dmg, "hit": hit, "lp": np.zeros((8, 1), np.float32),
+    done = np.array([0, 0, 0, 0, 0, 0, 1, 0], bool)[:, None]
+    roll = {"dmg": dmg, "hit": hit, "done": done, "lp": np.zeros((8, 1), np.float32),
             "lp_a": np.zeros((8, 1), np.float32), "committed": np.zeros((8, 1), bool)}
     r = a.soft_reward(roll, alpha=0.0)
     _, _, _, ret, _ = a._gae_all(r, hit, None, np.zeros((9, 1), np.float32), None, None, done)
-    # steps 0-2 collect 1+2+0 before the hit at 3, whose own 5 is a trade;
-    # 4-5 collect 3+4 before the hit at 6; 7 bootstraps from V = 0
-    assert ret[:, 0].tolist() == [3, 2, 0, 0, 7, 4, 0, 7], ret[:, 0].tolist()
-    print(f"  return = damage before the next hit: {ret[:, 0].tolist()}")
+    # the hit at 3 is survived (its 5 counts); the one at 6 kills (its 6 is a
+    # trade); 7 starts the next episode and bootstraps from V = 0
+    assert ret[:, 0].tolist() == [15, 14, 12, 12, 7, 4, 0, 7], ret[:, 0].tolist()
+    print(f"  return = damage before death: {ret[:, 0].tolist()}")
 
 
 def test_soft_reward_and_alpha():
     a = mk(target_entropy=1.5)
     roll = {"dmg": np.zeros((2, 2), np.float32), "hit": np.zeros((2, 2), np.float32),
+            "done": np.zeros((2, 2), bool),
             "lp": np.array([[-1.5, -3.0], [-2.5, -1.0]], np.float32),
             "lp_a": np.array([[0.0, -1.5], [-1.0, 0.0]], np.float32),
             "committed": np.array([[False, True], [True, False]])}
@@ -89,6 +90,6 @@ def test_soft_reward_and_alpha():
 
 if __name__ == "__main__":
     test_gae_matches_scalar_loop()
-    test_return_is_damage_before_next_hit()
+    test_return_is_damage_before_death()
     test_soft_reward_and_alpha()
     print("PASS")

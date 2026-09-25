@@ -113,18 +113,20 @@ discounting, idling beat dying. The sim ends an episode where the game does
 
 ### The hitless objective (`train_hitless.py`)
 
-    r'_t = dmg_t * (1 - hit_t)  +  alpha * (-log pi(a_t|s_t) - H_target)
+    r'_t = dmg_t * (1 - hit_t * done_t)  +  alpha * (-log pi(a_t|s_t) - H_target)
 
-A return runs from a step to the next hit (any damage, a pit included) or
-the end of the fight, undiscounted (`gamma` 1): V(s) is the boss damage still
-to come before the next hit. A hit ends the return, not the fight, and a hit
-costs exactly the damage it forfeits; damage landed on the hit step is a
-trade and does not count. One critic (the attack head); no D, mask price or
-heal term. The entropy is in the reward (maximum-entropy RL), with `alpha`
-the multiplier of E[H] >= `target_entropy`, stepped every epoch; subtracting
-the target keeps staying alive from earning an entropy stream. `log pi` is
-the joint log-prob of the heads the agent chose (the action head is out on
-a hard-commit step).
+The return is the boss damage landed before the knight dies (or the boss
+does), undiscounted (`gamma` 1); damage on the killing step is a trade and
+does not count. The knight's masks are the hit budget: training episodes draw
+max masks from `train_max_health` (1..9), so a 1-2 mask episode is the
+hitless objective itself and a fuller one rewards every dodge that keeps
+masks for later; the policy sees its masks, so the return is Markov. One
+critic (the attack head); no D (reported, not used), mask price or heal term.
+The entropy is in the reward (maximum-entropy RL), with `alpha` the
+multiplier of E[H] >= `target_entropy`, stepped every epoch; subtracting the
+target keeps staying alive from earning an entropy stream. `log pi` is the
+joint log-prob of the heads the agent chose (the action head is out on a
+hard-commit step).
 
 ## Invariants
 
