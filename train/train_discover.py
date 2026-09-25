@@ -109,8 +109,11 @@ class Line:
 
 
 class LineStore:
-    """The best lines by R. A line that ever entered stays resolvable by id
-    (walks restarted from it may still be running when it is evicted)."""
+    """The best lines by R, then by how long they stayed hitless: a stretch
+    where no damage can be landed (NKG's Balloon) leaves R flat, and the
+    longer line is the deeper restart point. A line that ever entered stays
+    resolvable by id (walks restarted from it may still be running when it is
+    evicted)."""
 
     def __init__(self, capacity):
         self.capacity = capacity
@@ -118,14 +121,18 @@ class LineStore:
         self.top = []                     # ids, best first
         self.next_id = 0
 
+    @staticmethod
+    def rank(line):
+        return (line.R, len(line.actions))
+
     def add(self, line):
-        if len(self.top) >= self.capacity and line.R <= self.known[self.top[-1]].R:
+        if len(self.top) >= self.capacity and self.rank(line) <= self.rank(self.known[self.top[-1]]):
             return None
         lid = self.next_id
         self.next_id += 1
         self.known[lid] = line
         self.top.append(lid)
-        self.top.sort(key=lambda i: -self.known[i].R)
+        self.top.sort(key=lambda i: self.rank(self.known[i]), reverse=True)
         del self.top[self.capacity:]
         return lid
 
@@ -455,11 +462,13 @@ def train(cfg: DiscoverConfig):
         wl = float(np.mean([r[2] for r in recs])) if recs else 0.0
         print(f"ep {epoch:5d} | steps {env_steps:>11,} | {sps:6.0f} sps train {t_train:.2f}s | walks "
               f"{len(recs):4d} x {wl:5.0f}, {n_restart:3d} restarted | record {best.R if best else 0:6.2f} "
+              f"over {len(best.actions) if best else 0:5d} steps "
               f"top10 {top10:6.2f} | kills {len(walks.kills)} | H {ent:.2f} | beta {m.get('beta', 0):.4f} "
               f"imbalance {m.get('imbalance', 0):7.2f} logp_err/step {m.get('logp_err', 0):.4f} "
               f"gn {m.get('grad_norm', 0):.2f} fit {m.get('fit_sps', 0):6.0f} sps", flush=True)
         wb.log({"env_steps": env_steps, "perf/steps_per_s": sps, "perf/train_s": t_train,
                 "discover/record": best.R if best else 0.0, "discover/top10": top10,
+                "discover/record_steps": len(best.actions) if best else 0,
                 "discover/walks": len(recs), "discover/walk_len": wl, "discover/restarted": n_restart,
                 "discover/kills": len(walks.kills), "discover/entropy": ent,
                 "discover/tag_mismatch": walks.tag_mismatch,
